@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng đầu tiên của bạn? Đang trên đường đến!</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eeeeee;
+            font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            width: 100% !important;
+            -webkit-text-size-adjust: none;
+            direction: ltr;
+        }
+
+        table {
+            border-collapse: separate;
+            /* Changed from collapse for better spacing control in some clients */
+        }
+
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a {
+            text-decoration: none;
+            color: #126f43;
+            /* Màu xanh lá cây cho liên kết */
+            font-weight: bold;
+        }
+
+        /* Outer table for background and padding */
+        .outer-table {
+            background-color: #eeeeee;
+            padding: 0px 0;
+        }
+
+        /* Inner white content table */
+        .inner-table {
+            background-color: #ffffff;
+            max-width: 600px;
+            border-radius: 8px;
+            /* Added for rounded corners */
+            overflow: hidden;
+            /* Ensures content respects rounded corners */
+        }
+
+        /* Header section with logo */
+        .header-section {
+            padding-top: 40px;
+            padding-bottom: 16px;
+            padding-left: 40px;
+        }
+
+        /* Main greeting/headline */
+        .main-greeting-headline {
+            font-size: 36px;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 40px;
+            color: #222325;
+            font-weight: 400;
+            margin: 0;
+            padding: 32px 40px 16px 40px;
+        }
+
+        /* Intro text before steps */
+        .intro-text {
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 26px;
+            color: #404145;
+            padding: 0px 40px;
+        }
+
+        /* Step container (each column) */
+        .step-column {
+            display: inline-block;
+            max-width: 50%;
+            /* Adjust as needed for 2 columns */
+            min-width: 250px;
+            /* Minimum width to prevent squishing */
+            vertical-align: top;
+            width: 100%;
+            padding: 0px 0px 30px;
+            /* Padding for entire step column */
+        }
+
+        .step-content-table {
+            max-width: 250px;
+            /* Max width for content within each step */
+            border-collapse: separate;
+        }
+
+        .step-image-cell {
+            padding: 0px 0 10px;
+        }
+
+        .step-title {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #404145;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: left;
+            /* Align text within step title */
+            padding-bottom: 5px;
+            /* Space between title and description */
+        }
+
+        .step-description {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #404145;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: left;
+            /* Align text within step description */
+        }
+
+        /* CTA section */
+        .cta-text {
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 26px;
+            color: #404145;
+            padding: 0px 40px;
+            text-align: center;
+            /* Center CTA text */
+        }
+
+        .cta-button-cell {
+            padding: 2px 30px;
+            /* Adjust padding for button */
+            border-radius: 3px;
+        }
+
+        .cta-button {
+            background-color: #1dbf73;
+            /* Fiverr green color */
+            color: #ffffff;
+            display: inline-block;
+            font-family: helvetica, Arial;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            /* Adjusted button padding */
+            border-radius: 3px;
+            /* Apply border-radius to the anchor too */
+        }
+
+        /* Footer styles */
+        .footer-content-cell {
+            color: #818181;
+            font-size: 12px;
+            padding-top: 5px;
+            line-height: 1.5;
+            font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #126f43;
+            /* Consistent link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .app-store-links img {
+            display: inline-block;
+            /* Make images behave like blocks for margin */
+            margin: 5px;
+            /* Space between app store buttons */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media only screen and (max-width: 600px) {
+            .inner-table {
+                width: 100% !important;
+                border-radius: 0 !important;
+                /* Remove rounded corners on small screens if desired */
+            }
+
+            .header-section,
+            .main-greeting-headline,
+            .intro-text,
+            .cta-text,
+            .footer-content-cell {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .step-column {
+                max-width: 100% !important;
+                min-width: unset !important;
+                width: 100% !important;
+                display: block !important;
+            }
+
+            .step-content-table {
+                max-width: 100% !important;
+                padding: 0 20px !important;
+                /* Add padding to inner step content */
+            }
+
+            .cta-button {
+                width: 80% !important;
+                /* Make button wider on mobile */
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="direction:ltr;width:100%;font-family:'Helvetica Light',Helvetica,Arial,sans-serif;margin:0;padding:0"
+        bgcolor="#eeeeee">
+        <img src="https://ci3.googleusercontent.com/meips/ADKq_NZtW58GM1EdloCCJoqjqIcMEs1XlWhiewGFISUKEclX2UfFuQC-WucgPJhMhnRezpSHDarFcamSkOdHw2Jawd-uIma0OMf_PhCOWikrgAgoAEUm9bS0clFATUJ4rVaw_i6__aphisJ0VMKk9A8NwqJgEHtdI7xDvRDQSZYfa7_hg9Um1LGJOvu7kUL5H5AIYS-GsO3jg7dFD8qPJpplRcU5bYukfnarPaIkWJJQ7xZIikYK6uf9EztbPhs9aJqPkIcdeli0HAWEZ0BGH2yt0JfRlPoErU98-4QocaRD_t3PwacVFRbMobf3mAfDzs1Cnyqi_wi05FLBv7vLWqXtT5PKb6bm6qbPqf3fytIJ-GePs_grw-XzGVP5GzIH53rEXPWv7XDj5hbdwA6M8AduplAQbhT6vh8LiLxlC_mK-41xRzc7WS0QA7dZZsSbcwU3GtCeb_ZVSpe8x6w7EBSgEDnKZVF6-FsLBB80DDEQy8QrjFvOu4D-dnQVxHzE1Z2PKYgK4hsS-w98z5ZVmJfBDdntMddrN9SM6KdZh4mehusXacSTd8Qphclfdde5KCMz2VYllX7hFy1mNb0i7Z8BMsu2Eqd6meHGJmOczXu_LSuLmcQR4vpN__cxbdtvD5DGcgfZPa2z0RE_pPJCy4doDcc0F-Gd8pr7Ih5_Bb5NHqwjwSZSRUL4jtpr4jAane_j2ROeQ1MOwngR2yPbZEuoqtsLmphJzbhUAysYGCSvbpoz9H58N3VZLIs5YI0ZHsDfz4bHa_7iX7cmbjy2_5pamRFsdLpLIugvOzA5XgNp0Wj32wO3iBklQX-zKyUJR6gvLkr1ev-kyftv1Ej9Fjz1eMbCk_iLJVPuYPsXykJAmWQaCIi_f6w4sz4GggKGXqD6BJ1MInsu6yWHSwmWZeo7lM5PKvDPPwzdfm6uh-c8sOxSCppgzHvv7sTrM0NCzW1zyZOm-ol_cxLOhijCrNM-LPPSEJ8LgVsH1UVFj7phc8cwZHeoWATW86kOQpSSeJtyYRG2zsUAe5ViQRzMmAP-hT3MGjkTtKtQO2jM3RQkoLswWx8Yxf4ah5PR9imfwL2MBwfauRPZARGjWf8uWOh20zJEAJWXxUpH9rpnCoF6dVvfCmODqMUzNMbHkkDB0vc=s0-d-e1-ft#https://links.announce.Strongbody.com/wf/open?upn=u001.pQAPZ-2Bp88KGuWpVBAwls-2BMrybsgMr7zc-2FGfF-2Byrs2uPhcVDbqdNdW9k3L6tKUv-2FW-2BdudSImCEpOKggfG-2Bw0QrCl3mbRF1h56ysk6gNYvqRN5CQqoBCSkCp3smYhO9VZ4iNxJ-2BMd7bdUDHkb0x4zQ5uPx-2BRQE62qdT7cN0VLdsMqFbbvUeBkqhZCQwTY7Wqtz4ecxjCqz4dRdeHVlLqPjqjrHzOYVgOay21nSRd7R5gijmnvzf4hRfCxP7RxfvnJxyFc0gt3-2Fb4afHNY4VXuFgczn8fZCVeXQnRAxvmaG8jLBs0WQwxIOyAPsahC8kPrzKo0r9YmslaUuakRDPI0bh-2FQrClotUwMFM4M6zaSx2JUqheN6FY9XTZbtFc2CrSNXIJ9yqxc6P3C9blyyLQL9eCRx2CLWYMZZemDufPkGih1PE6Scy3KoslPmbIYHvUV1OEnz9zu-2FOPNDk6rTonAI8AJm-2F-2B2GdthYZu-2FURAiwfPmRZ-2Bpoy2MXHN7H3SI4wW1SDhszmEx72TOxapjIRJotz-2B8robVfmsruybrnzRwnhvGfvmIMTaAMOJYWGUs7WXST6Myy2Bkr0c12tCdoPvCZDruJOdW9bxc9iY-2F67ZzgjwXLopgrftRp-2B6iIQNWgJyVDhWmBmG30qkcRkfYd7ADIZOOUsiUyrebklSv7BHrOP1px5DUrxISJTbahsQilqMQ6UVVIT2pofTpc0qsItLUzr4iD9lwTpJ3XJyVRYL2PcRw-3D"
+            alt="" width="1" height="1" border="0"
+            style="height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important"
+            class="CToWUd" data-bit="iit">
+
+        <div
+            style="display:none!important;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">
+            Đơn hàng đầu tiên của bạn? Đang trên đường đến!
+        </div>
+
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="outer-table">
+            <tbody>
+                <tr>
+                    <td align="center" bgcolor="#eeeeee" height="20" valign="top" width="100%"></td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#eeeeee" style="padding:0px 15px">
+                        <table role="presentation" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+                            class="inner-table" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table role="presentation" align="center" border="0" cellpadding="0"
+                                            cellspacing="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="header-section" align="left">
+                                                        <a href="https://links.announce.Strongbody.com/uni/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BA7x8zAlKJDdEmizJpkYOrtgEsqhAseJsKujU3gSld80bHrdcWP7-2F0GSKgPDXeaoy-2FmSNITk-2BedOon3o-2FbHPlSjo7FbIpEOV3QndiPRpRtqDbW6Lu0dw-2FlvcaBydo-2FBNSeyECORkz8rC3YjQuLXRGfszP2DEU-2F50fs2de6I1CybnzFrj7-2FQrdSxTS9webmq6cg-3D-3D0xfj_ovNKPE-2B8FHNe-2FNjST2Gs-2B5LqqIFVIxKkBuZwzmwaPzQdunzUq3XoHQK0GurpK2GgIq8CIs0WiKr95sRljsIq31CNqnO-2B939oHEZwV57lTTEPCzcZdb2nZtfZhAdmH0nhagHD7nM6gN6OZAWswyNez0Ihq7XQ6e9oY84d0bVyTafvu6Nc6weBcGOcbXREA-2BrvRU972ztrZl9OY2UTziSE6cRShyXiEQTZVvn1INkJIvQcpydbb87C7RRqZ7G7Rt3NQ7UvqxzcIpKa-2BFA3KTgVkXSng7GrpbBho4AhTsYsxE0Ty2v0-2FgyOhGE7xnUI8kdbR2ybWKm-2FDb0FzGc-2FGMY-2B1NEZqaXHUwUW3a9W6e0vAiNQMKdv8Gjy-2FBa82-2F0WAFBbsvSxvLSvz9POeK1Wl2DKvjXPZQGlx0oIm5EmNRA0NHrLk1SzOtK15-2FmTuR9lPHo2zJPSkqZFdc8dKA2GPtZeivUp2FziQtFnkherrSMq7SQolQUBlsJaZnre0gRkFzgswHeZetNjKm83H6ewu1MAnrgMsKcIPEx9tfEh7f1zeYr8Kxt-2FIpcjHonFSpSMPoBEPl-2BSBQQmEtKvCGP3iK38-2FgNRYtLsa0d9j-2BWiG8jb7OElLqg3pkF8m-2BAPmjWGTrdWrQ5quSnaZ7-2FMHME-2BY6YVCLrgsSabuF7V-2B-2BwjLO3lpzTiBsFFzGWwb-2BVwWvs3GvCoL-2BlTwm5BI5dMV6gAMflFgpUNs6vzo3gcPf3eknztQh4-3D"
+                                                            target="_blank" data-saferedirecturl="">
+                                                            <img alt="Strongbody." src="./images/logo.png" width="80"
+                                                                style="vertical-align:left;width:100%;max-width:80px;border-style:solid;border-width:0px"
+                                                                class="CToWUd" data-bit="iit">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="main-greeting-headline" align="left">
+                                                        <b>What a</b><span style="font-family:Georgia"><i>
+                                                                smart move</i></span> <b>!</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="intro-text">
+                                                        <p style="margin:0;padding:0">
+                                                            Looking forward to your first order being completed? You
+                                                            should be like that! Now you just need a few more small
+                                                            steps to achieve perfect results.<br><br><b> The next
+                                                                event will take place:</b>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" bgcolor="#ffffff" height="40" valign="top"
+                                                        width="100%"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" height="100%" valign="top" width="100%">
+                                        <table role="presentation" align="center" border="0" cellpadding="0"
+                                            cellspacing="0" style="max-width:550px;border-collapse:separate"
+                                            width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" style="font-size:0;padding:0px 0px 30px"
+                                                        valign="top">
+
+                                                        <div class="step-column">
+                                                            <table role="presentation" align="center" border="0"
+                                                                cellpadding="0" cellspacing="0"
+                                                                class="step-content-table" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" valign="top">
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                style="margin-bottom:20px;border-radius:0px;border-collapse:separate;border:0px solid #ffffff"
+                                                                                width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-image-cell"
+                                                                                            align="center">
+                                                                                            <a href="https://links.announce.Strongbody.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BFS-2BZqUv8EWjxNWlBiL1mChZcrzS0xjY1AYVhL8DPpSkDlqsWB6vI63fCSKwMrMzhRkG-2FYOoHWldVhXvZs1jLYonrENHvUY0XTLPvn3Z5I6e4G9DRDXx-2FCv2eLyJ7Olnos5sGbonQmXAVUAcsH8Z9YOV41eNrSAT4OC-2FI4WyHmsABz8A_ovNKPE-2B8FHNe-2FNjST2Gs-2B5LqqIFVIxKkBuZwzmwaPzQdunzUq3XoHQK0GurpK2GgIq8CIs0WiKr95sRljsIq31CNqnO-2B939oHEZwV57lTTEPCzcZdb2nZtfZhAdmH0nhagHD7nM6gN6OZAWswyNez0Ihq7XQ6e9oY84d0bVyTafvu6Nc6weBcGOcbXREA-2BrvRU972ztrZl9OY2UTziSE6cRShyXiEQTZVvn1INkJIvQcpydbb87C7RRqZ7G7Rt3NQ7UvqxzcIpKa-2BFA3KTgVkXSng7GrpbBho4AhTsYsxE0Ty2v0-2FgyOhGE7xnUI8kdbR2ybWKm-2FDb0FzGc-2FGMY-2B1NEZqaXHUwUW3a9W6e0vAiNQMKdv8Gjy-2FBa82-2F0WAFBbsvSxvLSvz9POeK1Wl2DKvjXPZQGlx0oIm5EmNRA0NHrLk1SzOtK15-2FmTuR9lPHo2zJPSkqZFdc8dKA2GPtZeivUp2FziQtFnkherrSMq7SQolQUBlsJaZnre0gRkFzgswHeZetNjKm83H6ewu1MAnrgMsKcIPEx9tfEh7f1zeYr8Kxt-2FIpcjHonFSpSMPoBEPl-2BSBQQmEtKvCGP3iK38-2FgNRYtLsa0d9j-2BWiG8jb7OElLqg3pkF8m-2BAPmjWGTrdWrQ5quSnaZ7-2FMHME-2BY6YVCLrgsSabuF7V-2B-2BwjLO3lpzTiBsFFzGWwb-2BVwWvs3GvCoL-2BlTwm5BI5dMV6gAMflFgpUNs6vzo3gcPf3eknztQh4-3D"
+                                                                                                target="_blank"
+                                                                                                data-saferedirecturl="">
+                                                                                                <img alt="Chia sẻ chi tiết đơn hàng"
+                                                                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NZ2KAkmc5Q6T792yvP4y2pwK6r0KzOa-k6hhPyh9KI97GaRoOhVs3XfOWXVaOz_Z4i7sjF_dEuD6uPhX1vW3lyuXPInfbe2wwdkbvM6Akw3hpgwsd9lCmjwaFdmtECB3_YgKV7fiKDY1EN0wtBCnewXDv5y1fTduoT_9Ap5VOK8goZi_zNY-PdOt2opWnfLc7PBv7cGEIPuwitoHu6aPv2yfZc9vaP3ccTbvK2nlkIaoidjnQz5xw=s0-d-e1-ft#https://Strongbody-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/da8c353448348dfbdde441cc7ebe0d9a-1680433208161/01%20Step%201.png"
+                                                                                                    height="200"
+                                                                                                    width="245"
+                                                                                                    style="display:block;width:100%;max-width:100%"
+                                                                                                    class="CToWUd"
+                                                                                                    data-bit="iit">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                width="100%"
+                                                                                style="border-collapse:separate">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-title"
+                                                                                            align="left">
+                                                                                            <b>Step 1: Share order
+                                                                                                details</b>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="step-description"
+                                                                                            align="left">
+                                                                                            Make sure the freelancer
+                                                                                            understands your
+                                                                                            requirements clearly.
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="step-column">
+                                                            <table role="presentation" align="center" border="0"
+                                                                cellpadding="0" cellspacing="0"
+                                                                class="step-content-table" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" valign="top">
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                style="margin-bottom:20px;border-radius:0px;border-collapse:separate;border:0px solid #ffffff"
+                                                                                width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-image-cell"
+                                                                                            align="center">
+                                                                                            <a href="https://links.announce.Strongbody.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BFS-2BZqUv8EWjxNWlBiL1mChZcrzS0xjY1AYVhL8DPpSkDlqsWB6vI63fCSKwMrMzhRkG-2FYOoHWldVhXvZs1jLYonrENHvUY0XTLPvn3Z5I6e4G9DRDXx-2FCv2eLyJ7Olnos5sGbonQmXAVUAcsH8Z9YOV41eNrSAT4OC-2FI4WyHmsAIgxY_ovNKPE-2B8FHNe-2FNjST2Gs-2B5LqqIFVIxKkBuZwzmwaPzQdunzUq3XoHQK0GurpK2GgIq8CIs0WiKr95sRljsIq31CNqnO-2B939oHEZwV57lTTEPCzcZdb2nZtfZhAdmH0nhagHD7nM6gN6OZAWswyNez0Ihq7XQ6e9oY84d0bVyTafvu6Nc6weBcGOcbXREA-2BrvRU972ztrZl9OY2UTziSE6cRShyXiEQTZVvn1INkJIvQcpydbb87C7RRqZ7G7Rt3NQ7UvqxzcIpKa-2BFA3KTgVkXSng7GrpbBho4AhTsYsxE0Ty2v0-2FgyOhGE7xnUI8kdbR2ybWKm-2FDb0FzGc-2FGMY-2B1NEZqaXHUwUW3a9W6e0vAiNQMKdv8Gjy-2FBa82-2F0WAFBbsvSxvLSvz9POeK1Wl2DKvjXPZQGlx0oIm5EmNRA0NHrLk1SzOtK15-2FmTuR9lPHo2zJPSkqZFdc8dKA2GPtZeivUp2FziQtFnkherrSMq7SQolQUBlsJaZnre0gRkFzgswHeZetNjKm83H6ewu1MAnrgMsKcIPEx9tfEh7f1zeYr8Kxt-2FIpcjHonFSpSMPoBEPl-2BSBQQmEtKvCGP3iK38-2FvT2kwPeEOdmTEr52Y0Waq-2BlcaZ9VK7EHnBUsjNB5AFVSEAawe4TI184WlnTGNLyi-2FmCDtxV4VYwR7slpojLF-2FNtUFIw-2B0nFN11D6uqQS-2BtQFouramdqKPhED-2BmiIXGS28r0S559P1WSsB9LmRQ5tog-3D"
+                                                                                                target="_blank"
+                                                                                                data-saferedirecturl="">
+                                                                                                <img alt="Để freelancer làm việc"
+                                                                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NZkD8WLUm-mqhEG2knaK-DhRGpsvTozDgI6ViVy3x--t-T7jOr9vqa8U_PO6XwtQZk8BUazEi0I_8OyeSta_dPsRwMYrL22e9crJo6ypqLyXL0d5CTzapcl1PZClt6j-0DJO-caUGngBv62ldXVQqRHBjVsKJpWZyH8d3kFZlEtYjKuMhnIZgYyLx1P3QZfTq_ytmXm2CM08RcUGBVXXLPzQaQaGR07hkrUu2RiTC-0qajtE46wKA=s0-d-e1-ft#https://Strongbody-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/0a5a35115c29809792993a0e7aab3111-1679992639597/02%20Step%201.png"
+                                                                                                    height="200"
+                                                                                                    width="245"
+                                                                                                    style="display:block;width:100%;max-width:100%"
+                                                                                                    class="CToWUd"
+                                                                                                    data-bit="iit">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                width="100%"
+                                                                                style="border-collapse:separate">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-title"
+                                                                                            align="left">
+                                                                                            <b>Step 2: Let the
+                                                                                                freelancer work.</b>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="step-description"
+                                                                                            align="left">
+                                                                                            They will be busy so you can
+                                                                                            get back to business.
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" height="100%" valign="top" width="100%">
+                                        <table role="presentation" align="center" border="0" cellpadding="0"
+                                            cellspacing="0" style="max-width:550px;border-collapse:separate"
+                                            width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" style="font-size:0;padding:0px 0px 30px"
+                                                        valign="top">
+
+                                                        <div class="step-column">
+                                                            <table role="presentation" align="center" border="0"
+                                                                cellpadding="0" cellspacing="0"
+                                                                class="step-content-table" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" valign="top">
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                style="margin-bottom:20px;border-radius:0px;border-collapse:separate;border:0px solid #ffffff"
+                                                                                width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-image-cell"
+                                                                                            align="center">
+                                                                                            <a href="https://links.announce.Strongbody.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BFS-2BZqUv8EWjxNWlBiL1mChZcrzS0xjY1AYVhL8DPpSkDlqsWB6vI63fCSKwMrMzhRkG-2FYOoHWldVhXvZs1jLYonrENHvUY0XTLPvn3Z5I6e4G9DRDXx-2FCv2eLyJ7Olnos5sGbonQmXAVUAcsH8Z9YOV41eNrSAT4OC-2FI4WyHmsAxybc_ovNKPE-2B8FHNe-2FNjST2Gs-2B5LqqIFVIxKkBuZwzmwaPzQdunzUq3XoHQK0GurpK2GgIq8CIs0WiKr95sRljsIq31CNqnO-2B939oHEZwV57lTTEPCzcZdb2nZtfZhAdmH0nhagHD7nM6gN6OZAWswyNez0Ihq7XQ6e9oY84d0bVyTafvu6Nc6weBcGOcbXREA-2BrvRU972ztrZl9OY2UTziSE6cRShyXiEQTZVvn1INkJIvQcpydbb87C7RRqZ7G7Rt3NQ7UvqxzcIpKa-2BFA3KTgVkXSng7GrpbBho4AhTsYsxE0Ty2v0-2FgyOhGE7xnUI8kdbR2ybWKm-2FDb0FzGc-2FGMY-2B1NEZqaXHUwUW3a9W6e0vAiNQMKdv8Gjy-2FBa82-2F0WAFBbsvSxvLSvz9POeK1Wl2DKvjXPZQGlx0oIm5EmNRA0NHrLk1SzOtK15-2FmTuR9lPHo2zJPSkqZFdc8dKA2GPtZeivUp2FziQtFnkherrSMq7SQolQUBlsJaZnre0gRkFzgswHeZetNjKm83H6ewu1MAnrgMsKcIPEx9tfEh7f1zeYr8Kxt-2FIpcjHonFSpSMPoBEPl-2BSBQQmEtKvCGP3iK38-2Fv54N3bP4vWXDGQUorqjV-2FE28U3UM-2FAx0I2fzjbYn3G3Txk-2B8z258nBoxmvAenogDQ508Gcgh3VRWaLie57ck3xJlrbGQYp-2FV-2FFS0fzGVDUake98MKc7rVN1a-2BWtElYfd1naAgqFMzlTFSLWj-2B6DgwI-3D"
+                                                                                                target="_blank"
+                                                                                                data-saferedirecturl="">
+                                                                                                <img alt="Đưa ra phản hồi của bạn"
+                                                                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NbY4BbMI9D9K9aEB7BFrxBCGPjCTpQwfgeasijp0m27yMrHBC1Xw5hsg9aUYTUEBwwOgldw-_nXZ0dDaJQPDsrotzPXHAo-F8BxmElsFv8RbrTlZqxPUVqBbE01J_CPF8dSjWC_r7eGl2yVAUMu60qJNfHYXaOKiE8RDz6gi02BgzgDgiZDjSLJPCLB3R1oCE024rFE-Cl82si1VTs0Bp8cNA-lgTpN60_K09KGFGadMmgvPsRnNQ=s0-d-e1-ft#https://Strongbody-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/0720cf878cb80822d1ebc927229fb9d7-1679992787956/03%20Step%201.png"
+                                                                                                    height="200"
+                                                                                                    width="245"
+                                                                                                    style="display:block;width:100%;max-width:100%"
+                                                                                                    class="CToWUd"
+                                                                                                    data-bit="iit">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                width="100%"
+                                                                                style="border-collapse:separate">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-title"
+                                                                                            align="left">
+                                                                                            <b>Step 3: Provide
+                                                                                                feedback</b>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="step-description"
+                                                                                            align="left">
+                                                                                            When notified, please review
+                                                                                            the work to ensure it meets
+                                                                                            your expectations.
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="step-column">
+                                                            <table role="presentation" align="center" border="0"
+                                                                cellpadding="0" cellspacing="0"
+                                                                class="step-content-table" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" valign="top">
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                style="margin-bottom:20px;border-radius:0px;border-collapse:separate;border:0px solid #ffffff"
+                                                                                width="100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-image-cell"
+                                                                                            align="center">
+                                                                                            <a href="https://links.announce.Strongbody.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BFS-2BZqUv8EWjxNWlBiL1mChZcrzS0xjY1AYVhL8DPpSkDlqsWB6vI63fCSKwMrMzhRkG-2FYOoHWldVhXvZs1jLYonrENHvUY0XTLPvn3Z5I6e4G9DRDXx-2FCv2eLyJ7Olnos5sGbonQmXAVUAcsH8Z9YOV41eNrSAT4OC-2FI4WyHmsARCKV_ovNKPE-2B8FHNe-2FNjST2Gs-2B5LqqIFVIxKkBuZwzmwaPzQdunzUq3XoHQK0GurpK2GgIq8CIs0WiKr95sRljsIq31CNqnO-2B939oHEZwV57lTTEPCzcZdb2nZtfZhAdmH0nhagHD7nM6gN6OZAWswyNez0Ihq7XQ6e9oY84d0bVyTafvu6Nc6weBcGOcbXREA-2BrvRU972ztrZl9OY2UTziSE6cRShyXiEQTZVvn1INkJIvQcpydbb87C7RRqZ7G7Rt3NQ7UvqxzcIpKa-2BFA3KTgVkXSng7GrpbBho4AhTsYsxE0Ty2v0-2FgyOhGE7xnUI8kdbR2ybWKm-2FDb0FzGc-2FGMY-2B1NEZqaXHUwUW3a9W6e0vAiNQMKdv8Gjy-2FBa82-2F0WAFBbsvSxvLSvz9POeK1Wl2DKvjXPZQGlx0oIm5EmNRA0NHrLk1SzOtK15-2FmTuR9lPHo2zJPSkqZFdc8dKA2GPtZeivUp2FziQtFnkherrSMq7SQolQUBlsJaZnre0gRkFzgswHeZetNjKm83H6ewu1MAnrgMsKcIPEx9tfEh7f1zeYr8Kxt-2FIpcjHonFSpSMPoBEPl-2BSBQQmEtKvCGP3iK38-2FjPEwPig5YWAbbVx3lC3LjoMRxif-2F3Yr1ORpwJVU-2BsxEDQL0Xl-2BLxlKoVfKmJkBDFcfGQS6W5iVmQ6khz07VpNrCS8S7o7alLHYCg1qVQVIPZgGlGtHT-2FHXxnl4HJpGdbIkJjHOYqSSc5sqVdnbd2nI-3D"
+                                                                                                target="_blank"
+                                                                                                data-saferedirecturl="">
+                                                                                                <img alt="Nhận kết quả của bạn"
+                                                                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NbyvPd9i0gKL5U8x2EMNWlcdXCV8HhQT_S4ilEZBQwAdZmThElSivQphV_ysSNcYPJ0AJGo1sranP8EYdztlHteCAn0F7JqpkzyK2m3ry4difKsNzCHl4HPpzzLqeUC-LK5NK4ZPI5owlUDQ7D1tTlzfmQNJ7RR8Xb2SX_Ef0jqMmi6mDEJINhqHp2xgT3L7AWaAEGVAChbbrV7DSf67MLoXL6SktowyZXUg-gvfpZ7adGfHvSZVg=s0-d-e1-ft#https://Strongbody-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/0a0b57f68983d842592a4e1ae392e77c-1679992866184/04%20Step%201.png"
+                                                                                                    height="200"
+                                                                                                    width="245"
+                                                                                                    style="display:block;width:100%;max-width:100%"
+                                                                                                    class="CToWUd"
+                                                                                                    data-bit="iit">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table role="presentation" border="0"
+                                                                                cellpadding="0" cellspacing="0"
+                                                                                width="100%"
+                                                                                style="border-collapse:separate">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="step-title"
+                                                                                            align="left">
+                                                                                            <b>Step 4: Receive the
+                                                                                                results</b>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="step-description"
+                                                                                            align="left">
+                                                                                            A completed order,\n many
+                                                                                            wonderful things will come.
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="cta-text">
+                                        Now, while you are waiting for something wonderful...<br>Why not maintain this
+                                        momentum?
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" height="16" valign="top" width="100%"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" width="580">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" height="45"
+                                            width="auto" style="border-collapse:separate">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" bgcolor="#FF0000" height="44"
+                                                        style="border-radius: 8px; padding: 2px 30px;">
+                                                        <a href="#"
+                                                            style="width: auto; color: rgb(255, 255, 255); display: inline-block; font-family: helvetica, Arial; font-size: 15px; line-height: 24px; text-align: center; font-weight: bold; text-decoration: none;"
+                                                            target="_blank">Post
+                                                            Fulfill more orders.</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" height="48" valign="top" width="100%"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" bgcolor="#eeeeee" style="padding: 20px 0px;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                            class="m_-3842618150516941142responsive-table"
+                                            style="max-width: 600px; border-collapse: separate;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center"
+                                                        style="color: rgb(129, 129, 129); font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: &quot;Helvetica Light&quot;, Helvetica, Arial, sans-serif;">
+                                                        <table
+                                                            style="width: 100%; text-align: center; border-collapse: separate;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" style="padding: 10px 10px 25px;">
+                                                                        <a href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BKF33-2BRvMn8su-2BZg0q267H7d7NLwkxIhQC8giZTj5x8rC9gHfCRWW08vf04vdC-2FD-2Bu-2FDxWpvD8vuwmktEaboxLLw5r-2B1kuutWmrO5ceCYmkbIID0_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd9384zzOzT3w8HJIMl19Ecc9l6JInbqKSEmzRIQCisqBlmQlBOGxtp72UlxO4hd9zGpPCaJ3x7ZJA9mjujYuudBnU0jF3027bjUf1Y92MR-2BI0Wfpwxi6cIslZ8p1BR1klAQuM2F8htEzOLyP5BpewbpspM-3D"
+                                                                            style="display: inline-block; margin: 0px;"
+                                                                            target="_blank"><img alt="Twitter"
+                                                                                height="40"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NY_px_nwyLC22GRNNOBgEHyrvXlJ8ipfJKHwa0HGsYtE5V5ZfboRph_295j5yYlL2JZ8PnzKXZZvk3-YzfXth4axhOROU6dQjnNiwnk-BUg04XcG2tc8d5qwimtaF1UC7zrz4PbIKtWVyd9yw30TDspeHSoCXTFdtqRbh6r3OcO4w-g3QunBM0ri7Xzww-Nfg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597de16e171ec0de07a5/original.png?1613977981"
+                                                                                style="width: 40px; height: 40px;"
+                                                                                width="40" class="CToWUd"
+                                                                                data-bit="iit"></a> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BKF3is0nMk7-2FZlXloDK-2FgbGlBT7jmhX8pvjrjO91cs9-2FzOapnwfFfaywx61PGQXsdL-2B23pDu8fgeEH16tZjesYjtm-2FZ69TQFVBMzZ-2BTTy-2BRvBMxD_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd9386gVJHtsNSvXdFtAyv2lXlXK-2BXBF91cJ9cZ8uBgCLxFnNjgmpGLK13MLB8RygEH70CWdHaBHxQQUDMW6b8s-2FMQ2cJqakazm7CdNjmFqiLl-2BOAMTEhOYPm-2F86hsEpEhOfZhbQtsr59L07Ri86tRVqmIA-3D"
+                                                                            style="display: inline-block; margin: 0px;"
+                                                                            target="_blank"><img alt="Facebook"
+                                                                                height="40"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                                                                                style="width: 40px; height: 40px;"
+                                                                                width="40" class="CToWUd"
+                                                                                data-bit="iit"></a> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.u0gdiNyXqP6Z13TaUet-2B4GirwvAaxG9jwCeIBXhORCuLMni-2BlTC5FATfKhaGgfzpLseeK73ib4-2FYfM8QgGE8F8DdhPfCB3T2qKqP7w423KpnIZhfIE67aeILKUWmZgCSG7VR_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938ypWOqBTBzx7YDd-2BDZntwSOthyVDXrD-2BKe4ypVFTbG8706yLvYizqWQEgBE0Blzle9mkf-2FTfHzWAzZMdJoXjuBGRRJSoGa-2F-2BUrEwIdaiPrA5HsIVe44qPn-2BML3EnF3b84nG6IgpFxpkw9D86MzPcSaQ-3D"
+                                                                            style="display: inline-block; margin: 0px;"
+                                                                            target="_blank"><img alt="Pinterest"
+                                                                                height="40"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                                                                                style="width: 40px; height: 40px;"
+                                                                                width="40" class="CToWUd"
+                                                                                data-bit="iit"></a> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.G8InBdZMyMLFosDO2eMXV62LFMBv0skBaZg4mgswt8FNk-2FgVRuEM6onS4QjMukZr2zNJ7hl-2FkG79AsA94P7AUlFXHohWoKZ0BjA1FavMF-2BSSLfp-2BBilgg3NuagQIjkn7-2FoBAcyZVQmkQMJKoKujW8A-3D-3DNGe3_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd93818R3FU4VyygH-2BEYv5jDv2y02ZMi0KBB-2BS-2BlixqaD1pPzPfIDPtXmIw35TchsfvUut9E-2B8QjD5KHhvt7LRIxhNuSW3IRvNiiOQZDwmN21kT47JHHqAu30DFHxMJ07QIT26rfc-2FyzUabVMl2Y9dnoKKQ-3D"
+                                                                            style="display: inline-block; margin: 0px;"
+                                                                            target="_blank"><img alt="LinkedIn"
+                                                                                height="40"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NbaRmd3XrVbgrindQPbNUyJj3SBCtEQu_x5SO99WOSFaZkJgl7gvAWzy9Jq1gFfEzc27QtEhNhN5MoNj1781AyFtUiNg2bAqaBSfp_isPziTlYlrwwmD2cRU3cCSDONfv8jTB0XXA8h0efiwdheJLnDAwM7rOl5O0zxfmVDvhGWY9FKtAJZBX6czw5MRqD8UQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597726e78f781dfefd41/original.png?1613977975"
+                                                                                style="width: 40px; height: 40px;"
+                                                                                width="40" class="CToWUd"
+                                                                                data-bit="iit"></a> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.cVIN5xF103TlrXLUItdQgK94a3FrSetyo1Trw6RZOJTwrFovER-2B9jtaTJz2lWmkPK2KFsF83WtRJ-2F973OiaGdthxuOoucZCvYqb9pPRSqyuZ32-2FPMeH224L3G8uUBkG0jx5r_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938wBpbHqVoB37EIK2dqvCKpS4tpMmH2414pUJ3GvP78L-2FlNbrscI8PwLM9pgz8BXhtZhcAjxLxjawBh5Dzjnbdti9TA61KyEfy3aBOB3TVDUSlbHWnRiIz71oEMbOwBlZSy2fp67JiKsi9ibu-2B36hzuE-3D"
+                                                                            style="display: inline-block; margin: 0px;"
+                                                                            target="_blank"><img alt="Instagram"
+                                                                                height="40"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                                                                                style="width: 40px; height: 40px;"
+                                                                                width="40" class="CToWUd"
+                                                                                data-bit="iit"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="color: rgb(197, 198, 201); font-size: 12px; line-height: 18px; font-family: arial, 'helvetica neue', helvetica, sans-serif;"
+                                                                        align="center">
+                                                                        <a href="#"
+                                                                            style="color: rgb(18, 111, 67); text-decoration: none; font-weight: bold;"
+                                                                            target="_blank">Privacy Policy</a> |
+                                                                        <a href="#"
+                                                                            style="color: rgb(18, 111, 67); text-decoration: none; font-weight: bold;"
+                                                                            target="_blank">Support</a> |
+                                                                        <a href="#"
+                                                                            style="color: rgb(18, 111, 67); text-decoration: none; font-weight: bold;"
+                                                                            target="_blank">Invite Friends</a> |
+                                                                        <a href="#"
+                                                                            style="color: rgb(18, 111, 67); text-decoration: none; font-weight: bold;"
+                                                                            target="_blank">Get Inspired</a><br><br>
+                                                                        <span style="color: rgb(122, 125, 133);">
+                                                                            This email was sent to you by StrongBody SG
+                                                                            PTE, LTD.<br>
+                                                                            You are receiving this email because you
+                                                                            signed up for StrongBody.ai<br>
+                                                                            If you wish to unsubscribe from all future
+                                                                            emails, please click <a href="#"
+                                                                                style="color: rgb(18, 111, 67); text-decoration: none;"
+                                                                                target="_blank">here</a>.<br><br>
+                                                                            105 CECIL STREET #18-20 THE OCTAGON
+                                                                            Singapore, 069534 Singapore
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="padding: 20px 10px;"> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BGFnA51R0-2FgHS7HTpvECFellnzC7yvXcyJWVHLFwwWV0-2FNxowR0FdqJ7b4gTfd9FcIxm9CQYuhYrFwuovjQ42JVpTHD93vWh4HN7GWA5MknrXifFkCRUJODFOXhGC5yn6w-3D-3DA7TI_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938-2BnLuHnfwBhgZlsvsDloK4-2Bf2sZ3TMgIjZUgVHEo-2FC7Ag7DMvvrr4zDryGYmjjku7rpQYQGYQ1uY4a0Ce-2FxW8095p95laTf-2B9kgp-2BmigXYfx5v4b0d-2Fq3SaqRQb6363EufTSTZVVK7ZEU9S0n5fJgok-3D"
+                                                                            style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
+                                                                            target="_blank"><img alt="Cửa hàng Apple"
+                                                                                height="36"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
+                                                                                width="120" class="CToWUd"
+                                                                                data-bit="iit"></a> <a
+                                                                            href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BIQOUy-2FOVR6aWqdX89KJtdL-2Fz9kRKDoZMQXGd4DPGYggSW0Ny-2FYkteywyg5DmVodXlY4yhH0LYbBws-2BcKhp0it1JWEHz3tfPDAui0GyQ6YIsL23MAMWIK7j2vRqGDPROK26JbjiW1WRtaNSL2FvzB4E-3DBAax_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938y-2FkBsfeLLwxq5eVDQVdHFMeHYKrSK1Ci6KD0rQbdy7HsBKPKOFXhwzTlIFC0eMSQSyHtn8mapyaEBMSt1qAsuFunPg5udwOG2TaWEy8VL2i06z-2FMIUvGzlfttmq0CDemziD9MFDsAPHRtuGxd5GdmE-3D"
+                                                                            style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
+                                                                            target="_blank"><img alt="Cửa hàng Google"
+                                                                                height="36"
+                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
+                                                                                width="120" class="CToWUd"
+                                                                                data-bit="iit"></a> </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table><br><br><br>
+                                                        <div id="m_-3842618150516941142_eoa_div"
+                                                            style="display: none; background-image: url(&quot;https://ci3.googleusercontent.com/meips/ADKq_NaRipglrFGYjvIvcNadg3rrNduUYaY8NYHavSlVTkj3Us-mQpr6gcpI14MxgXf4z3N2F_DaHYWjOnJ7PAreDznd25jeqw0y5GhGwBGkLWKJ6lnmv6AHzu6TyypU7D83viXm2lTh=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af/P&quot;);">
+                                                        </div><img alt="" border="0" height="1"
+                                                            id="m_-3842618150516941142_eoa_img"
+                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NaINrQN2eQiYHQQycUWMEjIrIMabbsSnYtSgevz8usXCflXVTJBdmQYFcfsMaQ2POmLrUR5ele-MLWugCddY_11Ka8oRj9oLwr3Pc6leApFh79vuDxgbBRgdmTvwvZ3ZAfPkg=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af"
+                                                            style="display: block; margin: 0px; padding: 0px; border-width: 0px; height: 1px; width: 1px;"
+                                                            title="" width="1" class="CToWUd" data-bit="iit"
+                                                            jslog="138226; u014N:xr6bB; 53:WzAsMl0.">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+    </div>
+</body>
+
+</html>
