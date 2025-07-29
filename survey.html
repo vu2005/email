@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMAIL</title>
+    <title>Service Quality Survey - StrongBody.ai</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
         rel="stylesheet">
 
@@ -59,7 +59,7 @@
                                                 <tr>
                                                     <td align="center"
                                                         style="font-size:24px;color:#0e0e0f;font-weight:700;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:28px;vertical-align:top;text-align:center;padding:35px 40px 0px">
-                                                        <strong>[seller], has a request regarding your order</strong>
+                                                        <strong>Service Quality Survey - First Quarter {{survey_year}}</strong>
                                                     </td>
                                                 </tr>
 
@@ -70,40 +70,130 @@
                                                             <tr>
                                                                 <td
                                                                     style="font-size:20px;color:#0e0e0f;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:28px;padding:0px 0px 20px;text-align:center">
-                                                                    <b>Hello [username],</b>
+                                                                    <b>Hello {{username}},</b>
                                                                 </td>
                                                             </tr>
                                                         </table>
 
                                                         <p style="margin:0 0 20px 0;">
-                                                            [seller] has a request regarding order (<strong>Order
-                                                                ID:
-                                                                [Order Number]</strong>) Please review the request and
-                                                            respond as soon as possible.
+                                                            The StrongBody.ai Management Team respectfully sends you our warmest greetings and wishes for your health and wellness.
                                                         </p>
 
-                                                        <p style="margin:0 0 10px 0;">
-                                                            Need help navigating the situation? We encourage you to work
-                                                            things out with Faisal Saleem over at the resolution center
-                                                            or contact our customer support.
+                                                        <p style="margin:0 0 20px 0;">
+                                                            With the desire to improve service quality and provide an increasingly better experience for our community members, we are pleased to announce the deployment of the <strong>"Service Quality Survey - First Quarter {{survey_year}} at StrongBody.ai"</strong> to evaluate satisfaction levels with the operational services we are providing. This helps us continuously improve service quality and better understand how to serve you.
+                                                        </p>
+
+                                                        <h3 style="color:#ff0000; margin:30px 0 15px 0; font-size:18px;">Survey Method:</h3>
+
+                                                        <p style="margin:0 0 15px 0;">
+                                                            <strong>Online Survey:</strong> Please use the survey link sent to your personal email <strong>({{user_email}})</strong>, through the StrongBody.ai mobile app notifications, or scan the QR code below.
                                                         </p>
 
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0"
-                                                            style="margin:30px 0px;">
+                                                            style="margin:20px 0px;">
                                                             <tr>
-                                                                    <td align="center" style="text-align:center;">
-                                                                    <a href="[Order URL]" target="_blank"
-                                                                        style="color:#ffffff; background-color:#ff0000; display:inline-block; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:20px; font-weight:bold; text-decoration:none; padding:10px 20px; border-radius:5px;">
-                                                                        View and Respond
+                                                                <td align="center" style="text-align:center;">
+                                                                    <a href="{{survey_url}}" target="_blank"
+                                                                        style="color:#ffffff; background-color:#ff0000; display:inline-block; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px; line-height:20px; font-weight:bold; text-decoration:none; padding:12px 30px; border-radius:5px; margin-bottom:20px;">
+                                                                        Take Survey Now
                                                                     </a>
                                                                 </td>
                                                             </tr>
                                                         </table>
 
+                                                        <!-- QR Code Section -->
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin:20px 0; background-color:#f8f9fa; border-radius:8px;">
+                                                            <tr>
+                                                                <td align="center" style="padding:20px;">
+                                                                    <p style="margin:0 0 15px 0; font-size:16px; font-weight:bold; color:#333;">
+                                                                        Or scan this QR code with your phone:
+                                                                    </p>
+                                                                    <!-- Method 1: Using QR image from database/generated QR -->
+                                                                    <img src="{{qr_code_image_url}}" alt="Survey QR Code" 
+                                                                         style="width:150px; height:150px; border:2px solid #ddd; border-radius:8px; display:block; margin:0 auto;">
+                                                                    
+                                                                    <!-- Method 2: Using online QR generator service (backup) -->
+                                                                    <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{survey_url_encoded}}" 
+                                                                         alt="Survey QR Code" 
+                                                                         style="width:150px; height:150px; border:2px solid #ddd; border-radius:8px; display:block; margin:0 auto;"> -->
+                                                                    
+                                                                    <p style="margin:15px 0 0 0; font-size:12px; color:#666; text-align:center;">
+                                                                        Point your camera at the QR code to open the survey
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <p style="margin:0 0 20px 0; font-size:14px; color:#666;">
+                                                            <strong>Note:</strong> Each account can only participate in the survey once. Multiple submissions from the same account will only count the latest response.
+                                                        </p>
+
+                                                        <p style="margin:0 0 20px 0;">
+                                                            <strong>Survey Period:</strong> From {{survey_start_date}} to {{survey_end_date}}
+                                                        </p>
+
+                                                        <h3 style="color:#ff0000; margin:30px 0 15px 0; font-size:18px;">Rewards for Survey Participation:</h3>
+
+                                                        <p style="margin:0 0 15px 0;">
+                                                            We are pleased to offer meaningful rewards to show our appreciation to members who complete the survey within the specified timeframe:
+                                                        </p>
+
+                                                        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; border-color:#ddd; margin:20px 0;">
+                                                            <thead>
+                                                                <tr style="background-color:#f8f8f8;">
+                                                                    <th style="text-align:center; font-size:14px; padding:10px;">Rank</th>
+                                                                    <th style="text-align:center; font-size:14px; padding:10px;">Reward Criteria</th>
+                                                                    <th style="text-align:center; font-size:14px; padding:10px;">Reward Value</th>
+                                                                    <th style="text-align:center; font-size:14px; padding:10px;">Usage Period</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="text-align:center; font-size:14px; padding:8px;">1</td>
+                                                                    <td style="font-size:14px; padding:8px;">First 5 users to complete the survey</td>
+                                                                    <td style="font-size:14px; padding:8px;"><strong>1-month Premium Plan</strong><br>Access to all premium features + Personal trainer consultation</td>
+                                                                    <td style="font-size:14px; padding:8px;">Must activate within 60 days from reward notification</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="text-align:center; font-size:14px; padding:8px;">2</td>
+                                                                    <td style="font-size:14px; padding:8px;">Users 6-100 who complete the survey</td>
+                                                                    <td style="font-size:14px; padding:8px;"><strong>1-month Basic Plan</strong><br>+ 2 personal training sessions<br>+ 1 nutrition consultation<br>Value: $59</td>
+                                                                    <td style="font-size:14px; padding:8px;">Auto-activated upon survey completion, valid for 60 days</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="text-align:center; font-size:14px; padding:8px;">3</td>
+                                                                    <td style="font-size:14px; padding:8px;">Users 101+ who complete the survey</td>
+                                                                    <td style="font-size:14px; padding:8px;"><strong>3 Premium Feature Access Tokens</strong></td>
+                                                                    <td style="font-size:14px; padding:8px;">Valid until {{rewards_expiry_date}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <p style="margin:30px 0 20px 0;">
+                                                            We sincerely hope you will take the time to participate and provide your valuable feedback before <strong>{{survey_end_date}}</strong>. After this period, we will collect, compile, and announce the results to our community.
+                                                        </p>
+
+                                                        <p style="margin:0 0 20px 0;">
+                                                            If by the end of {{survey_end_date}}, we have not collected responses from at least 50% of our active users, we will extend the survey period for an additional 5 business days (until {{extended_survey_end_date}}) and send personalized follow-up notifications to encourage participation.
+                                                        </p>
+
+                                                        <p style="margin:0 0 20px 0;">
+                                                            For detailed information, please contact us:
+                                                        </p>
+
+                                                        <ul style="margin:0 0 20px 20px; color:#555;">
+                                                            <li style="margin-bottom:8px;"><strong>Support Hotline:</strong> {{support_phone}}</li>
+                                                            <li style="margin-bottom:8px;"><strong>Email:</strong> <a href="mailto:{{support_email}}" style="color:#ff0000;">{{support_email}}</a></li>
+                                                            <li style="margin-bottom:8px;"><strong>Live Chat:</strong> Available 24/7 on StrongBody.ai app</li>
+                                                        </ul>
+
                                                         <p style="margin:30px 0 0 0; font-size:14px; color:#999;">
-                                                            Thank you for choosing us. We’re committed to delivering
-                                                            quality
-                                                            and satisfaction.
+                                                            Thank you for being a valued member of our StrongBody.ai community. Your feedback helps us grow and serve you better.
+                                                        </p>
+
+                                                        <p style="margin:20px 0 0 0; font-size:14px; color:#999; text-align:right;">
+                                                            <strong>Best regards,</strong><br>
+                                                            <strong>StrongBody.ai Management Team</strong>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -139,16 +229,6 @@
                                             <tbody>
                                                 <tr>
                                                     <td align="center" style="padding: 10px 10px 25px;">
-                                                        <!-- <a href="#"
-                                                                                            style="display: inline-block; margin: 0px;"
-                                                                                            target="_blank"><img
-                                                                                                alt="Twitter"
-                                                                                                height="40"
-                                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NY_px_nwyLC22GRNNOBgEHyrvXlJ8ipfJKHwa0HGsYtE5V5ZfboRph_295j5yYlL2JZ8PnzKXZZvk3-YzfXth4axhOROU6dQjnNiwnk-BUg04XcG2tc8d5qwimtaF1UC7zrz4PbIKtWVyd9yw30TDspeHSoCXTFdtqRbh6r3OcO4w-g3QunBM0ri7Xzww-Nfg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597de16e171ec0de07a5/original.png?1613977981"
-                                                                                                style="width: 40px; height: 40px;"
-                                                                                                width="40"
-                                                                                                class="CToWUd"
-                                                                                                data-bit="iit"></a> -->
                                                         <a href="https://www.facebook.com/strongbody.career/"
                                                             style="display: inline-block; margin: 0px;"
                                                             target="_blank"><img alt="Facebook" height="40"
@@ -161,17 +241,6 @@
                                                                 src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
                                                                 style="width: 40px; height: 40px;" width="40"
                                                                 class="CToWUd" data-bit="iit"></a>
-                                                        <!-- <a 
-                                                                                            href="#"
-                                                                                            style="display: inline-block; margin: 0px;"
-                                                                                            target="_blank"><img
-                                                                                                alt="LinkedIn"
-                                                                                                height="40"
-                                                                                                src="https://ci3.googleusercontent.com/meips/ADKq_NbaRmd3XrVbgrindQPbNUyJj3SBCtEQu_x5SO99WOSFaZkJgl7gvAWzy9Jq1gFfEzc27QtEhNhN5MoNj1781AyFtUiNg2bAqaBSfp_isPziTlYlrwwmD2cRU3cCSDONfv8jTB0XXA8h0efiwdheJLnDAwM7rOl5O0zxfmVDvhGWY9FKtAJZBX6czw5MRqD8UQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597726e78f781dfefd41/original.png?1613977975"
-                                                                                                style="width: 40px; height: 40px;"
-                                                                                                width="40"
-                                                                                                class="CToWUd"
-                                                                                                data-bit="iit"></a>  -->
                                                         <a href="https://www.instagram.com/strongbody_network/"
                                                             style="display: inline-block; margin: 0px;"
                                                             target="_blank"><img alt="Instagram" height="40"
@@ -183,7 +252,7 @@
                                                 <tr>
                                                     <td style="color: rgb(197, 198, 201); font-size: 12px; line-height: 18px; font-family: arial, 'helvetica neue', helvetica, sans-serif;"
                                                         align="center">
-                                                        <a href="#"
+                                                        <a href="https://strongbody.ai/privacy"
                                                             style="color: rgb(18, 111, 67); text-decoration: none; font-weight: bold;"
                                                             target="_blank">Privacy
                                                             Policy</a> |
@@ -209,7 +278,7 @@
                                                             StrongBody.ai<br>
                                                             If you wish to unsubscribe
                                                             from all future
-                                                            emails, please click <a href="#"
+                                                            emails, please click <a href="{{unsubscribe_url}}"
                                                                 style="color: rgb(18, 111, 67); text-decoration: none;"
                                                                 target="_blank">here</a>.<br><br>
                                                             105 CECIL STREET #18-20 THE
@@ -227,25 +296,18 @@
                                                 <tr>
                                                     <td align="center" style="padding: 20px 10px;"> <a href="#"
                                                             style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
-                                                            target="_blank"><img alt="Cửa hàng Apple" height="36"
+                                                            target="_blank"><img alt="App Store" height="36"
                                                                 src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
                                                                 width="120" class="CToWUd" data-bit="iit"></a> <a
                                                             href="#"
                                                             style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
-                                                            target="_blank"><img alt="Cửa hàng Google" height="36"
+                                                            target="_blank"><img alt="Google Play Store" height="36"
                                                                 src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
                                                                 width="120" class="CToWUd" data-bit="iit"></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
-                                        </table><br><br><br>
-                                        <div id="m_-3842618150516941142_eoa_div"
-                                            style="display: none; background-image: url(&quot;https://ci3.googleusercontent.com/meips/ADKq_NaRipglrFGYjvIvcNadg3rrNduUYaY8NYHavSlVTkj3Us-mQpr6gcpI14MxgXf4z3N2F_DaHYWjOnJ7PAreDznd25jeqw0y5GhGwBGkLWKJ6lnmv6AHzu6TyypU7D83viXm2lTh=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af/P&quot;);">
-                                        </div><img alt="" border="0" height="1" id="m_-3842618150516941142_eoa_img"
-                                            src="https://ci3.googleusercontent.com/meips/ADKq_NaINrQN2eQiYHQQycUWMEjIrIMabbsSnYtSgevz8usXCflXVTJBdmQYFcfsMaQ2POmLrUR5ele-MLWugCddY_11Ka8oRj9oLwr3Pc6leApFh79vuDxgbBRgdmTvwvZ3ZAfPkg=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af"
-                                            style="display: block; margin: 0px; padding: 0px; border-width: 0px; height: 1px; width: 1px;"
-                                            title="" width="1" class="CToWUd" data-bit="iit"
-                                            jslog="138226; u014N:xr6bB; 53:WzAsMl0.">
+                                        </table>
                                     </td>
                                 </tr>
                             </tbody>
@@ -254,9 +316,6 @@
                 </tr>
             </tbody>
         </table>
-        <div class="yj6qo"></div>
-        <div class="adL">
-        </div>
     </div>
 </body>
 
