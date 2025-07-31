@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodbye from StrongBody</title>
+    <title>StrongBody - Thank You for Your Purchases</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -31,11 +31,81 @@
             text-decoration: none;
             border-radius: 8px;
             text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background-color 0.3s ease; /* Smooth transition for hover (if supported) */
+        }
+        .button:hover {
+            background-color: #CC0000; /* Darker red on hover */
         }
         .footer-links a {
             color: rgb(18, 111, 67) !important;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        /* --- General Information Box Styles (for consistency, though not used in this specific email for content tables) --- */
+        .important-note, .ticket-info, .otp-box { /* Grouping common box styles for consistency */
+            background-color: #f7f7f7;
+            border-left: 6px solid #e0e0e0;
+            padding: 18px 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: #404145;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            line-height: 1.6;
+        }
+
+        /* Specific override for OTP Box if needed from earlier template */
+        .otp-box {
+            background-color: #ffffff; /* White background */
+            border: 2px dashed #FF0000; /* Dashed red border for clear separation */
+            border-radius: 12px; /* More rounded corners */
+            padding: 20px 25px;
+            font-size: 28px; /* Larger font for OTP */
+            font-weight: bold;
+            letter-spacing: 4px; /* Wider letter spacing */
+            text-align: center;
+            margin: 25px auto;
+            max-width: 280px; /* Slightly wider */
+            color: #FF0000; /* Red OTP text */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+            word-break: break-all; /* Ensures long OTPs don't break layout */
+        }
+
+        /* --- Styles for Order Summary (used in this email) --- */
+        .order-summary {
+            background-color: #ffffff; /* White background */
+            border: 1px solid #e0e0e0; /* Lighter, cleaner border */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Distinct shadow for the whole box */
+        }
+        .order-summary table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px; /* Slightly larger text within table */
+        }
+        .order-summary th, .order-summary td {
+            padding: 12px 0; /* More padding for spacing */
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0; /* Lighter line for rows */
+        }
+        .order-summary th {
+            font-weight: bold;
+            color: #222325; /* Darker header text */
+            padding-bottom: 15px; /* More space below headers */
+        }
+        .order-summary .total {
+            font-weight: bold;
+            font-size: 20px; /* Larger total font */
+            color: #FF0000; /* Highlight total in red */
+            border-bottom: none;
+            padding-top: 20px; /* More space above total */
+        }
+        .order-summary tbody tr:last-child td {
+            border-bottom: none; /* No border for the last row */
         }
     </style>
 </head>
@@ -43,7 +113,7 @@
     <div style="direction: ltr; width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0px; padding: 0px;" bgcolor="#eeeeee">
         <img src="" alt="" width="1" height="1" border="0" style="height: 1px; width: 1px; border-width: 0px; margin: 0px; padding: 0px;" class="CToWUd" data-bit="iit">
         <div style="font-size: 1px; color: rgb(255, 255, 255); line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; display: none;">
-            We're sorry to see you go.
+            Thank you for your recent purchases on StrongBody. We appreciate your continued support!
         </div>
         <div style="font-size: 1px; color: rgb(255, 255, 255); line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; display: none;">
         </div>
@@ -73,37 +143,34 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td align="center" class="m_-3842618150516941142title-padding" style="font-size: 32px; line-height: 40px; color: rgb(34, 35, 37); padding: 20px 40px 16px;">
-                                                                        We're Sorry to See You Go!
+                                                                        Thank You for Your Continued Support!
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="center" style="padding: 20px 40px 0;">
-                                                                        <a href="#" target="_blank">
-                                                                            <img alt="Goodbye from StrongBody" class="m_-3842618150516941142img-max CToWUd" width="496" src="https://ci3.googleusercontent.com/meips/ADKq_Naeh1eFzwUjNdyQoPPqPzBqhR6hHntka3bX2KKh8MIMXHm-13e9i09xnKyaNegEcXNWM2FdHwMXB1B1E-GAGVm_k6y-TGknfnMLSpbV8--HhHiXd2uaSRIsbdCjh57WuC3ta5sVscIRgNZdreqV5knlHM_www_Xlbqup8ZSwxp-XSKG9Gp-8IPoqRwiwKwL=s0-d-e1-ft#https://braze-images.com/appboy/communication/assets/image_assets/images/67e57598610c7900650069bb/original.png?1743091096" style="display: block; width: 100%; " data-bit="iit">
-                                                                        </a>
+                                                                        <img alt="Thank You for Your Support" class="m_-3842618150516941142img-max CToWUd" width="496" src="https://83b23bd4b11f6f17abca174082b1e787.cdn.bubble.io/cdn-cgi/image/w=2048,h=642,f=auto,dpr=0.75,fit=cover/f1720548651931x978044916879157100/Rectangle%20296.png" style="display: block; width: 100%; " data-bit="iit">
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td align="left" class="m_-3842618150516941142padding" style="font-size: 16px; line-height: 26px; color: rgb(64, 65, 69); padding: 30px 40px 0px;">
-                                                                        Hi [User Name],
+                                                                        Dear {{customerName}},
                                                                         <br><br>
-                                                                        We've received your request to unsubscribe from StrongBody.ai. Your account has been successfully canceled.
+                                                                        We want to express our sincere gratitude for your continued support and purchases on the StrongBody platform. Your trust in us drives our commitment to consistently improve and deliver the best services and products for your health and fitness journey.
                                                                         <br><br>
-                                                                        We're sorry to see you leave and hope you had a positive experience with StrongBody.ai. Your feedback is very important to us. If there's any specific reason you decided to cancel, please share it so we can improve our services.
+                                                                        We hope that the products and services you've chosen have been valuable in helping you achieve your wellness goals. StrongBody is dedicated to being your partner every step of the way.
                                                                         <br><br>
-                                                                        You're welcome to rejoin StrongBody.ai anytime if you wish to explore our health experts, products, or courses again.
+                                                                        If you have any questions about your recent orders or require further assistance, please don't hesitate to contact our team at <a href="mailto:strongbody@strongbody.ai" style="color: rgb(18, 111, 67); text-decoration: none;">strongbody@strongbody.ai</a>.
+                                                                        <br><br>
+                                                                        We encourage you to keep exploring the latest articles, courses, and products on StrongBody.ai to stay motivated and continue your progress!
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="center" height="40" valign="top" width="100%"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td align="center" width="580">
+                                                                    <td align="center" width="580" style="padding: 20px 0px;">
                                                                         <table cellpadding="0" cellspacing="0" height="45" width="auto" style="border-collapse: separate;">
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td align="center" bgcolor="#FF0000" height="44" style="border-radius: 8px; padding: 2px 30px;">
-                                                                                        <a href="https://strongbody.ai/re-activate" name="re_activate_cta" class="button" target="_blank">Reactivate My Account</a>
+                                                                                    <td>
+                                                                                        <a href="[Link to customer's order history/account]" name="view_purchase_history_cta" class="button" target="_blank">View Your Purchase History</a>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -111,18 +178,15 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="left" style="padding: 30px 40px 0; font-size: 14px; line-height: 22px; color: rgb(64, 65, 69);">
-                                                                        If you have any questions, don't hesitate to contact us.
+                                                                    <td align="left" class="m_-3842618150516941142padding" style="font-size: 16px; line-height: 26px; color: rgb(64, 65, 69); padding: 30px 40px 0px;">
+                                                                        Best regards,
                                                                         <br>
-                                                                        Sincerely,
-                                                                        <br>
-                                                                        The Strongbody.ai Team
+                                                                        The StrongBody Team
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td bgcolor="#ffffff" align="center" height="40" valign="top" width="100%"></td>
                                                                 </tr>
-                                                              
                                                             </tbody>
                                                         </table>
                                                     </td>
@@ -159,7 +223,7 @@
                                                                                 <tr>
                                                                                     <td style="color: rgb(197, 198, 201); font-size: 12px; line-height: 18px;" align="center" class="footer-links">
                                                                                         <a href="#" target="_blank">Privacy Policy</a> |
-                                                                                        <a href="https://strongbody.ai/contact" target="_blank">Support</a> |
+                                                                                        <a href="mailto:strongbody@strongbody.ai" target="_blank">Support</a> |
                                                                                         <a href="https://strongbody.ai/manage-ref" target="_blank">Invite Friends</a> |
                                                                                         <a href="https://strongbody.ai/ourblog" target="_blank">Get Inspired</a><br><br>
                                                                                         <span style="color: rgb(122, 125, 133);">
