@@ -5,268 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StrongBody.ai</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS tổng thể để áp dụng font cho toàn bộ trang */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #eeeeee;
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        /* Styles cho phần nội dung chính */
-        .main-content-wrapper {
-            max-width: 600px;
-            background-color: #ffffff;
-            margin: 0 auto;
-            padding: 0px 15px; /* Để giữ padding bên ngoài của bảng bao quanh */
-        }
-
-        .header-logo-container {
-            padding-top: 30px;
-            padding-left: 55px;
-            padding-bottom: 0px;
-            text-align: left;
-        }
-
-        .header-logo {
-            width: 100%;
-            max-width: 80px;
-            border-style: none;
-        }
-
-        .title-section {
-            padding: 20px 40px 0px;
-            font-size: 24px;
-            color: #0e0e0f;
-            font-weight: 700;
-            line-height: 28px;
-            vertical-align: top;
-            text-align: center;
-        }
-
-        .body-text-section {
-            padding: 40px 40px 0px;
-            font-size: 16px;
-            line-height: 22px;
-            color: #555555;
-            text-align: left;
-        }
-
-        .info-block p {
-            font-weight: 500;
-            margin-bottom: 10px; /* Thêm khoảng cách giữa các dòng thông tin */
-        }
-
-        .info-label {
-            color: #95979d;
-            font-size: 14px;
-        }
-
-        .info-value {
-            color: #222325;
-        }
-
-        .security-recommendation {
-            font-size: 14px;
-            line-height: 22px;
-            margin-top: 20px; /* Khoảng cách trên bảng khuyến nghị bảo mật */
-        }
-
-        .security-link {
-            color: #ff0000;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .two-factor-auth-box {
-            font-size: 14px;
-            line-height: 22px;
-            color: #62646a;
-            font-weight: 500;
-            border: 1px solid #e4e5e7;
-            border-radius: 3px;
-            background-color: #f5f5f5;
-            padding: 24px; /* Padding bên trong hộp */
-            margin-top: 20px; /* Khoảng cách trên hộp */
-        }
-
-        .footer-social-links {
-            padding: 10px 10px 25px;
-            text-align: center;
-        }
-
-        .social-icon {
-            display: inline-block;
-            margin: 0px;
-        }
-
-        .social-icon img {
-            width: 40px;
-            height: 40px;
-            border-style: none; /* Đảm bảo không có viền */
-        }
-
-        .footer-links-text {
-            color: #818181;
-            font-size: 12px;
-            padding-top: 5px;
-            line-height: 1.5;
-            font-family: 'Plus Jakarta Sans', sans-serif; /* Đảm bảo font ở chân trang */
-            text-align: center;
-        }
-
-        .footer-link {
-            color: #126f43;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .unsubscribe-text {
-            color: #7a7d85;
-        }
-
-        .app-store-links {
-            padding: 20px 10px;
-            text-align: center;
-        }
-
-        .app-store-link {
-            display: inline-block;
-            width: 120px;
-            height: 36px;
-            margin: 4px;
-        }
-
-        .app-store-link img {
-            width: 120px;
-            height: 36px;
-            border-style: none;
-        }
-
-        /* Các điều chỉnh cho khả năng đáp ứng trên thiết bị di động */
-        @media only screen and (max-width: 600px) {
-            .main-content-wrapper {
-                padding: 0; /* Xóa padding bên ngoài để nội dung sát hơn viền trên di động */
-            }
-            .header-logo-container {
-                padding-left: 20px; /* Giảm padding trái trên di động */
-            }
-            .title-section,
-            .body-text-section,
-            .two-factor-auth-box {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-    </style>
 </head>
-<body>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<body style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; background-color: #eeeeee;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
         <tbody>
             <tr>
                 <td width="100%" align="center" valign="top" bgcolor="#eeeeee" height="20"></td>
             </tr>
             <tr>
-                <td bgcolor="#eeeeee" align="center" style="padding:0px 15px">
-                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"
-                        style="max-width:600px" class="main-content-wrapper">
+                <td bgcolor="#eeeeee" align="center" style="padding: 0px 15px;">
+                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-collapse: collapse;">
                         <tbody>
                             <tr>
-                                <td align="left" class="header-logo-container">
-                                    <a href="https://links.announce.fiverr.com/uni/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BA7x8zAlKJDdEmizJpkYOrtgEsqhAseJsKujU3gSld80bHrdcWP7-2F0GSKgPDXeaoy-2FmSNITk-2BedOon3o-2FbHPlSjo7FbIpEOV3QndiPRpRtqDAVuAEqpWxwmF-2BlE1UMRpeMpHpEAPmB1tnLVx6ad3Bxyk55n-2FuxOITBY3HV5aRWrup8sW_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938xNDUDhCUUJn0I-2FP6a0nLBZbZGuaUK88aEtCmQKzmER1vynid6a8T33IeOVQ5YPBXS96UjGsr4B-2Fz2LR5tk-2FyGNfq-2BxXed-2FOoTrzLysM3BVOSuamg3qhDhaCzIBBmw1eIwIX0xAfUPc1-2F7tLg7JjZ6E-3D"
-                                            target="_blank">
-                                            <img alt="Fiverr."
-                                                src="https://admin.StrongBody.ai/static/media/logo-strong-body.c19c8d8ff1aee7ff35b7.png"
-                                                width="80" class="header-logo">
-                                        </a>
+                                <td align="left" style="padding-top: 30px; padding-left: 55px; padding-bottom: 0px; text-align: left;">
+                                    <a href="https://strongbody.ai/" target="_blank">
+                                        <img alt="StrongBody.ai" src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" width="80" style="width: 100%; max-width: 80px; border-style: none;">
+                                    </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
                                         <tbody>
                                             <tr>
                                                 <td align="center">
-                                                    <a href="https://www.fiverr.com/?utm_medium=email&utm_source=system_email&utm_content=fiverr_logo&email_id=8a7655ab43904038e0f8d1a073c812d7&email_name=buyer_custom_order_offer"
-                                                        target="_blank"
-                                                        data-saferedirecturl="https://www.google.com/url?q=https://www.fiverr.com/?utm_medium%3Demail%26utm_source%3Dsystem_email%26utm_content%3Dfiverr_logo%26email_id%3D8a7655ab43904038e0f8d1a073c812d7%26email_name%3Dbuyer_custom_order_offer&source=gmail&ust=1753414250478000&usg=AOvVaw2FsHp52-vhDLzmd7ps4D0Z">
-                                                        <img width="70" border="0" style="vertical-align:middle; display:none;">
+                                                    <a href="#" target="_blank">
+                                                        <img width="70" border="0" style="vertical-align: middle; display: none;">
                                                     </a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center" class="title-section">
+                                                <td align="center" style="padding: 20px 40px 0px; font-size: 24px; color: #0e0e0f; font-weight: 700; line-height: 28px; vertical-align: top; text-align: center;">
                                                     <strong>Are You Trying To Log In From a New Device?</strong>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="body-text-section">
-                                                    <span>
-                                                        <p>Hi [username],</p>
-                                                        <p>We noticed a new login attempt to your StrongBody account from a new device, and wanted to make sure it’s really you:</p>
-                                                        <p class="info-block">
-                                                            <span class="info-label">Device</span>
+                                                <td style="padding: 40px 40px 0px; font-size: 16px; line-height: 22px; color: #555555; text-align: left;">
+                                                    <span style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                                                        <p style="margin: 0;">Hi [username],</p>
+                                                        <p style="margin: 20px 0;">We noticed a new login attempt to your StrongBody account from a new device, and wanted to make sure it’s really you:</p>
+                                                        <p style="font-weight: 500; margin-bottom: 10px;">
+                                                            <span style="color: #95979d; font-size: 14px;">Device</span>
                                                             <br>
-                                                            <span class="info-value">[mobile]</span>
+                                                            <span style="color: #222325;">[mobile]</span>
                                                         </p>
-                                                        <p class="info-block">
-                                                            <span class="info-label">Approximate Location</span>
+                                                        <p style="font-weight: 500; margin-bottom: 10px;">
+                                                            <span style="color: #95979d; font-size: 14px;">Approximate Location</span>
                                                             <br>
-                                                            <span class="info-value">[address]</span>
+                                                            <span style="color: #222325;">[address]</span>
                                                         </p>
-                                                        <p class="info-block">
-                                                            <span class="info-label">Time</span>
+                                                        <p style="font-weight: 500; margin-bottom: 10px;">
+                                                            <span style="color: #95979d; font-size: 14px;">Time</span>
                                                             <br>
-                                                            <span class="info-value">[at_time]</span>
+                                                            <span style="color: #222325;">[at_time]</span>
                                                         </p>
-
-                                                        <p class="security-recommendation">If you didn’t try to log in recently, we recommend you <a href="http://www.fiverr.com/linker?email_name=mfa_login_notification&url=http%3A%2F%2Fwww.fiverr.com%2Fusers%2Fstrongbodygloba%2Fedit%2Fsecurity%3Futm_medium%3Demail%26utm_source%3Dsystem_email%26utm_campaign%3Dmfa_login_notification&email_id=be14988f46d7d8ff8184ff3605d69d4d"
-                                                            class="security-link" target="_blank"
-                                                            data-saferedirecturl="">change your password</a> ASAP to protect your account. By changing your password, all devices logged into your account will be logged out.
-                                                        </p>
+                                                        <p style="font-size: 14px; line-height: 22px; margin-top: 20px;">If you didn’t try to log in recently, we recommend you <a href="#" style="color: #ff0000; text-decoration: none; font-weight: 500;" target="_blank">change your password</a> ASAP to protect your account. By changing your password, all devices logged into your account will be logged out.</p>
 
                                                         <table border="0">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td style="background:none;height:20px"> </td>
+                                                                    <td style="background: none; height: 20px;"> </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
 
-                                                        <table border="0" cellpadding="0" cellspacing="0" class="two-factor-auth-box">
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 14px; line-height: 22px; color: #62646a; font-weight: 500; border: 1px solid #e4e5e7; border-radius: 3px; background-color: #f5f5f5; padding: 24px; margin-top: 20px; border-collapse: collapse;">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td colspan="3" height="24"> </td>
+                                                                    <td colspan="3" height="24" style="height: 24px;"> </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td width="24"> </td>
+                                                                    <td width="24" style="width: 24px;"> </td>
                                                                     <td align="left">
-                                                                        <p>To keep your account secure, we strongly recommend you enable two-factor authentication. You can do so in your account settings under the <a href="http://www.fiverr.com/users/strongbodygloba/edit/security?email_id=be14988f46d7d8ff8184ff3605d69d4d&email_name=mfa_login_notification"
-                                                                            class="security-link" target="_blank"
-                                                                            data-saferedirecturl="https://www.google.com/url?q=http://www.fiverr.com/users/strongbodygloba/edit/security?email_id%3Dbe14988f46d7d8ff8184ff3605d69d4d%26email_name%3Dmfa_login_notification&source=gmail&ust=1753414938985000&usg=AOvVaw1F9qXJ6WCmS7bHu5B5fVWM">Security section</a>
-                                                                        </p>
+                                                                        <p style="margin: 0;">To keep your account secure, we strongly recommend you enable two-factor authentication. You can do so in your account settings under the <a href="#" style="color: #ff0000; text-decoration: none; font-weight: 500;" target="_blank">Security section</a></p>
                                                                     </td>
-                                                                    <td width="24"> </td>
+                                                                    <td width="24" style="width: 24px;"> </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="3" height="24"> </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <table border="0">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td style="background:none;height:20px"> </td>
+                                                                    <td colspan="3" height="24" style="height: 24px;"> </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
 
-                                                        <p>Thanks,<br><span style="font-weight:500;color:#222325">The StrongBody Team</span></p>
+                                                        <table border="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="background: none; height: 20px;"> </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <p style="margin: 0;">Thanks,<br><span style="font-weight: 500; color: #222325;">The StrongBody Team</span></p>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -283,92 +112,41 @@
             </tr>
             <tr>
                 <td align="center" bgcolor="#eeeeee" style="padding: 20px 0px;">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0"
-                        class="m_-3842618150516941142responsive-table"
-                        style="max-width: 600px; border-collapse: separate;" width="100%">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; border-collapse: separate;" width="100%">
                         <tbody>
                             <tr>
-                                <td align="center" class="footer-links-text">
+                                <td align="center" style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
                                     <table style="width: 100%; text-align: center; border-collapse: separate;">
                                         <tbody>
                                             <tr>
-                                                <td align="center" class="footer-social-links">
-                                                    <a href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BKF33-2BRvMn8su-2BZg0q267H7d7NLwkxIhQC8giZTj5x8rC9gHfCRWW08vf04vdC-2FD-2Bu-2FDxWpvD8vuwmktEaboxLLw5r-2B1kuutWmrO5ceCYmkbIID0_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd9384zzOzT3w8HJIMl19Ecc9l6JInbqKSEmzRIQCisqBlmQlBOGxtp72UlxO4hd9zGpPCaJ3x7ZJA9mjujYuudBnU0jF3027bjUf1Y92MR-2BI0Wfpwxi6cIslZ8p1BR1klAQuM2F8htEzOLyP5BpewbpspM-3D"
-                                                        class="social-icon" target="_blank"><img
-                                                            alt="Twitter" height="40"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NY_px_nwyLC22GRNNOBgEHyrvXlJ8ipfJKHwa0HGsYtE5V5ZfboRph_295j5yYlL2JZ8PnzKXZZvk3-YzfXth4axhOROU6dQjnNiwnk-BUg04XcG2tc8d5qwimtaF1UC7zrz4PbIKtWVyd9yw30TDspeHSoCXTFdtqRbh6r3OcO4w-g3QunBM0ri7Xzww-Nfg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597de16e171ec0de07a5/original.png?1613977981"
-                                                            width="40" class="CToWUd" data-bit="iit"></a> <a
-                                                    href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BKF3is0nMk7-2FZlXloDK-2FgbGlBT7jmhX8pvjrjO91cs9-2FzOapnwfFfaywx61PGQXsdL-2B23pDu8fgeEH16tZjesYjtm-2FZ69TQFVBMzZ-2BTTy-2BRvBMxD_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd9386gVJHtsNSvXdFtAyv2lXlXK-2BXBF91cJ9cZ8uBgCLxFnNjgmpGLK13MLB8RygEH70CWdHaBHxQQUDMW6b8s-2FMQ2cJqakazm7CdNjmFqiLl-2BOAMTEhOYPm-2F86hsEpEhOfZhbQtsr59L07Ri86tRVqmIA-3D"
-                                                        class="social-icon" target="_blank"><img
-                                                            alt="Facebook" height="40"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
-                                                            width="40" class="CToWUd" data-bit="iit"></a> <a
-                                                    href="https://links.announce.fiverr.com/ls/click?upn=u001.u0gdiNyXqP6Z13TaUet-2B4GirwvAaxG9jwCeIBXhORCuLMni-2BlTC5FATfKhaGgfzpLseeK73ib4-2FYfM8QgGE8F8DdhPfCB3T2qKqP7w423KpnIZhfIE67aeILKUWmZgCSG7VR_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938ypWOqBTBzx7YDd-2BDZntwSOthyVDXrD-2BKe4ypVFTbG8706yLvYizqWQEgBE0Blzle9mkf-2FTfHzWAzZMdJoXjuBGRRJSoGa-2F-2BUrEwIdaiPrA5HsIVe44qPn-2BML3EnF3b84nG6IgpFxpkw9D86MzPcSaQ-3D"
-                                                        class="social-icon" target="_blank"><img
-                                                            alt="Pinterest" height="40"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
-                                                            width="40" class="CToWUd" data-bit="iit"></a> <a
-                                                    href="https://links.announce.fiverr.com/ls/click?upn=u001.G8InBdZMyMLFosDO2eMXV62LFMBv0skBaZg4mgswt8FNk-2FgVRuEM6onS4QjMukZr2zNJ7hl-2FkG79AsA94P7AUlFXHohWoKZ0BjA1FavMF-2BSSLfp-2BBilgg3NuagQIjkn7-2FoBAcyZVQmkQMJKoKujW8A-3D-3DNGe3_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd93818R3FU4VyygH-2BEYv5jDv2y02ZMi0KBB-2BS-2BlixqaD1pPzPfIDPtXmIw35TchsfvUut9E-2B8QjD5KHhvt7LRIxhNuSW3IRvNiiOQZDwmN21kT47JHHqAu30DFHxMJ07QIT26rfc-2FyzUabVMl2Y9dnoKKQ-3D"
-                                                        class="social-icon" target="_blank"><img
-                                                            alt="LinkedIn" height="40"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NbaRmd3XrVbgrindQPbNUyJj3SBCtEQu_x5SO99WOSFaZkJgl7gvAWzy9Jq1gFfEzc27QtEhNhN5MoNj1781AyFtUiNg2bAqaBSfp_isPziTlYlrwwmD2cRU3cCSDONfv8jTB0XXA8h0efiwdheJLnDAwM7rOl5O0zxfmVDvhGWY9FKtAJZBX6czw5MRqD8UQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597726e78f781dfefd41/original.png?1613977975"
-                                                            width="40" class="CToWUd" data-bit="iit"></a> <a
-                                                    href="https://links.announce.fiverr.com/ls/click?upn=u001.cVIN5xF103TlrXLUItdQgK94a3FrSetyo1Trw6RZOJTwrFovER-2B9jtaTJz2lWmkPK2KFsF83WtRJ-2F973OiaGdthxuOoucZCvYqb9pPRSqyuZ32-2FPMeH224L3G8uUBkG0jx5r_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938wBpbHqVoB37EIK2dqvCKpS4tpMmH2414pUJ3GvP78L-2FlNbrscI8PwLM9pgz8BXhtZhcAjxLxjawBh5Dzjnbdti9TA61KyEfy3aBOB3TVDUSlbHWnRiIz71oEMbOwBlZSy2fp67JiKsi9ibu-2B36hzuE-3D"
-                                                        class="social-icon" target="_blank"><img
-                                                            alt="Instagram" height="40"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
-                                                            width="40" class="CToWUd" data-bit="iit"></a>
+                                                <td align="center" style="padding: 10px 10px 25px; text-align: center;">
+                                                    <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img alt="Facebook" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966" width="40" style="width: 40px; height: 40px; border-style: none;"></a> 
+                                                    <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img alt="Pinterest" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971" width="40" style="width: 40px; height: 40px; border-style: none;"></a> 
+                                                    <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img alt="Instagram" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937" width="40" style="width: 40px; height: 40px; border-style: none;"></a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="footer-links-text"
-                                                    align="center">
-                                                    <a href="#"
-                                                        class="footer-link"
-                                                        target="_blank">Privacy Policy</a> |
-                                                    <a href="#"
-                                                        class="footer-link"
-                                                        target="_blank">Support</a> |
-                                                    <a href="#"
-                                                        class="footer-link"
-                                                        target="_blank">Invite Friends</a> |
-                                                    <a href="#"
-                                                        class="footer-link"
-                                                        target="_blank">Get Inspired</a><br><br>
-                                                    <span class="unsubscribe-text">
-                                                        This email was sent to you by StrongBody SG
-                                                        PTE, LTD.<br>
-                                                        You are receiving this email because you
-                                                        signed up for StrongBody.ai<br>
-                                                        If you wish to unsubscribe from all future
-                                                        emails, please click <a href="#"
-                                                            style="color: rgb(18, 111, 67); text-decoration: none;"
-                                                            target="_blank">here</a>.<br><br>
-                                                        105 CECIL STREET #18-20 THE OCTAGON
-                                                        Singapore, 069534 Singapore
+                                                <td align="center" style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
+                                                    <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;" target="_blank">Privacy Policy</a> |
+                                                    <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;" target="_blank">Support</a> |
+                                                    <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;" target="_blank">Invite Friends</a> |
+                                                    <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;" target="_blank">Get Inspired</a><br><br>
+                                                    <span style="color: #7a7d85;">
+                                                        This email was sent to you by StrongBody SG PTE, LTD.<br>
+                                                        You are receiving this email because you signed up for StrongBody.ai<br>
+                                                        If you wish to unsubscribe from all future emails, please click <a href="#" style="color: #ff0000; text-decoration: none;" target="_blank">here</a>.<br><br>
+                                                        105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore
                                                     </span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center" class="app-store-links"> <a
-                                                        href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BGFnA51R0-2FgHS7HTpvECFellnzC7yvXcyJWVHLFwwWV0-2FNxowR0FdqJ7b4gTfd9FcIxm9CQYuhYrFwuovjQ42JVpTHD93vWh4HN7GWA5MknrXifFkCRUJODFOXhGC5yn6w-3D-3DA7TI_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938-2BnLuHnfwBhgZlsvsDloK4-2Bf2sZ3TMgIjZUgVHEo-2FC7Ag7DMvvrr4zDryGYmjjku7rpQYQGYQ1uY4a0Ce-2FxW8095p95laTf-2B9kgp-2BmigXYfx5v4b0d-2Fq3SaqRQb6363EufTSTZVVK7ZEU9S0n5fJgok-3D"
-                                                        class="app-store-link" target="_blank"><img alt="Cửa hàng Apple" height="36"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
-                                                            width="120" class="CToWUd" data-bit="iit"></a> <a
-                                                    href="https://links.announce.fiverr.com/ls/click?upn=u001.TWJuC2VN4aam7dFLwSK6BIQOUy-2FOVR6aWqdX89KJtdL-2Fz9kRKDoZMQXGd4DPGYggSW0Ny-2FYkteywyg5DmVodXlY4yhH0LYbBws-2BcKhp0it1JWEHz3tfPDAui0GyQ6YIsL23MAMWIK7j2vRqGDPROK26JbjiW1WRtaNSL2FvzB4E-3DBAax_RSmKyjzZ5MO3VPzOSuyw5yA5PXgmlacSDuj6cFiYjGX-2BoI7dtyWb3a9QDaqxo-2FpTiPQ1uUX6Yabe7r7OgtyuPPgWpCq-2BGDHHwGnyIQq9d-2FlgsZjdCZvVhYbNaq6g857bP0Qy42EqczpvBLB-2BqV3ocFwnFki4hAwK6Z13jA3GcQnu5O0Oc7pJzIYgiVeKx5NzaBxmDvz4VpzP8-2FhJNjOU1Ezcavsocm2UPGzUr0WqHkv3b87-2BMRpmP9-2FkBkwZ0DdrMovPFAaSn6Pmrcy6s91dA4JK4V2ZRyfJYvTWoZPe6G3Dh69Il3a4bpXXzNiOriNaJYGpQTua-2Fi3AgD7yOb-2B-2F3RFzPa-2FnG1PyL0xMtKOCcEzpSQMGloCM4-2FoHOIU2x6JamtJquEO4ohPozYFaAW78SUjwv30F-2FR-2FVkbTcidZjsx9-2BF0cbeOCe5bJtd2gBxyHDz19QrddP7C1r5eOkabI4R-2BeCGO-2FnVFwycjvQyo-2FNOf0f6Llew5dInXmoNHC8PuPaaWfAZIahXxs5sqLEQlgJtThaAJZDgxk-2BoohPQBACCXe-2BnHGmj9YX0-2F4rkHlgJ5h4bboucWP2dHpvCdyJNd938y-2FkBsfeLLwxq5eVDQVdHFMeHYKrSK1Ci6KD0rQbdy7HsBKPKOFXhwzTlIFC0eMSQSyHtn8mapyaEBMSt1qAsuFunPg5udwOG2TaWEy8VL2i06z-2FMIUvGzlfttmq0CDemziD9MFDsAPHRtuGxd5GdmE-3D"
-                                                        class="app-store-link" target="_blank"><img alt="Cửa hàng Google" height="36"
-                                                            src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
-                                                            width="120" class="CToWUd" data-bit="iit"></a> </td>
+                                                <td align="center" style="padding: 20px 10px; text-align: center;">
+                                                    <a href="#" style="display: inline-block; width: 120px; height: 36px; margin: 4px;" target="_blank"><img alt="Apple Store" height="36" src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298" width="120" style="width: 120px; height: 36px; border-style: none;"></a>
+                                                    <a href="#" style="display: inline-block; width: 120px; height: 36px; margin: 4px;" target="_blank"><img alt="Google Play" height="36" src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311" width="120" style="width: 120px; height: 36px; border-style: none;"></a>
+                                                </td>
                                             </tr>
                                         </tbody>
-                                    </table><br><br><br>
-                                    <div id="m_-3842618150516941142_eoa_div"
-                                        style="display: none; background-image: url(&quot;https://ci3.googleusercontent.com/meips/ADKq_NaRipglrFGYjvIvcNadg3rrNduUYaY8NYHavSlVTkj3Us-mQpr6gcpI14MxgXf4z3N2F_DaHYWjOnJ7PAreDznd25jeqw0y5GhGwBGkLWKJ6lnmv6AHzu6TyypU7D83viXm2lTh=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af/P&quot;);">
-                                    </div><img alt="" border="0" height="1" id="m_-3842618150516941142_eoa_img"
-                                        src="https://ci3.googleusercontent.com/meips/ADKq_NaINrQN2eQiYHQQycUWMEjIrIMabbsSnYtSgevz8usXCflXVTJBdmQYFcfsMaQ2POmLrUR5ele-MLWugCddY_11Ka8oRj9oLwr3Pc6leApFh79vuDxgbBRgdmTvwvZ3ZAfPkg=s0-d-e1-ft#https://VpBM5I1Och.eoapxl.com/VpBM5I1Och/22ee4607-75c1-4b90-8c45-e165f88ec8af"
-                                        style="display: block; margin: 0px; padding: 0px; border-width: 0px; height: 1px; width: 1px;"
-                                        title="" width="1" class="CToWUd" data-bit="iit"
-                                        jslog="138226; u014N:xr6bB; 53:WzAsMl0.">
+                                    </table>
                                 </td>
                             </tr>
                         </tbody>
@@ -377,8 +155,5 @@
             </tr>
         </tbody>
     </table>
-    <div class="yj6qo"></div>
-    <div class="adL">
-    </div>
 </body>
 </html>

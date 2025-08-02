@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Thank You for Your StrongBody Purchase!</title>
+  <title>Thank You for Your StrongBody Service Purchase!</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,7 @@
 </head>
 
 <body style="margin:0;padding:0;font-family:'Plus Jakarta Sans', sans-serif;background-color:#eeeeee;">
-  <div style="display:none;max-height:0px;opacity:0;overflow:hidden;">Your StrongBody purchase is confirmed! Here are
+  <div style="display:none;max-height:0px;opacity:0;overflow:hidden;">Your StrongBody service purchase is confirmed! Here are
     your order details.</div>
 
   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#eeeeee;">
@@ -48,57 +48,54 @@
           <tr>
             <td align="center"
               style="font-size:32px;line-height:40px;color:#222325;padding:20px 40px 16px;font-weight:bold;">
-              Thank You for Your StrongBody Purchase!
+              Thank You for Your StrongBody Service Purchase!
             </td>
           </tr>
           <tr>
             <td align="center" style="padding:20px 40px 0;">
               <img
                 src="https://braze-images.com/appboy/communication/assets/image_assets/images/67e57598610c7900650069bb/original.png?1743091096"
-                alt="Order Confirmed" width="100%" style="display:block;max-width:496px;">
+                alt="Service Purchased" width="100%" style="display:block;max-width:496px;">
             </td>
           </tr>
           <tr>
             <td align="left" style="padding:30px 40px 0;font-size:16px;line-height:26px;color:#404145;">
               Dear {{customerName}},<br><br>
-              Thank you for your recent purchase from StrongBody! We're thrilled to have you as part of our
-              community.<br><br>
-              Your order <strong>#{{orderID}}</strong> has been successfully placed on <strong>{{orderDate}}</strong>.
-              Here's a summary:
+              Thank you for purchasing our service! We're excited to help you on your wellness journey.<br><br>
+              Your service order <strong>#{{order_no}}</strong> has been successfully confirmed on <strong>{{orderDate}}</strong>.
+              Here's a summary of your purchase:
 
               <table width="100%"
                 style="margin-top:20px;background-color:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:15px 20px;">
                 <thead>
                   <tr style="font-weight:bold;color:#404145;">
-                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Item</th>
-                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Quantity</th>
-                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Price</th>
+                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Service Type</th>
+                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Service Name</th>
+                    <th align="right" style="padding:8px 0;border-bottom:1px solid #eee;">Price</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {{#each products}}
                   <tr>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{this.productName}}</td>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{this.quantity}}</td>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{this.price}}</td>
+                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{service.title}}</td>
+                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{title}}</td>
+                    <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;">{{price}}</td>
                   </tr>
-                  {{/each}}
                   <tr>
                     <td colspan="2" align="right"
-                      style="padding:8px 0;font-weight:bold;font-size:18px;border-top:1px solid #eee;">Total:</td>
-                    <td style="padding:8px 0;font-weight:bold;font-size:18px;color:#ff0000;">{{totalAmount}}</td>
+                      style="padding:8px 0;font-weight:bold;font-size:18px;border-top:1px solid #eee;">Total Amount:</td>
+                    <td align="right" style="padding:8px 0;font-weight:bold;font-size:18px;color:#ff0000;">{{price}}</td>
                   </tr>
                 </tbody>
               </table>
 
-              <br>You can view your order details and track its status by logging into your account:
+              <br>You can view your service purchase details and manage your appointment by logging into your account:
             </td>
           </tr>
           <tr>
             <td align="center" style="padding:20px;">
-              <a href="[Link to customer's order history/account]" target="_blank"
+              <a href="[Link to customer's service purchases/account]" target="_blank"
                 style="display:inline-block;padding:12px 25px;background-color:#ff0000;color:#ffffff;text-decoration:none;font-size:16px;font-weight:bold;border-radius:8px;">
-                View Your Order
+                View Your Purchase
               </a>
             </td>
           </tr>
@@ -110,14 +107,14 @@
                                         padding: 30px 40px 0px;
                                       ">
               If you have any questions about your
-              order, please don't hesitate to reach out
+              service purchase, please don't hesitate to reach out
               to our support team at
               <a href="mailto:customercare@strongbody.ai" style="
                                           color: rgb(18, 111, 67);
                                           text-decoration: none;
                                         ">customercare@strongbody.ai</a>. <br><br>
               We're here to help you achieve your strong
-              body goals!
+              body goals through our professional services!
               <br><br>
               Warmly,
               <br>
