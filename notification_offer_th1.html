@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrongBody - Account Created</title>
+    <title>StrongBody - Your Request Has Been Received</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
-
 <body style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
 
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #eeeeee;">
@@ -19,167 +16,102 @@
         </tr>
         <tr>
             <td align="center" style="padding: 0 15px;">
-
-                <table width="100%" cellpadding="0" cellspacing="0" border="0"
-                    style="max-width: 600px; background-color: #ffffff;">
-
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; background-color: #ffffff;">
                     <tr>
                         <td style="padding: 30px 55px 0;">
-                            <a href="#" target="_blank">
-                                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
-                                    alt="StrongBody" width="80" style="max-width: 80px; border: 0;">
+                            <a href="https://strongbody.ai/" target="_blank">
+                                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" 
+                                    alt="StrongBody" 
+                                    width="80" 
+                                    style="max-width: 80px; border: 0;">
                             </a>
                         </td>
                     </tr>
-
+                    
                     <tr>
-                        <td
-                            style="text-align: left; padding: 35px 40px 20px; font-size: 16px; color: #0e0e0f; line-height: 24px;">
+                        <td style="text-align: left; padding: 35px 40px 20px; font-size: 16px; color: #0e0e0f; line-height: 24px;">
                             <div style="margin-bottom: 20px;">
-                                Hello <strong>{{full_name}}</strong>,
+                                Hello <strong>{{.firstName}} {{.lastName}}</strong>,
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                Thank you for trusting and submitting your request to <strong>StrongBody – A platform connecting you with global experts</strong>. We have received your request and will soon find the most suitable expert to assist you.
                             </div>
 
-                            <div style="margin-bottom: 20px;">
-                                Thank you for trusting and sending your consultation request to <strong>StrongBody –
-                                    Platform connecting healthcare professionals and patients.</strong> We have received
-                                your request and are looking for the most suitable doctor to assist you as soon as
-                                possible.
+                            <div style="background-color: #f0f8ff; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 4px solid #ff0000;">
+                                <div style="font-size: 16px; color: #0e0e0f; line-height: 24px; margin-bottom: 15px;">
+                                    <strong>An account has been automatically created for you</strong> with the email: <strong>{{.email}}</strong>
+                                </div>
+                                <div style="font-size: 14px; color: #666; line-height: 22px;">
+                                    To get started, please set your account password by clicking the button below.
+                                </div>
                             </div>
                         </td>
                     </tr>
-
+                    
                     <tr>
                         <td style="padding: 0 40px 40px;">
-
-                            <div
-                                style="background-color: #f0f8ff; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 4px solid #ff0000;">
-                                <div style="font-size: 16px; color: #0e0e0f; line-height: 24px; margin-bottom: 15px;">
-                                    <strong>Your account has been automatically created</strong> with email address:
-                                    <strong>{{email}}</strong>
-                                </div>
-                                <div style="font-size: 14px; color: #666; line-height: 22px;">
-                                    You can log in to track your consultation progress, update your health profile, and
-                                    chat with doctors.
-                                </div>
-                            </div>
-
-                            <div
-                                style="background-color: #f8f9fa; border-radius: 12px; padding: 25px; margin-bottom: 25px;">
-                                <div style="font-size: 16px; color: #0e0e0f; font-weight: 600; margin-bottom: 15px;">
-                                    Login at:
-                                    <a href="https://strongbody.ai/" target="_blank"
-                                        style="color: #ff0000; text-decoration: none;">
-                                        https://strongbody.ai/
-                                    </a>
-                                </div>
-                                <div style="font-size: 14px; color: #666; line-height: 22px;">
-                                    <strong>Temporary password</strong> will be sent in the next email (or you can click
-                                    "Forgot Password" to create a new password).
-                                </div>
-                            </div>
-
                             <div style="text-align: center; margin-bottom: 30px;">
-                                <a href="https://strongbody.ai/" target="_blank"
+                                <a href="{{.ResetLink}}" 
+                                    target="_blank" 
                                     style="display: inline-block; background-color: #ff0000; color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 25px; font-size: 16px; font-weight: 600;">
-                                    Login Now
+                                    Set Your Password
                                 </a>
                             </div>
 
-                            <div
-                                style="background-color: #fff3f3; border-radius: 8px; padding: 20px; font-size: 14px; color: #666; line-height: 22px;">
+                            <div style="background-color: #fff3f3; border-radius: 8px; padding: 20px; font-size: 14px; color: #666; line-height: 22px;">
                                 <div style="margin-bottom: 15px;">
-                                    <strong style="color: #ff0000;">Next Steps:</strong>
+                                    <strong style="color: #ff0000;">Next steps:</strong>
                                 </div>
-                                <div style="margin-bottom: 8px;">We will analyze your medical records and find the most
-                                    suitable doctor for you</div>
-                                <div style="margin-bottom: 8px;">You will receive email notifications when a doctor is
-                                    recommended</div>
-                                <div style="margin-bottom: 8px;">Log in to your account to track progress and book
-                                    appointments</div>
-                                <div>Contact us if you need additional support</div>
+                                <div style="margin-bottom: 8px;">1. Set your password to complete the account creation.</div>
+                                <div style="margin-bottom: 8px;">2. We will analyze your request and find the most suitable expert.</div>
+                                <div style="margin-bottom: 8px;">3. You will receive an email notification once an expert is recommended.</div>
+                                <div>4. Log in to your account to track your request's progress.</div>
                             </div>
-
                         </td>
                     </tr>
 
                     <tr>
                         <td height="45"></td>
                     </tr>
-
                 </table>
-
             </td>
         </tr>
 
         <tr>
             <td align="center" bgcolor="#eeeeee" style="padding: 20px 0px;">
-                <table align="center" border="0" cellpadding="0" cellspacing="0"
-                    style="max-width: 600px; border-collapse: separate;" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; border-collapse: separate;" width="100%">
                     <tbody>
                         <tr>
-                            <td align="center"
-                                style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
+                            <td align="center" style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
                                 <table style="width: 100%; text-align: center; border-collapse: separate;">
                                     <tbody>
                                         <tr>
                                             <td align="center" style="padding: 10px 10px 25px; text-align: center;">
-                                                <a href="#" style="display: inline-block; margin: 0px;"
-                                                    target="_blank"><img alt="Facebook" height="40"
-                                                        src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
-                                                        width="40"
-                                                        style="width: 40px; height: 40px; border-style: none;"></a>
-                                                <a href="#" style="display: inline-block; margin: 0px;"
-                                                    target="_blank"><img alt="Pinterest" height="40"
-                                                        src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
-                                                        width="40"
-                                                        style="width: 40px; height: 40px; border-style: none;"></a>
-                                                <a href="#" style="display: inline-block; margin: 0px;"
-                                                    target="_blank"><img alt="Instagram" height="40"
-                                                        src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
-                                                        width="40"
-                                                        style="width: 40px; height: 40px; border-style: none;"></a>
+                                                <!-- Social media icons -->
+                                                <a href="#"><img alt="Facebook" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966" width="40" style="border-style: none;"></a>
+                                                <a href="#"><img alt="Pinterest" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971" width="40" style="border-style: none;"></a>
+                                                <a href="#"><img alt="Instagram" height="40" src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937" width="40" style="border-style: none;"></a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center"
-                                                style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
-                                                <a href="#"
-                                                    style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
-                                                    target="_blank">Privacy Policy</a> |
-                                                <a href="#"
-                                                    style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
-                                                    target="_blank">Support</a> |
-                                                <a href="#"
-                                                    style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
-                                                    target="_blank">Invite Friends</a> |
-                                                <a href="#"
-                                                    style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
-                                                    target="_blank">Get Inspired</a><br><br>
+                                            <td align="center" style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5;">
+                                                <a href="#" style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;">Privacy Policy</a> |
+                                                <a href="#" style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;">Support</a> |
+                                                <a href="#" style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;">Invite Friends</a> |
+                                                <a href="#" style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;">Get Inspired</a><br><br>
                                                 <span style="color: #7a7d85;">
                                                     This email was sent to you by StrongBody SG PTE, LTD.<br>
-                                                    You are receiving this email because you signed up for
-                                                    StrongBody.ai<br>
-                                                    If you wish to unsubscribe from all future emails, please click <a
-                                                        href="#" style="color: #555555; text-decoration: none;"
-                                                        target="_blank">here</a>.<br><br>
+                                                    You are receiving this email because you signed up for StrongBody.ai<br>
+                                                    If you wish to unsubscribe from all future emails, please click <a href="#" style="color: #555555; text-decoration: none;">here</a>.<br><br>
                                                     105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore
                                                 </span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td align="center" style="padding: 20px 10px; text-align: center;">
-                                                <a href="#"
-                                                    style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
-                                                    target="_blank"><img alt="Apple Store" height="36"
-                                                        src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
-                                                        width="120"
-                                                        style="width: 120px; height: 36px; border-style: none;"></a>
-                                                <a href="#"
-                                                    style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
-                                                    target="_blank"><img alt="Google Play" height="36"
-                                                        src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
-                                                        width="120"
-                                                        style="width: 120px; height: 36px; border-style: none;"></a>
+                                            <td align="center" style="padding: 20px 10px;">
+                                                <a href="#"><img alt="Apple Store" height="36" src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298" width="120" style="border-style: none;"></a>
+                                                <a href="#"><img alt="Google Play" height="36" src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311" width="120" style="border-style: none;"></a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -191,7 +123,5 @@
             </td>
         </tr>
     </table>
-
 </body>
-
 </html>

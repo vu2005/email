@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Service Request Confirmation - StrongBody</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #eeeeee;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        img {
+            display: block;
+            border: 0;
+            outline: none;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .header {
+            padding: 40px 40px 16px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            padding: 30px 40px 10px;
+            letter-spacing: -1px;
+        }
+
+        .status-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a73e8;
+            text-align: center;
+            padding: 0 40px 20px;
+        }
+
+        .amount-section {
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        .amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .amount-label {
+            font-size: 16px;
+            color: #404145;
+        }
+
+        .text-content {
+            font-size: 16px;
+            line-height: 26px;
+            color: #404145;
+            padding: 20px 40px;
+        }
+
+        .invoice-details {
+            padding: 20px 40px;
+        }
+
+        .detail-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .detail-box {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #6c757d;
+        }
+
+        .detail-value {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .button-section {
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: #222325;
+            color: #fff;
+            margin: 0 10px 10px 0;
+        }
+
+        .button-secondary {
+            background-color: #fff;
+            color: #222325;
+            border: 2px solid #222325;
+        }
+
+        .footer {
+            background-color: #eeeeee;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #818181;
+        }
+
+        .footer a {
+            color: #000;
+            font-weight: bold;
+            padding: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-address {
+            color: #7a7d85;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 28px;
+                padding: 20px 20px 10px;
+            }
+
+            .amount {
+                font-size: 36px;
+            }
+
+            .text-content,
+            .invoice-details,
+            .button-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .button-link {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#eeeeee">
+        <tr>
+            <td align="center">
+                <table width="100%" class="content" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="header">
+                            <a href="https://strongbody.ai" target="_blank">
+                                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
+                                    alt="StrongBody" width="123" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">Service Request Confirmation</td>
+                    </tr>
+                    <tr>
+                        <td class="status-text">Please review and confirm the service you registered for</td>
+                    </tr>
+                    <tr>
+                        <td class="amount-section">
+                            <div class="amount">15 USD</div>
+                            <div class="amount-label">Registered Service Fee</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-content">
+                            Hello,<br><br>
+                            Thank you for trusting StrongBody. We’ve received your service request and want to make sure
+                            everything is correct before proceeding to payment.<br><br>
+                            If you have any questions, feel free to contact our support team: <a
+                                href="mailto:customercare@strongbody.ai"
+                                style="color:#404145; font-weight:bold;">customercare@strongbody.ai</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="invoice-details">
+                            <div class="detail-title">Service Details</div>
+                            <div class="detail-box">
+                                <div class="detail-row">
+                                    <span class="detail-label">Service Name</span>
+                                    <span class="detail-value">1-Month Personal Training Package</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Registration Time</span>
+                                    <span class="detail-value">August 2025</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Service Fee</span>
+                                    <span class="detail-value">15 USD</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Status</span>
+                                    <span class="detail-value" style="color: #1a73e8;">Pending Confirmation</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="button-section">
+                            <a href="#" class="button-link" target="_blank">Confirm Service</a>
+                            <a href="#" class="button-link button-secondary" target="_blank">Cancel or Modify</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="40"></td>
+                    </tr>
+                </table>
+                <table width="100%" style="max-width: 600px;">
+                    <tr>
+                        <td align="center"
+                            style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
+                            <table style="width: 100%; text-align: center; border-collapse: separate;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="padding: 10px 10px 25px; text-align: center;">
+                                            <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img
+                                                    alt="Facebook" height="40"
+                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                                                    width="40"
+                                                    style="width: 40px; height: 40px; border-style: none;"></a>
+                                            <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img
+                                                    alt="Pinterest" height="40"
+                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                                                    width="40"
+                                                    style="width: 40px; height: 40px; border-style: none;"></a>
+                                            <a href="#" style="display: inline-block; margin: 0px;" target="_blank"><img
+                                                    alt="Instagram" height="40"
+                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                                                    width="40"
+                                                    style="width: 40px; height: 40px; border-style: none;"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"
+                                            style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
+                                            <a href="#"
+                                                style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
+                                                target="_blank">Privacy Policy</a> |
+                                            <a href="#"
+                                                style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
+                                                target="_blank">Support</a> |
+                                            <a href="#"
+                                                style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
+                                                target="_blank">Invite Friends</a> |
+                                            <a href="#"
+                                                style="color: #000; text-decoration: none; font-weight: bold;padding: 0 10px;"
+                                                target="_blank">Get Inspired</a><br><br>
+                                            <span style="color: #7a7d85;">
+                                                This email was sent to you by StrongBody SG PTE, LTD.<br>
+                                                You are receiving this email because you signed up for
+                                                StrongBody.ai<br>
+                                                If you wish to unsubscribe from all future emails, please click <a
+                                                    href="#" style="color: #555555; text-decoration: none;"
+                                                    target="_blank">here</a>.<br><br>
+                                                105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding: 20px 10px; text-align: center;">
+                                            <a href="#"
+                                                style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
+                                                target="_blank"><img alt="Apple Store" height="36"
+                                                    src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
+                                                    width="120"
+                                                    style="width: 120px; height: 36px; border-style: none;"></a>
+                                            <a href="#"
+                                                style="display: inline-block; width: 120px; height: 36px; margin: 4px;"
+                                                target="_blank"><img alt="Google Play" height="36"
+                                                    src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
+                                                    width="120"
+                                                    style="width: 120px; height: 36px; border-style: none;"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
