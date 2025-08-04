@@ -1,0 +1,35 @@
+ <div class="total-section">
+                <p>Tổng thanh toán</p>
+                <div class="total-amount">{{total_amount}}</div>
+                <span class="payment-status {{payment_status_class}}">{{payment_status}}</span>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3 style="margin-top: 0; color: #667eea;">Bước tiếp theo</h3>
+                <p>{{next_steps_message}}</p>
+                {{#if has_download_link}}
+                <a href="{{download_link}}" class="button">Tải hóa đơn PDF</a>
+                {{/if}}
+                {{#if has_service_link}}
+                <a href="{{service_link}}" class="button">Truy cập dịch vụ</a>
+                {{/if}}
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h4 style="margin-top: 0; color: #667eea;">Liên hệ hỗ trợ</h4>
+                <p><strong>Email:</strong> {{support_email}}</p>
+                <p><strong>Điện thoại:</strong> {{support_phone}}</p>
+                <p><strong>Giờ làm việc:</strong> {{business_hours}}</p>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 14px; color: #666;">
+                Nếu bạn có bất kỳ câu hỏi nào về hóa đơn này, vui lòng liên hệ với đội ngũ hỗ trợ của chúng tôi.
+            </p>
+
+            <p style="font-size: 14px; color: #666;">
+                Trân trọng,<br>
+                <strong>Đội ngũ {{company_name}}</strong>
+            </p>
+        </div>
