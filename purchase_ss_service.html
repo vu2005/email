@@ -60,9 +60,9 @@
           </tr>
           <tr>
             <td align="left" style="padding:30px 40px 0;font-size:16px;line-height:26px;color:#404145;">
-              Dear {{customerName}},<br><br>
+              Dear {{.customerName}},<br><br>
               Thank you for purchasing our service! We're excited to help you on your wellness journey.<br><br>
-              Your service order <strong>#{{order_no}}</strong> has been successfully confirmed on <strong>{{orderDate}}</strong>.
+              Your service order <strong>#{{.order_no}}</strong> has been successfully confirmed on <strong>{{.orderDate}}</strong>.
               Here's a summary of your purchase:
 
               <table width="100%"
@@ -76,14 +76,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{service.title}}</td>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{service.type}}</td>
-                    <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;">{{price}}</td>
+                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{.service.title}}</td>
+                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{.service.type}}</td>
+                    <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;">{{.price}} $</td>
                   </tr>
                   <tr>
                     <td colspan="2" align="right"
                       style="padding:8px 0;font-weight:bold;font-size:18px;border-top:1px solid #eee;">Total Amount:</td>
-                    <td align="right" style="padding:8px 0;font-weight:bold;font-size:18px;color:#ff0000;">{{price}}</td>
+                    <td align="right" style="padding:8px 0;font-weight:bold;font-size:18px;color:#ff0000;">{{.price}} $</td>
                   </tr>
                 </tbody>
               </table>
