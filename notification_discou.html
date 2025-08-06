@@ -1,218 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet" />
-    <style>
-        body,
-        div,
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        td,
-        a {
-            font-family: "Plus Jakarta Sans", sans-serif !important;
-            text-decoration: none;
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <style>
+    body,
+    div,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    td,
+    a {
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eeeeee; padding: 0 15px;">
-  <tr>
-    <td align="center" style="padding: 16px 0;">
-      <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; border-collapse: collapse; border-radius: 8px;">
-        <tr>
-          <td style="padding: 30px 48px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tr>
-                <td align="center" style="padding: 0 40px 30px;">
-                  <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" width="100" alt="StrongBody" style="display: block; border: 0; max-width: 100px;">
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="padding-bottom: 12px;">
-                  <img src="{{Img_seller_avatar}}" width="66" height="66" style="border: 3px solid #1dbf73; border-radius: 50%; display: block; object-fit: cover;">
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="font-size: 20px; line-height: 28px; color: #404145; padding-bottom: 30px; font-weight: bold;">
-                  {{seller_username}} sent you a coupon
-                </td>
-              </tr>
-              <tr>
-                <td style="font-size: 16px; line-height: 24px; color: #62646a;">
-                  <p>Hi {{username}},</p>
-                  <p>
-                    Enjoyed working with **{{seller_username}}**? Now you can work with them again and get **{{discount_percentage}}%** off!<br>
-                    Use the coupon code **{{coupon_code}}** at checkout on any of their Gigs, until {{valid_until_date}}, {{valid_until_time}} UTC.
-                  </p>
-                  <p style="padding-top: 30px;">Enjoy!<br>The StrongBody Team</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="font-size: 14px; font-style: italic; color: #7a7d85; padding: 24px 0 28px;">
-                  Note: You can use this coupon only once.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #efeff0; border-radius: 8px; border-collapse: separate;">
-                    <tr>
-                      <td align="center" style="font-size: 14px; font-weight: bold; color: #000; padding: 20px 48px 8px;">
-                        {{seller_username}}’s Coupon
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <table cellpadding="0" cellspacing="0" width="100%" style="border: 1px dashed #d4defb; border-radius: 10px; border-collapse: separate;">
-                          <tr>
-                            <td align="center" style="color: #62646a; padding: 0 16px; border-right: 1px dashed #d4defb;">
-                              <span style="font-size: 42px; line-height: 42px; font-weight: bold; color: #62646a;">{{discount_percentage}}%</span><br>
-                              <span style="font-size: 12px; line-height: 21px;">OFF</span>
-                            </td>
-                            <td>
-                              <ul style="list-style-type: none; font-size: 13px; line-height: 21px; padding: 0 24px;">
-                                <li style="padding-bottom: 8px;"><img src="https://ci3.googleusercontent.com/meips/ADKq_Nbw8iSEXFsPUXaXg-bm_bpac-pWBtbVq84ZtjgYdCShq2HmdgOahE0I4goSC9kjFBqpzoozcX8NZVJHiM9Khn2Uth0YKio9PODo-5CLRPC7Mv8JJ04c_qkPa0XxTkAnpf6EqmPLfvMybI7C1RuBPA-cEw81ug2XuGd6KAcdaVYSoNmVzDN8DqyTjih_sWumgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e89d128a1b144f4d56cf9/original.png?1613662672" width="13" style="vertical-align: middle; margin-right: 10px;"><b>Minimum order amount:</b> ${{min_order_amount}}</li>
-                                <li style="padding-bottom: 8px;"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZyy3pFTRubWrr4L4retZFIf7jpyeC9NgFSGNrduKwDol1dOpcXIrcdzen5mUjVF8w9GTIx2YDhyRZJYvS24orQS6hXLRX0DYsZD01f7fnpdVapr70-ky8QaRd_mBAuXFkKlIKoBV5D4hQKL99HRgJb8q1eq8Ivkc0j4GMsN4Bgis11HMJia5zu1xPFOWtvrA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e8a03967e1846c7ff8df4/original.png?1613662723" width="13" style="vertical-align: middle; margin-right: 10px;"><b>Applies to:</b> {{applies_to}}</li>
-                                <li><img src="https://ci3.googleusercontent.com/meips/ADKq_NbF_M20xrPAuma-vxZrIfEpE6sMILjOBTq2S9tHVOxn_KzwIUwmYLOPT0EDRIE6BbMzSil65ZV_Cd6xtSQybAehot1o8B_wGL9GRtViT3vHjo3dwAvON2aRgl9wr02pF70Sv6Ho91z3OjQvvstvgn9b905d-jxgWv8BJcBHqO5kA517XJTDPRWuGmIA9dVjwg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e8a2595927458655ad2bd/original.png?1613662757" width="13" style="vertical-align: middle; margin-right: 10px;"><b>Valid until:</b> {{valid_until_date}}, {{valid_until_time}} UTC</li>
-                              </ul>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="padding: 48px 0 52px;">
-                  <a href="#" style="background-color: #ff0000; color: #fff; text-decoration: none; padding: 12px 36px; border-radius: 8px; font-size: 16px; font-weight: bold; line-height: 24px; display: inline-block;">View Profile</a>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="font-size: 16px; font-weight: bold; color: #62646a; padding-bottom: 32px;">
-                  Check out {{seller_username}}'s Gigs
-                </td>
-              </tr>
-              <tr>
-                <td align="center" valign="top">
-                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                      <td align="center" valign="top" style="font-size: 0;">
-                        <div style="display: inline-block; width: 100%; max-width: 250px; vertical-align: top; margin: 0 10px 20px;">
-                          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #dbdbdb; border-radius: 3px; border-collapse: separate;">
+    <tr>
+      <td align="center" style="padding: 16px 0;">
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"
+          style="max-width: 600px; border-collapse: collapse; border-radius: 8px;">
+          <tr>
+            <td style="padding: 30px 48px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 0 40px 30px;">
+                    <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" width="100"
+                      alt="StrongBody" style="display: block; border: 0; max-width: 100px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom: 12px;">
+                    <img src="{{Img_seller_avatar}}" width="66" height="66"
+                      style="border: 3px solid #1dbf73; border-radius: 50%; display: block; object-fit: cover;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center"
+                    style="font-size: 20px; line-height: 28px; color: #404145; padding-bottom: 30px; font-weight: bold;">
+                    {{seller_username}} sent you a coupon
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 16px; line-height: 24px; color: #62646a;">
+                    <p>Hi {{username}},</p>
+                    <p>
+                      Enjoyed working with **{{seller_username}}**? Now you can work with them again and get
+                      **{{discount_percentage}}%** off!<br>
+                      Use the coupon code **{{coupon_code}}** at checkout on any of their Gigs, until
+                      {{valid_until_date}}, {{valid_until_time}} UTC.
+                    </p>
+                    <p style="padding-top: 30px;">Enjoy!<br>The StrongBody Team</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 14px; font-style: italic; color: #7a7d85; padding: 24px 0 28px;">
+                    Note: You can use this coupon only once.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0" width="100%"
+                      style="border: 1px solid #efeff0; border-radius: 8px; border-collapse: separate;">
+                      <tr>
+                        <td align="center"
+                          style="font-size: 14px; font-weight: bold; color: #000; padding: 20px 48px 8px;">
+                          {{seller_username}}’s Coupon
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table cellpadding="0" cellspacing="0" width="100%"
+                            style="border: 1px dashed #d4defb; border-radius: 10px; border-collapse: separate;">
                             <tr>
-                              <td>
-                                <a href="#">
-                                  <img src="https://ci3.googleusercontent.com/meips/ADKq_NYXsKgW_hmDEhJO8tidZgLZNCHnjN5zuZHgBxaLpgfTOBy-6pfBlRBjoRVXE9qy8XBs5tdji_Iato0Lx9u94qFGtv_uyXFNRsAWlXPCN-3pRQZZfQdWhTvIHmUGI7u_n7NHylye-THIPEE-pEyjhsCtYDMNojNZfOEsM4oKjBFYzIdMgT_thoCF19Jr2gAoK-PUu_ku-zxNm8tzcaO4zB1bpBr5ARzKiJxt-fc8oGkKP6mwx2YtQhUy5QK1Rte1GUtv29KLSh9ebk5gk2vz=s0-d-e1-ft#https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/414786424/original/cc5c330b036d559205ef4c277dacffafdefc3aa6/setup-and-integration-your-business.png" width="230" height="142" style="display: block; border-top-left-radius: 2px; border-top-right-radius: 2px; object-fit: cover;">
-                                </a>
+                              <td align="center"
+                                style="color: #62646a; padding: 0 16px; border-right: 1px dashed #d4defb;">
+                                <span
+                                  style="font-size: 42px; line-height: 42px; font-weight: bold; color: #62646a;">{{discount_percentage}}%</span><br>
+                                <span style="font-size: 12px; line-height: 21px;">OFF</span>
                               </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px 0; font-size: 12px; line-height: 20px; font-weight: 500; color: #0e0e0f;">By {{seller_username}}</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px 0; font-size: 15px; line-height: 17px; height: 51px; color: #303030; vertical-align: top;">{{gig_title_1}}</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px; line-height: 20px; font-size: 12px; font-weight: 500; color: #555;">
-                                <img src="https://ci3.googleusercontent.com/meips/ADKq_NYpdLmBCrU0hi1LNy9aj_w6Htmka1_wdwfdqDIrgYzATlS04QfFuwnaH-3H2MfT6A4VcgEJPw0NDYLL9zYYl1BxFjnnMVdZxP94LBKsfcK7cmhztu5zD0K3pZcKJrC4Psno9yBdmb7YU4RHz13ole5Gv6hc_iAHe8pf15wLvIGm6XIEVJglEwzQaJJNcTnhgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5cc555b00bb88b3960711961/original.png?1556436400" style="vertical-align: middle;">
-                                <span style="font-size: 14px; font-weight: bold; color: #ffbf00;"> {{gig_rating_1}}</span>
-                                <span style="float: right; text-transform: uppercase;">Starting at <span style="font-size: 18px; color: #555;">${{gig_price_1}}</span></span>
+                              <td>
+                                <ul style="list-style-type: none; font-size: 13px; line-height: 21px; padding: 0 24px;">
+                                  <li style="padding-bottom: 8px;"><img
+                                      src="https://ci3.googleusercontent.com/meips/ADKq_Nbw8iSEXFsPUXaXg-bm_bpac-pWBtbVq84ZtjgYdCShq2HmdgOahE0I4goSC9kjFBqpzoozcX8NZVJHiM9Khn2Uth0YKio9PODo-5CLRPC7Mv8JJ04c_qkPa0XxTkAnpf6EqmPLfvMybI7C1RuBPA-cEw81ug2XuGd6KAcdaVYSoNmVzDN8DqyTjih_sWumgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e89d128a1b144f4d56cf9/original.png?1613662672"
+                                      width="13" style="vertical-align: middle; margin-right: 10px;"><b>Minimum order
+                                      amount:</b> ${{min_order_amount}}</li>
+                                  <li style="padding-bottom: 8px;"><img
+                                      src="https://ci3.googleusercontent.com/meips/ADKq_NZyy3pFTRubWrr4L4retZFIf7jpyeC9NgFSGNrduKwDol1dOpcXIrcdzen5mUjVF8w9GTIx2YDhyRZJYvS24orQS6hXLRX0DYsZD01f7fnpdVapr70-ky8QaRd_mBAuXFkKlIKoBV5D4hQKL99HRgJb8q1eq8Ivkc0j4GMsN4Bgis11HMJia5zu1xPFOWtvrA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e8a03967e1846c7ff8df4/original.png?1613662723"
+                                      width="13" style="vertical-align: middle; margin-right: 10px;"><b>Applies to:</b>
+                                    {{applies_to}}</li>
+                                  <li><img
+                                      src="https://ci3.googleusercontent.com/meips/ADKq_NbF_M20xrPAuma-vxZrIfEpE6sMILjOBTq2S9tHVOxn_KzwIUwmYLOPT0EDRIE6BbMzSil65ZV_Cd6xtSQybAehot1o8B_wGL9GRtViT3vHjo3dwAvON2aRgl9wr02pF70Sv6Ho91z3OjQvvstvgn9b905d-jxgWv8BJcBHqO5kA517XJTDPRWuGmIA9dVjwg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/602e8a2595927458655ad2bd/original.png?1613662757"
+                                      width="13" style="vertical-align: middle; margin-right: 10px;"><b>Valid until:</b>
+                                    {{valid_until_date}}, {{valid_until_time}} UTC</li>
+                                </ul>
                               </td>
                             </tr>
                           </table>
-                        </div>
-                        <div style="display: inline-block; width: 100%; max-width: 250px; vertical-align: top; margin: 0 10px 20px;">
-                          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #dbdbdb; border-radius: 3px; border-collapse: separate;">
-                            <tr>
-                              <td>
-                                <a href="#">
-                                  <img src="https://ci3.googleusercontent.com/meips/ADKq_NYd-NRweSJ9UxpUZGXc-C6XTXGtiM3hr_4XvOE2R32C2xSEi2SDI_Hq0KYtB_snb4AzH3SaFUNlNrdDB9hgQ7B6L88J8vLl8zt_lX0MZPR-LMpIyfK3G6gm-6JDOGYllCgnQ0VKW-7R8NqfiYHJKbpOFk4-GqUFkGK0o_T0bWtGq5Y0ExJ1xB50BlvaQdT5-yoZcinkF9lkc-u-JB6E5VUJZCcvS4VoHFJlNm82pil4wGZIyYtVdYC6Cde-vWZumZLkZXANycbSJ5VanEF49tZRuwJ2kIKd5ci9sxarznDjgrd9ElHMI3LEqc2wqT74ibAnFZZH2yqsjyiQ=s0-d-e1-ft#https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/427844258/original/5161e011a93443e0380ea239472dab901a66b164/professionally-create-and-optimize-your-facebook-and-instagram-business-accounts.png" width="230" height="142" style="display: block; border-top-left-radius: 2px; border-top-right-radius: 2px; object-fit: cover;">
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px 0; font-size: 12px; line-height: 20px; font-weight: 500; color: #0e0e0f;">By {{seller_username}}</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px 0; font-size: 15px; line-height: 17px; height: 51px; color: #303030; vertical-align: top;">{{gig_title_2}}</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 10px 8px; line-height: 20px; font-size: 12px; font-weight: 500; color: #555;">
-                                <img src="https://ci3.googleusercontent.com/meips/ADKq_NYpdLmBCrU0hi1LNy9aj_w6Htmka1_wdwfdqDIrgYzATlS04QfFuwnaH-3H2MfT6A4VcgEJPw0NDYLL9zYYl1BxFjnnMVdZxP94LBKsfcK7cmhztu5zD0K3pZcKJrC4Psno9yBdmb7YU4RHz13ole5Gv6hc_iAHe8pf15wLvIGm6XIEVJglEwzQaJJNcTnhgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5cc555b00bb88b3960711961/original.png?1556436400" style="vertical-align: middle;">
-                                <span style="font-size: 14px; font-weight: bold; color: #ffbf00;"> {{gig_rating_2}}</span>
-                                <span style="float: right; text-transform: uppercase;">Starting at <span style="font-size: 18px; color: #555;">${{gig_price_2}}</span></span>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding: 48px 0 52px;">
+                    <a href="#"
+                      style="background-color: #ff0000; color: #fff; text-decoration: none; padding: 12px 36px; border-radius: 8px; font-size: 16px; font-weight: bold; line-height: 24px; display: inline-block;">View
+                      Profile</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="font-size: 16px; font-weight: bold; color: #62646a; padding-bottom: 32px;">
+                    Check out {{seller_username}}'s Gigs
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td align="center" valign="top" style="font-size: 0;">
+                          <div
+                            style="display: inline-block; width: 100%; max-width: 250px; vertical-align: top; margin: 0 10px 20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                              style="border: 1px solid #dbdbdb; border-radius: 3px; border-collapse: separate;">
+                              <tr>
+                                <td>
+                                  <a href="#">
+                                    <img
+                                      src="https://ci3.googleusercontent.com/meips/ADKq_NYXsKgW_hmDEhJO8tidZgLZNCHnjN5zuZHgBxaLpgfTOBy-6pfBlRBjoRVXE9qy8XBs5tdji_Iato0Lx9u94qFGtv_uyXFNRsAWlXPCN-3pRQZZfQdWhTvIHmUGI7u_n7NHylye-THIPEE-pEyjhsCtYDMNojNZfOEsM4oKjBFYzIdMgT_thoCF19Jr2gAoK-PUu_ku-zxNm8tzcaO4zB1bpBr5ARzKiJxt-fc8oGkKP6mwx2YtQhUy5QK1Rte1GUtv29KLSh9ebk5gk2vz=s0-d-e1-ft#https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/414786424/original/cc5c330b036d559205ef4c277dacffafdefc3aa6/setup-and-integration-your-business.png"
+                                      width="230" height="142"
+                                      style="display: block; border-top-left-radius: 2px; border-top-right-radius: 2px; object-fit: cover;">
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px 0; font-size: 12px; line-height: 20px; font-weight: 500; color: #0e0e0f;">
+                                  By {{seller_username}}</td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px 0; font-size: 15px; line-height: 17px; height: 51px; color: #303030; vertical-align: top;">
+                                  {{gig_title_1}}</td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px; line-height: 20px; font-size: 12px; font-weight: 500; color: #555;">
+                                  <img
+                                    src="https://ci3.googleusercontent.com/meips/ADKq_NYpdLmBCrU0hi1LNy9aj_w6Htmka1_wdwfdqDIrgYzATlS04QfFuwnaH-3H2MfT6A4VcgEJPw0NDYLL9zYYl1BxFjnnMVdZxP94LBKsfcK7cmhztu5zD0K3pZcKJrC4Psno9yBdmb7YU4RHz13ole5Gv6hc_iAHe8pf15wLvIGm6XIEVJglEwzQaJJNcTnhgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5cc555b00bb88b3960711961/original.png?1556436400"
+                                    style="vertical-align: middle;">
+                                  <span style="font-size: 14px; font-weight: bold; color: #ffbf00;">
+                                    {{gig_rating_1}}</span>
+                                  <span style="float: right; text-transform: uppercase;">Starting at <span
+                                      style="font-size: 18px; color: #555;">${{gig_price_1}}</span></span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div
+                            style="display: inline-block; width: 100%; max-width: 250px; vertical-align: top; margin: 0 10px 20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                              style="border: 1px solid #dbdbdb; border-radius: 3px; border-collapse: separate;">
+                              <tr>
+                                <td>
+                                  <a href="#">
+                                    <img
+                                      src="https://ci3.googleusercontent.com/meips/ADKq_NYd-NRweSJ9UxpUZGXc-C6XTXGtiM3hr_4XvOE2R32C2xSEi2SDI_Hq0KYtB_snb4AzH3SaFUNlNrdDB9hgQ7B6L88J8vLl8zt_lX0MZPR-LMpIyfK3G6gm-6JDOGYllCgnQ0VKW-7R8NqfiYHJKbpOFk4-GqUFkGK0o_T0bWtGq5Y0ExJ1xB50BlvaQdT5-yoZcinkF9lkc-u-JB6E5VUJZCcvS4VoHFJlNm82pil4wGZIyYtVdYC6Cde-vWZumZLkZXANycbSJ5VanEF49tZRuwJ2kIKd5ci9sxarznDjgrd9ElHMI3LEqc2wqT74ibAnFZZH2yqsjyiQ=s0-d-e1-ft#https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/427844258/original/5161e011a93443e0380ea239472dab901a66b164/professionally-create-and-optimize-your-facebook-and-instagram-business-accounts.png"
+                                      width="230" height="142"
+                                      style="display: block; border-top-left-radius: 2px; border-top-right-radius: 2px; object-fit: cover;">
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px 0; font-size: 12px; line-height: 20px; font-weight: 500; color: #0e0e0f;">
+                                  By {{seller_username}}</td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px 0; font-size: 15px; line-height: 17px; height: 51px; color: #303030; vertical-align: top;">
+                                  {{gig_title_2}}</td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="padding: 10px 8px; line-height: 20px; font-size: 12px; font-weight: 500; color: #555;">
+                                  <img
+                                    src="https://ci3.googleusercontent.com/meips/ADKq_NYpdLmBCrU0hi1LNy9aj_w6Htmka1_wdwfdqDIrgYzATlS04QfFuwnaH-3H2MfT6A4VcgEJPw0NDYLL9zYYl1BxFjnnMVdZxP94LBKsfcK7cmhztu5zD0K3pZcKJrC4Psno9yBdmb7YU4RHz13ole5Gv6hc_iAHe8pf15wLvIGm6XIEVJglEwzQaJJNcTnhgQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5cc555b00bb88b3960711961/original.png?1556436400"
+                                    style="vertical-align: middle;">
+                                  <span style="font-size: 14px; font-weight: bold; color: #ffbf00;">
+                                    {{gig_rating_2}}</span>
+                                  <span style="float: right; text-transform: uppercase;">Starting at <span
+                                      style="font-size: 18px; color: #555;">${{gig_price_2}}</span></span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eeeeee; padding: 20px 0;">
-  <tr>
-    <td align="center">
-      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; text-align: center; color: #818181; font-size: 12px; line-height: 1.5; border-collapse: separate;">
-        <tr>
-          <td style="padding: 20px 0;">
-            <div style="padding: 10px 0 25px;">
-              <a href="https://www.facebook.com/strongbody.career/" style="margin: 0 5px; text-decoration: none;">
-                <img src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966" alt="Facebook" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
-              </a>
-              <a href="https://www.pinterest.com/strongbodyai/" style="margin: 0 5px;text-decoration: none;">
-                <img src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971" alt="Pinterest" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
-              </a>
-              <a href="https://www.instagram.com/strongbody_network/" style="margin: 0 5px;text-decoration: none;">
-                <img src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937" alt="Instagram" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
-              </a>
-            </div>
-            <div style="color: #c5c6c9; font-size: 12px; line-height: 18px; margin-bottom: 15px;">
-              <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;">Privacy Policy</a> |
-              <a href="https://strongbody.ai/contact" style="color: #ff0000; text-decoration: none; font-weight: bold;">Support</a> |
-              <a href="https://strongbody.ai/manage-ref" style="color: #ff0000; text-decoration: none; font-weight: bold;">Invite Friends</a> |
-              <a href="https://strongbody.ai/ourblog" style="color: #ff0000; text-decoration: none; font-weight: bold;">Get Inspired</a>
-            </div>
-            <div style="color: #7a7d85; font-size: 12px; line-height: 18px; margin-bottom: 20px;">
-              This email was sent to you by StrongBody SG PTE, LTD.<br>
-              You are receiving this email because you signed up for StrongBody.ai<br>
-              If you wish to unsubscribe from all future emails, please click <a href="#" style="color: #ff0000; text-decoration: none;">here</a>.<br>
-              <br>
-              105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br>
-              StrongBody wellness marketplace, now in Multi Me - your trusted super app for health and connections
-            </div>
-            <div>
-              <a href="#" style="display: inline-block; margin: 4px;">
-                <img src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298" alt="App Store" width="120" height="36" style="width: 120px; height: 36px; border: 0;">
-              </a>
-              <a href="#" style="display: inline-block; margin: 4px;">
-                <img src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311" alt="Google Play" width="120" height="36" style="width: 120px; height: 36px; border: 0;">
-              </a>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eeeeee; padding: 20px 0;">
+    <tr>
+      <td align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+          style="max-width: 600px; text-align: center; color: #818181; font-size: 12px; line-height: 1.5; border-collapse: separate;">
+          <tr>
+            <td style="padding: 20px 0;">
+              <div style="padding: 10px 0 25px;">
+                <a href="https://www.facebook.com/strongbody.career/" style="margin: 0 5px; text-decoration: none;">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                    alt="Facebook" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
+                </a>
+                <a href="https://www.pinterest.com/strongbodyai/" style="margin: 0 5px;text-decoration: none;">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                    alt="Pinterest" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
+                </a>
+                <a href="https://www.instagram.com/strongbody_network/" style="margin: 0 5px;text-decoration: none;">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                    alt="Instagram" width="40" height="40" style="width: 40px; height: 40px; border: 0;">
+                </a>
+              </div>
+              <div style="color: #c5c6c9; font-size: 12px; line-height: 18px; margin-bottom: 15px;">
+                <a href="#" style="color: #ff0000; text-decoration: none; font-weight: bold;">Privacy Policy</a> |
+                <a href="https://strongbody.ai/contact"
+                  style="color: #ff0000; text-decoration: none; font-weight: bold;">Support</a> |
+                <a href="https://strongbody.ai/manage-ref"
+                  style="color: #ff0000; text-decoration: none; font-weight: bold;">Invite Friends</a> |
+                <a href="https://strongbody.ai/ourblog"
+                  style="color: #ff0000; text-decoration: none; font-weight: bold;">Get Inspired</a>
+              </div>
+              <div style="color: #7a7d85; font-size: 12px; line-height: 18px; margin-bottom: 20px;">
+                This email was sent to you by StrongBody SG PTE, LTD.<br>
+                You are receiving this email because you signed up for StrongBody.ai<br>
+                If you wish to unsubscribe from all future emails, please click <a href="#"
+                  style="color: #ff0000; text-decoration: none;">here</a>.<br>
+                <br>
+                105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br>
+                StrongBody wellness marketplace, now in Multi Me - your trusted super app for health and connections
+              </div>
+              <div>
+                <a href="#" style="display: inline-block; margin: 4px;">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
+                    alt="App Store" width="120" height="36" style="width: 120px; height: 36px; border: 0;">
+                </a>
+                <a href="#" style="display: inline-block; margin: 4px;">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
+                    alt="Google Play" width="120" height="36" style="width: 120px; height: 36px; border: 0;">
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+
 </html>
