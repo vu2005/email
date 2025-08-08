@@ -1,172 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email Offer</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body,
-      table,
-      td,
-      a,
-      p {
-        margin: 0;
-        padding: 0;
-        font-family: "Plus Jakarta Sans", sans-serif !important;
-        text-decoration: none !important;
-      }
-    </style>
-  </head>
-  <body style="background-color: #eeeeee">
-    <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#eeeeee">
-      <tr>
-        <td height="20">&nbsp;</td>
-      </tr>
-      <tr>
-        <td align="center" style="padding: 0 15px">
-          <table
-            width="100%"
-            style="max-width: 600px"
-            bgcolor="#ffffff"
-            cellpadding="0"
-            cellspacing="0"
-          >
-            <!-- Logo / Header -->
-            <tr>
-              <td align="left" style="padding: 30px 55px 0">
-                <a href="#" target="_blank">
-                  <img
-                    src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
-                    alt="StrongBody."
-                    width="80"
-                    style="display: block; max-width: 80px; border: none"
-                  />
-                </a>
-              </td>
-            </tr>
-            <!-- Banner -->
-            <tr>
-              <td align="center" style="padding: 20px 0">
-                <a href="#" target="_blank">
-                  <img
-                    src="https://braze-images.com/appboy/communication/assets/image_assets/images/67e57598610c7900650069bb/original.png"
-                    alt="Banner"
-                    width="600"
-                    style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Offer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    body,
+    table,
+    td,
+    a,
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+      text-decoration: none !important;
+    }
+  </style>
+</head>
+
+<body style="background-color: #eeeeee">
+  <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#eeeeee">
+    <tr>
+      <td height="20">&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="center" style="padding: 0 15px">
+        <table width="100%" style="max-width: 600px" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+          <!-- Logo / Header -->
+          <tr>
+            <td align="left" style="padding: 30px 55px 0">
+              <a href="#" target="_blank">
+                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
+                  alt="StrongBody." width="80" style="display: block; max-width: 80px; border: none" />
+              </a>
+            </td>
+          </tr>
+          <!-- Banner -->
+          <tr>
+            <td align="center" style="padding: 20px 0">
+              <a href="#" target="_blank">
+                <img
+                  src="https://braze-images.com/appboy/communication/assets/image_assets/images/67e57598610c7900650069bb/original.png"
+                  alt="Banner" width="600" style="
                       display: block;
                       width: 100%;
                       max-width: 600px;
                       border: none;
-                    "
-                  />
-                </a>
-              </td>
-            </tr>
-            <!-- Title -->
-            <tr>
-              <td
-                align="center"
-                style="
+                    " />
+              </a>
+            </td>
+          </tr>
+          <!-- Title -->
+          <tr>
+            <td align="center" style="
                   font-size: 40px;
                   font-family: Helvetica, Arial, sans-serif;
                   color: #222325;
                   line-height: 48px;
                   padding: 20px 15px;
-                "
-              >
-                [seller] sent you a custom offer
-              </td>
-            </tr>
-            <!-- Body Content -->
-            <tr>
-              <td
-                style="
+                ">
+              [seller] sent you a custom offer
+            </td>
+          </tr>
+          <!-- Body Content -->
+          <tr>
+            <td style="
                   padding: 0 40px 40px;
                   color: #555;
                   font-size: 16px;
                   line-height: 22px;
-                "
-              >
-                <p
-                  style="
+                ">
+              <p style="
                     font-size: 20px;
                     color: #0e0e0f;
                     line-height: 28px;
                     padding-bottom: 20px;
-                  "
-                >
-                  <strong>Hello [username]</strong>
-                </p>
-                <p>
-                  You asked, and [seller] delivered. Check out the details of
-                  the offer they created just for you:
-                </p>
-              </td>
-            </tr>
-            <!-- Offer Section -->
-            <tr>
-              <td align="center" style="padding: 0 15px">
-                <table
-                  width="100%"
-                  style="max-width: 530px"
-                  cellpadding="0"
-                  cellspacing="0"
-                >
-                  <tr>
-                    <td style="padding: 10px" width="45%">
-                      <a href="{{seller_service}}" target="_blank">
-                        <img
-                          src="{{seller_service}}"
-                          alt="{{seller_service}}"
-                          style="
+                  ">
+                <strong>Hello [username]</strong>
+              </p>
+              <p>
+                You asked, and [seller] delivered. Check out the details of
+                the offer they created just for you:
+              </p>
+            </td>
+          </tr>
+          <!-- Offer Section -->
+          <tr>
+            <td align="center" style="padding: 0 15px">
+              <table width="100%" style="max-width: 530px" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 10px" width="45%">
+                    <a href="{{seller_service}}" target="_blank">
+                      <img src="{{seller_service}}" alt="{{seller_service}}" style="
                             width: 100%;
                             display: block;
                             border-radius: 3px;
                             border: none;
-                          "
-                        />
-                      </a>
-                    </td>
-                    <td
-                      style="
+                          " />
+                    </a>
+                  </td>
+                  <td style="
                         padding: 20px 10px 10px;
                         font-size: 16px;
                         color: #404145;
-                      "
-                    >
-                      <p>{{service_title}}</p>
-                      <p
-                        style="
+                      ">
+                    <p>{{service_title}}</p>
+                    <p style="
                           font-size: 13px;
                           line-height: 30px;
                           font-weight: bold;
-                        "
-                      >
-                        Delivery time: [at_time]<br />
-                        Price: [price]
-                      </p>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <!-- Separator -->
-            <tr>
-              <td align="center" style="padding: 20px 0">
-                <hr style="border: 1px solid #d4d4d4; width: 85%" />
-              </td>
-            </tr>
-            <!-- Call-to-Action -->
-            <tr>
-              <td align="center" style="padding: 40px 0">
-                <a
-                  href="#"
-                  target="_blank"
-                  style="
+                        ">
+                      Delivery time: [at_time]<br />
+                      Price: [price]
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Separator -->
+          <tr>
+            <td align="center" style="padding: 20px 0">
+              <hr style="border: 1px solid #d4d4d4; width: 85%" />
+            </td>
+          </tr>
+          <!-- Call-to-Action -->
+          <tr>
+            <td align="center" style="padding: 40px 0">
+              <a href="#" target="_blank" style="
                     background-color: #ff0000;
                     color: #ffffff;
                     font-weight: bold;
@@ -175,163 +139,113 @@
                     padding: 12px 30px;
                     border-radius: 5px;
                     display: inline-block;
-                  "
-                >
-                  View offer
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td height="48">&nbsp;</td>
-            </tr>
-          </table>
-          <!-- Footer -->
-          <table
-            width="100%"
-            style="max-width: 600px"
-            bgcolor="#eeeeee"
-            cellpadding="0"
-            cellspacing="0"
-          >
-            <tr>
-              <td height="20">&nbsp;</td>
-            </tr>
-            <tr>
-              <td
-                align="center"
-                style="
+                  ">
+                View offer
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="font-family:'Helvetica',Avenir,Arial,sans-serif;font-size:16px;color:#404145;line-height:26px;font-weight:400;border-collapse:collapse;padding: 0 40px"
+              align="left">
+              Sincerely,
+              <br>
+              The StrongBody.ai Team
+            </td>
+          </tr>
+          <tr>
+            <td height="48">&nbsp;</td>
+          </tr>
+        </table>
+        <!-- Footer -->
+        <table width="100%" style="max-width: 600px" bgcolor="#eeeeee" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="20">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center" style="
                   padding: 0 10px 25px;
                   color: #818181;
                   font-size: 12px;
                   line-height: 18px;
-                "
-              >
-                <!-- Social icons -->
-                <a
-                  href="https://www.facebook.com/strongbody.career/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
-                    alt="Facebook"
-                    width="40"
-                    height="40"
-                    style="margin: 0 5px"
-                  />
-                </a>
-                <a
-                  href="https://www.pinterest.com/strongbodyai/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
-                    alt="Pinterest"
-                    width="40"
-                    height="40"
-                    style="margin: 0 5px"
-                  />
-                </a>
-                
-                <a
-                  href="https://www.instagram.com/strongbody_network/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
-                    alt="Instagram"
-                    width="40"
-                    height="40"
-                    style="margin: 0 5px"
-                  />
-                </a>
-                <br /><br />
-                <a
-                  href="#"
-                  style="
+                ">
+              <!-- Social icons -->
+              <a href="https://www.facebook.com/strongbody.career/" target="_blank">
+                <img
+                  src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                  alt="Facebook" width="40" height="40" style="margin: 0 5px" />
+              </a>
+              <a href="https://www.pinterest.com/strongbodyai/" target="_blank">
+                <img
+                  src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                  alt="Pinterest" width="40" height="40" style="margin: 0 5px" />
+              </a>
+
+              <a href="https://www.instagram.com/strongbody_network/" target="_blank">
+                <img
+                  src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                  alt="Instagram" width="40" height="40" style="margin: 0 5px" />
+              </a>
+              <br /><br />
+              <a href="#" style="
                     color: #000; padding: 0 10px; font-weight: bold; text-decoration: none;
                     font-weight: bold;
                     text-decoration: none;
-                  "
-                  >Privacy Policy</a
-                >
-                |
-                <a
-                  href="https://strongbody.ai/contact"
-                  style="
+                  ">Privacy Policy</a>
+              |
+              <a href="https://strongbody.ai/contact" style="
                     color: #000; padding: 0 10px; font-weight: bold; text-decoration: none;
                     font-weight: bold;
                     text-decoration: none;
-                  "
-                  >Support</a
-                >
-                |
-                <a
-                  href="https://strongbody.ai/manage-ref"
-                  style="
+                  ">Support</a>
+              |
+              <a href="https://strongbody.ai/manage-ref" style="
                     color: #000; padding: 0 10px; font-weight: bold; text-decoration: none;
                     font-weight: bold;
                     text-decoration: none;
-                  "
-                  >Invite Friends</a
-                >
-                |
-                <a
-                  href="https://strongbody.ai/ourblog"
-                  style="
+                  ">Invite Friends</a>
+              |
+              <a href="https://strongbody.ai/ourblog" style="
                     color: #000; padding: 0 10px; font-weight: bold; text-decoration: none;
                     font-weight: bold;
                     text-decoration: none;
-                  "
-                  >Get Inspired</a
-                >
-                <br /><br />
-                <span style="color: #7a7d85">
-                  This email was sent to you by StrongBody SG PTE, LTD.<br />
-                  You are receiving this email because you signed up for
-                  StrongBody.ai<br />
-                  To unsubscribe, click
-                  <a
-                    href="#"
-                    style="color: #000; padding: 0 10px; font-weight: bold; text-decoration: none; text-decoration: none"
-                    target="_blank"
-                    >here</a
-                  >.<br /><br />
-                  105 CECIL STREET #18‑20 THE OCTAGON Singapore, 069534
-                  Singapore<br />
-                  StrongBody wellness marketplace, now in Multi Me – your
-                  trusted super app for health and connections
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="padding: 0 10px 20px">
-                <a href="#" target="_blank" style="margin: 4px"
-                  ><img
-                    src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
-                    alt="App Store"
-                    width="120"
-                    height="36"
-                    style="border: none"
-                /></a>
-                <a href="#" target="_blank" style="margin: 4px"
-                  ><img
-                    src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
-                    alt="Google Play"
-                    width="120"
-                    height="36"
-                    style="border: none"
-                /></a>
-              </td>
-            </tr>
-            <tr>
-              <td height="20">&nbsp;</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td height="20">&nbsp;</td>
-      </tr>
-    </table>
-  </body>
+                  ">Get Inspired</a>
+              <br /><br />
+              <span style="color: #7a7d85">
+                This email was sent to you by StrongBody SG PTE, LTD.<br />
+                You are receiving this email because you signed up for
+                StrongBody.ai<br />
+                To unsubscribe, click
+                <a href="#"
+                  style="color: #000; padding: 0 10px; font-weight: bold; text-decoration: none; text-decoration: none"
+                  target="_blank">here</a>.<br /><br />
+                105 CECIL STREET #18‑20 THE OCTAGON Singapore, 069534
+                Singapore<br />
+                StrongBody wellness marketplace, now in Multi Me – your
+                trusted super app for health and connections
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding: 0 10px 20px">
+              <a href="#" target="_blank" style="margin: 4px"><img
+                  src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
+                  alt="App Store" width="120" height="36" style="border: none" /></a>
+              <a href="#" target="_blank" style="margin: 4px"><img
+                  src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
+                  alt="Google Play" width="120" height="36" style="border: none" /></a>
+            </td>
+          </tr>
+          <tr>
+            <td height="20">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="20">&nbsp;</td>
+    </tr>
+  </table>
+</body>
+
 </html>
