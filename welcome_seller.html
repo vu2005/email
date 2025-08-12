@@ -26,100 +26,21 @@
             font-family: "Plus Jakarta Sans", sans-serif !important;
             text-decoration: none;
         }
-
-        .feature-card {
-            transition: transform 0.3s ease;
+        
+        .feature-card-wrapper {
+            display: inline-block;
+            width: 30%;
+            min-width: 140px;
+            vertical-align: top;
+            margin: 10px;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #FF0000 0%, #FF4444 100%);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
-        }
-
-        /* Compact Carousel Styles */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .carousel-wrapper {
-            display: flex;
-            transition: transform 0.4s ease-in-out;
-            width: 300%;
-            /* 3 slides * 100% */
-        }
-
-        .carousel-slide {
-            width: 33.333%;
-            /* 100% / 3 slides */
-            flex-shrink: 0;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        .carousel-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            gap: 12px;
-        }
-
-        .carousel-btn {
-            background: linear-gradient(135deg, #FF0000 0%, #FF4444 100%);
-            color: white;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-        }
-
-        .carousel-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-        }
-
-        .carousel-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: scale(1);
-        }
-
-        .carousel-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #d1d5db;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-dot.active {
-            background: linear-gradient(135deg, #FF0000 0%, #FF4444 100%);
-            transform: scale(1.3);
+        @media screen and (max-width: 600px) {
+            .feature-card-wrapper {
+                width: 100% !important;
+                margin: 10px 0 !important;
+                display: block !important;
+            }
         }
     </style>
 
@@ -193,7 +114,7 @@
                                     </td>
                                 </tr>
 
-                                <!-- Features Section với Carousel -->
+                                <!-- Features Section -->
                                 <tr>
                                     <td bgcolor="#f8fafe" style="border-radius: 0px 0px 20px 20px;">
                                         <table bgcolor="#f8fafe" border="0" cellpadding="0" cellspacing="0" width="100%"
@@ -212,200 +133,130 @@
                                                     </td>
                                                 </tr>
 
-                                                <!-- Carousel Structure -->
+                                                <!-- Responsive Feature Grid -->
                                                 <tr>
-                                                    <td align="center" width="100%">
-                                                        <div class="carousel-container">
-                                                            <div class="carousel-wrapper" id="carouselWrapper">
-                                                                <!-- Slide 1 -->
-                                                                <div class="carousel-slide">
-                                                                    <table align="center" border="0" cellpadding="0"
-                                                                        cellspacing="0" style="max-width: 520px;"
-                                                                        width="100%">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td align="center"
-                                                                                    style="font-size: 0px; padding: 0px;">
-                                                                                    <!-- Feature: Shop -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">🏪</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Shop</h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Create your branded online store</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                    <!-- Feature: Products -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">📦</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Products</h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Sell physical products globally</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
+                                                    <td align="center" width="100%"
+                                                        style="font-size: 0; text-align: center; padding: 0 10px;">
 
-                                                                <!-- Slide 2 -->
-                                                                <div class="carousel-slide">
-                                                                    <table align="center" border="0" cellpadding="0"
-                                                                        cellspacing="0" style="max-width: 520px;"
-                                                                        width="100%">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td align="center"
-                                                                                    style="font-size: 0px; padding: 0px;">
-                                                                                    <!-- Feature: Services -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">⚡</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Services</h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Offer professional services</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                    <!-- Feature: Digital -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">💾</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Digital</h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Sell digital products & downloads</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
+                                                        <!-- Feature 1: Shop -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">🏪</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Shop</h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Create your branded online store</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
 
-                                                                <!-- Slide 3 -->
-                                                                <div class="carousel-slide">
-                                                                    <table align="center" border="0" cellpadding="0"
-                                                                        cellspacing="0" style="max-width: 520px;"
-                                                                        width="100%">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td align="center"
-                                                                                    style="font-size: 0px; padding: 0px;">
-                                                                                    <!-- Feature: Blog -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">✍️</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Blog</h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Share expertise & build audience</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                    <!-- Feature: Network & Gallery -->
-                                                                                    <div
-                                                                                        style="display: inline-block; width: 30%; min-width: 140px; vertical-align: top; margin: 10px;">
-                                                                                        <table class="feature-card"
-                                                                                            border="0" cellpadding="0"
-                                                                                            cellspacing="0" width="100%"
-                                                                                            style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                                                                                            <tr>
-                                                                                                <td align="center">
-                                                                                                    <div
-                                                                                                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #cdb4db 0%, #ffc8dd 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                                                                                                        <span style="font-size: 28px;">🤝</span>
-                                                                                                    </div>
-                                                                                                    <h3
-                                                                                                        style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
-                                                                                                        Network & Gallery
-                                                                                                    </h3>
-                                                                                                    <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
-                                                                                                        Connect with others & showcase work</p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
+                                                        <!-- Feature 2: Products -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">📦</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Products</h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Sell physical products globally</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
 
-                                                            <!-- Carousel Controls (Buttons & Dots) -->
-                                                            <div class="carousel-controls">
-                                                                <button class="carousel-btn" id="prevBtn">❮</button>
-                                                                <div class="carousel-dots" id="carouselDots">
-                                                                    <div class="carousel-dot active" data-slide="0"></div>
-                                                                    <div class="carousel-dot" data-slide="1"></div>
-                                                                    <div class="carousel-dot" data-slide="2"></div>
-                                                                </div>
-                                                                <button class="carousel-btn" id="nextBtn">❯</button>
-                                                            </div>
+                                                        <!-- Feature 3: Services -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">⚡</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Services</h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Offer professional services</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
+                                                        <!-- Feature 4: Digital -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">💾</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Digital</h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Sell digital products & downloads</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
+                                                        <!-- Feature 5: Blog -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">✍️</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Blog</h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Share expertise & build audience</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
+                                                        <!-- Feature 6: Network & Gallery combined -->
+                                                        <div class="feature-card-wrapper">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                                                style="background: white; border-radius: 15px; padding: 25px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <div
+                                                                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #cdb4db 0%, #ffc8dd 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                                                                            <span style="font-size: 28px;">🤝</span>
+                                                                        </div>
+                                                                        <h3
+                                                                            style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 5px;">
+                                                                            Network & Gallery
+                                                                        </h3>
+                                                                        <p style="font-size: 12px; color: #64748b; margin: 0; line-height: 18px;">
+                                                                            Connect with others & showcase work</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -428,7 +279,7 @@
                                                                 <tr>
                                                                     <td align="center"
                                                                         style="border-radius: 25px; padding: 0px 40px; background: linear-gradient(135deg, #FF0000 0%, #FF4444 100%); box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);">
-                                                                        <a href="https://strongbody.ai/seller/dashboard"
+                                                                        <a href="https://strongbody.ai/dashboard-seller"
                                                                             style="width: auto; color: rgb(255, 255, 255); display: inline-block; font-size: 16px; line-height: 50px; text-align: center; font-weight: 700; text-decoration: none;"
                                                                             target="_blank"> Access Your Dashboard</a>
                                                                     </td>
@@ -530,84 +381,5 @@
             </tbody>
         </table>
     </div>
-
-    <!-- JavaScript for Carousel functionality -->
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 3;
-        const carouselWrapper = document.getElementById('carouselWrapper');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const dots = document.querySelectorAll('.carousel-dot');
-
-        function updateCarousel() {
-            const translateX = -currentSlide * 33.333;
-            carouselWrapper.style.transform = `translateX(${translateX}%)`;
-
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide === totalSlides - 1;
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateCarousel();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        }
-
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateCarousel();
-        }
-
-        // Event listeners for button clicks
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Event listeners for dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToSlide(index));
-        });
-
-        // Touch/swipe support for mobile
-        let startX = 0;
-        let endX = 0;
-
-        carouselWrapper.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        carouselWrapper.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = startX - endX;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-        }
-
-        // Initialize carousel on page load
-        updateCarousel();
-    </script>
 </body>
 </html>
