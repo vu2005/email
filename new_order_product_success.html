@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrongBody - New Order Notification</title>
+    <title>StrongBody - New Product Order</title>
     <!-- Google Font Library -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,15 +39,14 @@
                     <tr>
                         <td
                             style="text-align: center; padding: 35px 40px 0; font-size: 26px; color: #0e0e0f; font-weight: 700; line-height: 32px;">
-                            <strong style="color: #2c3e50;">You have a new order!</strong>
+                            <strong style="color: #2c3e50;">You have a new product order!</strong>
                         </td>
                     </tr>
                     <tr>
                         <td
                             style="text-align: center; padding: 15px 40px 20px; font-size: 16px; color: #555555; line-height: 24px;">
-                            Congratulations! You have just received a new order from a customer on StrongBody.
-                            Please check the order details below and prepare to provide the best service to your
-                            customer.
+                            Congratulations! A customer has just placed a product order on StrongBody.
+                            Please check the order details below and prepare the items for shipping.
                         </td>
                     </tr>
 
@@ -76,21 +75,27 @@
                                     </td>
                                 </tr>
 
-                                <!-- Service and image section -->
+                                <!-- Product and image section -->
                                 <tr>
                                     <td width="150" style="vertical-align: top; padding: 20px 20px 0 0;">
-                                        <img src="{{.image}}" alt="Service Image" width="120"
+                                        <img src="{{.product_image}}" alt="Product Image" width="120"
                                             style="width: 100%; max-width: 120px; border-radius: 8px; display: block; border: 2px solid #e0e0e0;">
                                     </td>
 
                                     <td style="vertical-align: top; padding-top: 20px;">
                                         <div
-                                            style="font-size: 18px; color: #0e0e0f; font-weight: 600; line-height: 24px; margin-bottom: 10px;">
-                                            {{.service_name}}
+                                            style="font-size: 18px; color: #0e0e0f; font-weight: 600; line-height: 24px; margin-bottom: 8px;">
+                                            {{.product_name}}
+                                        </div>
+                                        <div style="font-size: 14px; color: #666; margin-bottom: 8px;">
+                                            SKU: {{.product_sku}}
+                                        </div>
+                                        <div style="font-size: 14px; color: #666; margin-bottom: 10px;">
+                                            Quantity: <span style="font-weight: 600;">{{.quantity}}</span>
                                         </div>
                                         <div
                                             style="font-size: 24px; color: #dc3545; font-weight: bold; margin-bottom: 15px;">
-                                            {{.amount}}
+                                            {{.total_amount}}
                                         </div>
                                     </td>
                                 </tr>
@@ -103,13 +108,13 @@
                                             Customer Information:
                                         </div>
                                         <div style="font-size: 15px; color: #555555; margin-bottom: 5px;">
-                                            <strong>Name:</strong> {{.buyer_name}}
+                                            <strong>Name:</strong> {{.customer_name}}
                                         </div>
                                         <div style="font-size: 14px; color: #555555; margin-top: 10px;">
                                             <strong>Customer Note:</strong>
                                             <div
                                                 style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin-top: 5px; font-style: italic; color: #856404;">
-                                                "{{.buyer_note}}"
+                                                "{{.customer_note}}"
                                             </div>
                                         </div>
                                     </td>
@@ -131,12 +136,10 @@
                                         </div>
                                         <div style="font-size: 14px; color: #555555; line-height: 22px;">
                                             <div style="margin-bottom: 10px; padding: 8px 0;">
-                                                <strong style="color: #2c3e50;">1. Prepare Order:</strong> Package your
-                                                items and get ready for delivery
+                                                <strong style="color: #2c3e50;">1. Prepare Order:</strong> Package your items securely and prepare shipping labels
                                             </div>
                                             <div style="padding: 8px 0;">
-                                                <strong style="color: #2c3e50;">2. Confirm Shipping:</strong> Update
-                                                tracking information when the shipper arrives to collect
+                                                <strong style="color: #2c3e50;">2. Confirm Shipping:</strong> Update tracking information when the shipper arrives to collect the package
                                             </div>
                                         </div>
                                     </td>
@@ -163,7 +166,7 @@
                     <tr>
                         <td class="body-text" align="left" style="padding: 0 40px 40px;">
                             <div align="left" style="font-size: 14px; color: #555555; line-height: 22px;">
-                                Please prepare carefully to provide the best experience for your customer.
+                                Please package the items carefully and ensure secure shipping to provide the best experience for your customer.
                                 If you have any questions, don't hesitate to contact us.
                                 <br><br>
                                 Best of luck!
@@ -187,7 +190,6 @@
                                               " width="100%">
                     <tbody>
                         <tr>
-
                             <td align="center"
                                 style="color: #818181; font-size: 12px; padding-top: 5px; line-height: 1.5; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center;">
                                 <table style="width: 100%; text-align: center; border-collapse: separate;">
@@ -230,7 +232,7 @@
                                                     This email was sent to you by StrongBody SG
                                                     PTE, LTD.<br>
                                                     You are receiving this email because you
-                                                    signed up for
+                                                    are a seller on
                                                     StrongBody.ai<br>
                                                     If you wish to unsubscribe from all future
                                                     emails, please
