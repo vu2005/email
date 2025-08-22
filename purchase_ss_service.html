@@ -3,88 +3,136 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You for Your StrongBody Service Purchase!</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
     rel="stylesheet" />
-</head>
-<style>
-  body,
-  table,
-  td,
-  a,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Plus Jakarta Sans", sans-serif !important;
-    text-decoration: none;
-  }
-</style>
+
+  <style>
+    body,
+    table,
+    td,
+    a {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #eeeeee;
+    }
+
+    a {
+      color: #126f43;
+      text-decoration: none;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+      table[class="container"] {
+        width: 100% !important;
+      }
+
+      td[class="mobile-padding"] {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      img[class="responsive-img"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      td[class="center-text"] {
+        text-align: center !important;
+      }
+
+      a[class="button"] {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+      }
+    }
+  </style>
 </head>
 
-<body style="margin:0;padding:0;font-family:'Plus Jakarta Sans', sans-serif;background-color:#eeeeee;">
-  <div style="display:none;max-height:0px;opacity:0;overflow:hidden;">Your StrongBody service purchase is confirmed! Here are
-    your order details.</div>
+<body>
+  <div style="display:none;max-height:0px;opacity:0;overflow:hidden;">
+    Your StrongBody service purchase is confirmed! Here are your order details.
+  </div>
 
   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#eeeeee;">
     <tr>
       <td align="center" style="padding:20px;">
-        <table width="600" cellpadding="0" cellspacing="0"
-          style="width:100%;max-width:600px;background-color:#ffffff;border-radius:8px;padding:0;margin:0;">
+        <table class="container" width="600" cellpadding="0" cellspacing="0"
+          style="max-width:600px;background-color:#ffffff;border-radius:8px;">
           <tr>
             <td align="left" style="padding:30px 55px 0;">
               <a href="https://strongbody.ai/" target="_blank">
                 <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" width="80"
-                  alt="StrongBody" style="display:block;border:0;">
+                  alt="StrongBody" style="display:block;">
               </a>
             </td>
           </tr>
+
           <tr>
             <td align="center"
-              style="font-size:32px;line-height:40px;color:#222325;padding:20px 40px 16px;font-weight:bold;">
+              style="font-size:28px;line-height:36px;color:#222325;padding:20px 40px 16px;font-weight:bold;">
               Thank You for Your StrongBody Service Purchase!
             </td>
           </tr>
+
           <tr>
             <td align="center" style="padding:20px 40px 0;">
-              <img
+              <img class="responsive-img"
                 src="https://braze-images.com/appboy/communication/assets/image_assets/images/67e57598610c7900650069bb/original.png?1743091096"
-                alt="Service Purchased" width="100%" style="display:block;max-width:496px;">
+                alt="Service Purchased" style="max-width:496px;width:100%;height:auto;">
             </td>
           </tr>
+
           <tr>
-            <td align="left" style="padding:30px 40px 0;font-size:16px;line-height:26px;color:#404145;">
+            <td class="mobile-padding" align="left"
+              style="padding:30px 40px 0;font-size:16px;line-height:26px;color:#404145;">
               Dear {{.customerName}},<br><br>
               Thank you for purchasing our service! We're excited to help you on your wellness journey.<br><br>
-              Your service order <strong>#{{.order_no}}</strong> has been successfully confirmed on <strong>{{.orderDate}}</strong>.
+              Your service order <strong>#{{.orderNo}}</strong> has been successfully confirmed on
+              <strong>{{.orderDate}}</strong>.
               Here's a summary of your purchase:
-              
 
               <table width="100%"
-                style="margin-top:20px;background-color:#f7f7f7;border:1px solid #eee;border-radius:8px;padding:15px 20px;">
+                style="margin-top:20px;background-color:#f7f7f7;border:1px solid #eee;border-radius:8px;">
                 <thead>
                   <tr style="font-weight:bold;color:#404145;">
-                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Service Name</th>
-                    <th align="left" style="padding:8px 0;border-bottom:1px solid #eee;">Service Type</th>
-                    <th align="right" style="padding:8px 0;border-bottom:1px solid #eee;">Price</th>
+                    <th align="left" style="padding:8px 20px;border-bottom:1px solid #eee;">Service Name</th>
+                    <th align="left" style="padding:8px 20px;border-bottom:1px solid #eee;">Service Type</th>
+                    <th align="right" style="padding:8px 20px;border-bottom:1px solid #eee;">Price</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{.service.title}}</td>
-                    <td style="padding:8px 0;border-bottom:1px solid #eee;">{{.service.type}}</td>
-                    <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;">{{.price}} $</td>
+                    <td style="padding:8px 20px;border-bottom:1px solid #eee;">{{.serviceTitle}}</td>
+                    <td style="padding:8px 20px;border-bottom:1px solid #eee;">{{.serviceType}}</td>
+                    <td align="right" style="padding:8px 20px;border-bottom:1px solid #eee;">{{.price}} $</td>
                   </tr>
                   <tr>
                     <td colspan="2" align="right"
-                      style="padding:8px 0;font-weight:bold;font-size:18px;border-top:1px solid #eee;">Total Amount:</td>
-                    <td align="right" style="padding:8px 0;font-weight:bold;font-size:18px;color:#ff0000;">{{.price}} $</td>
+                      style="padding:8px 20px;font-weight:bold;font-size:18px;border-top:1px solid #eee;">Total Amount:
+                    </td>
+                    <td align="right" style="padding:8px 20px;font-weight:bold;font-size:18px;color:#ff0000;">{{.price}}
+                      $</td>
                   </tr>
                 </tbody>
               </table>
@@ -92,42 +140,36 @@
               <br>You can view your service purchase details and manage your appointment by logging into your account:
             </td>
           </tr>
+
           <tr>
             <td align="center" style="padding:20px;">
-              <a href="[Link to customer's service purchases/account]" target="_blank"
+              <a class="button" href="[Link to customer's service purchases/account]" target="_blank"
                 style="display:inline-block;padding:12px 25px;background-color:#ff0000;color:#ffffff;text-decoration:none;font-size:16px;font-weight:bold;border-radius:8px;">
                 View Your Purchase
               </a>
             </td>
           </tr>
+
           <tr>
-            <td align="left" class="m_-3842618150516941142padding" style="
-                                        font-size: 16px;
-                                        line-height: 26px;
-                                        color: rgb(64, 65, 69);
-                                        padding: 30px 40px 0px;
-                                      ">
-              If you have any questions about your
-              service purchase, please don't hesitate to reach out
-              to our support team at
-              <a href="mailto:customercare@strongbody.ai" style="
-                                          color: rgb(18, 111, 67);
-                                          text-decoration: none;
-                                        ">customercare@strongbody.ai</a>. <br><br>
-              We're here to help you achieve your strong
-              body goals through our professional services!
-              <br><br>
-              Warmly,
-              <br>
+            <td class="mobile-padding" align="left"
+              style="padding:30px 40px 0;font-size:16px;line-height:26px;color:#404145;">
+              If you have any questions about your service purchase, please don't hesitate to reach out to our support
+              team at
+              <a href="mailto:customercare@strongbody.ai"
+                style="color:#126f43;text-decoration:none;">customercare@strongbody.ai</a>.<br><br>
+              We're here to help you achieve your strong body goals through our professional services!<br><br>
+              Warmly,<br>
               The StrongBody Team
             </td>
           </tr>
+
           <tr>
             <td style="height:40px;"></td>
           </tr>
         </table>
+
         <!-- Footer -->
-        <table width="100%" style="max-width: 600px" cellpadding="0" cellspacing="0">
+        <table width="100%" style="max-width: 600px;" cellpadding="0" cellspacing="0">
           <tr>
             <td align="center" style="padding: 20px 10px">
               <!-- Social Icons -->
@@ -148,38 +190,28 @@
               </a>
             </td>
           </tr>
+
           <tr>
-            <td align="center" style="
-              color: #818181;
-              font-size: 12px;
-              line-height: 1.5;
-              padding: 0 10px 25px;
-            ">
-              <a href="#" style="color: #000;padding: 0 10px; font-weight: bold; text-decoration: none">Privacy
-                Policy</a>
-              |
+            <td align="center" style="color: #818181;font-size: 12px;line-height: 1.5;padding: 0 10px 25px;">
+              <a href="#" style="color: #000; font-weight: bold; text-decoration: none">Privacy Policy</a> |
               <a href="https://strongbody.ai/contact"
-                style="color: #000;padding: 0 10px; font-weight: bold; text-decoration: none">Support</a>
-              |
+                style="color: #000; font-weight: bold; text-decoration: none">Support</a> |
               <a href="https://strongbody.ai/manage-ref"
-                style="color: #000;padding: 0 10px; font-weight: bold; text-decoration: none">Invite Friends</a>
-              |
-              <a href="https://strongbody.ai/ourblog"
-                style="color: #000;padding: 0 10px; font-weight: bold; text-decoration: none">Get
+                style="color: #000; font-weight: bold; text-decoration: none">Invite Friends</a> |
+              <a href="https://strongbody.ai/ourblog" style="color: #000; font-weight: bold; text-decoration: none">Get
                 Inspired</a>
-              <br /><br />
+              <br><br>
               <span style="color: #7a7d85">
-                This email was sent to you by StrongBody SG PTE, LTD.<br />
-                You are receiving this email because you signed up for
-                StrongBody.ai<br />
+                This email was sent to you by StrongBody SG PTE, LTD.<br>
+                You are receiving this email because you signed up for StrongBody.ai<br>
                 If you wish to unsubscribe from all future emails, please click
-                <a href="#" style="color: #000;padding: 0 10px; text-decoration: none">here</a>.<br /><br />
-                105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br />
-                StrongBody wellness marketplace, now in Multi Me - your trusted
-                super app for health and connections
+                <a href="#" style="color: #000; text-decoration: none">here</a>.<br><br>
+                105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore<br>
+                StrongBody wellness marketplace, now in Multi Me – your trusted super app for health and connections
               </span>
             </td>
           </tr>
+
           <tr>
             <td align="center" style="padding: 20px 10px">
               <a href="#" target="_blank" style="margin: 4px; display: inline-block">
@@ -195,6 +227,7 @@
             </td>
           </tr>
         </table>
+
       </td>
     </tr>
   </table>
