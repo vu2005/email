@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Action Required: Missing Payment Method</title>
+    <script src="./footer/footer.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body, td, p, a { font-family: "Plus Jakarta Sans", sans-serif; }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;background:#eeeeee;">
+    <table width="100%" bgcolor="#eeeeee" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" style="max-width:600px;">
+                    <!-- Logo -->
+                    <tr>
+                        <td align="left" style="padding:30px 55px 0;">
+                            <a href="https://strongbody.ai/" target="_blank">
+                                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" 
+                                     width="80" alt="StrongBody" style="display:block;border:0;" />
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Title -->
+                    <tr>
+                        <td align="center" style="padding:25px 40px 10px;font-size:24px;font-weight:700;color:#222325;">
+                            Add a Payment Method to Your Account
+                        </td>
+                    </tr>
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding:20px 40px;font-size:16px;line-height:26px;color:#444;">
+                            Hi {{.UserName}},<br><br>
+                            We noticed that your account <strong>does not have a payment method added yet</strong>.<br><br>
+                            Adding a valid payment method ensures you can:<br>
+                            • Complete purchases without interruption<br>
+                            • Access premium features<br>
+                            • Keep your account active and secure<br><br>
+                            Please update your account settings to continue enjoying all StrongBody services.
+                        </td>
+                    </tr>
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding:30px 40px;">
+                            <a href="https://strongbody.ai/settings/payment"
+                                style="display:inline-block;padding:14px 28px;background-color:#000;color:#fff;font-weight:600;text-decoration:none;border-radius:6px;">
+                                Add Payment Method
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Extra Note -->
+                    <tr>
+                        <td style="padding:0 40px 40px;font-size:14px;color:#555;line-height:22px;">
+                            Don’t wait — adding a payment method only takes a minute and helps prevent any disruption in your account.<br><br>
+                            Thank you,<br>
+                            <strong>The StrongBody Team</strong>
+                        </td>
+                    </tr>
+                    <script>document.write(emailFooter);</script>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
