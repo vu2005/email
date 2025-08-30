@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GET INSPIRED — Real Stories, Real Connections</title>
+    <meta name="description"
+        content="Where small stories create big changes. Real user stories across medical travel, psychological & spiritual companions, massage, and global connections." />
+    <meta property="og:title" content="GET INSPIRED — Real Stories, Real Connections" />
+    <meta property="og:description"
+        content="Discover how users worldwide transformed their lives through our services." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.08)' },
+                    colors: { brand: { 500: '#3b82f6', 600: '#ff0000' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body,
+        table,
+        td,
+        a,
+        p {
+            -ms-text-size-adjust: 100%;
+            /* Đã cập nhật font-family để sử dụng "Plus Jakarta Sans" đầu tiên */
+            font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Đảm bảo các phần tử cụ thể cũng sử dụng font này nếu chúng có style riêng */
+        #titletext td {
+            font-family: "Plus Jakarta Sans", Helvetica, Avenir, Arial, sans-serif !important;
+        }
+
+        .body-text {
+            font-family: "Plus Jakarta Sans", Helvetica, Avenir, Arial, sans-serif !important;
+        }
+
+        #footer td {
+            font-family: "Plus Jakarta Sans", arial, "helvetica neue", helvetica,
+                sans-serif !important;
+        }
+    </style>
+</head>
+<style>
+    .link-underline {
+        background-size: 0 2px;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        transition: background-size .2s ease
+    }
+
+    .link-underline:hover {
+        background-size: 100% 2px
+    }
+
+    .tag {
+        border: 1px solid rgb(203 213 225/.7)
+    }
+
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden
+    }
+</style>
+<script>
+    const pref = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (pref === 'dark' || (!pref && sysDark)) document.documentElement.classList.add('dark');
+</script>
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased">
+    <!-- NAV -->
+    <header
+        class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/75 dark:supports-[backdrop-filter]:bg-slate-900/70 border-b border-slate-200/70 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="h-16 flex items-center justify-between">
+                <a href="#" class="flex items-center gap-3 font-semibold">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2l2.39 4.84L20 8.27l-4 3.9.94 5.48L12 15.77 7.06 17.65l.94-5.48-4-3.9 5.61-1.43L12 2z"
+                            stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    <span>StrongBody — Get Inspired</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="#stories" class="link-underline">Stories</a>
+                    <a href="#services" class="link-underline">Services</a>
+                    <a href="#cta" class="link-underline">Start</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <button id="langToggle"
+                        class="px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 text-sm">EN /
+                        VI</button>
+                    <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800"
+                        aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="py-12 sm:py-16 grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-slate-500">GET INSPIRED: REAL STORIES, REAL
+                        CONNECTIONS</p>
+                    <h1 class="mt-2 text-4xl md:text-5xl font-bold leading-tight"
+                        data-en="Where Small Stories Create Big Changes"
+                        data-vi="Nơi những câu chuyện nhỏ thay đổi cuộc đời lớn">Where Small Stories Create Big Changes
+                    </h1>
+                    <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-prose"
+                        data-en="Discover how users from around the world have transformed their lives through our platform's services. From life-changing medical travel to meaningful psychological and spiritual connections—this is your source of inspiration to embark on your own journey."
+                        data-vi="Hãy cùng khám phá cách những người dùng trên khắp thế giới đã thay đổi cuộc sống của họ thông qua các dịch vụ từ nền tảng của chúng tôi. Từ hành trình y tế vượt biên giới đến những kết nối tâm lý và tâm linh đầy ý nghĩa — đây là nguồn cảm hứng để bạn bắt đầu hành trình của mình.">
+                        Discover how users from around the world have transformed their lives through our platform's
+                        services. From life-changing medical travel to meaningful psychological and spiritual
+                        connections—this is your source of inspiration to embark on your own journey.</p>
+                    <div class="mt-6 flex gap-3">
+                        <a href="#cta" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:opacity-95">Post Your
+                            Request Now</a>
+                        <a href="#stories"
+                            class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Read Stories</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="aspect-[16/10] rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.pexels.com/photos/3771112/pexels-photo-3771112.jpeg?_gl=1*ojmj5v*_ga*Njk2NzE1NDM2LjE3NTM0Mjg4NTQ.*_ga_8JE65Q40S6*czE3NTY1NTQyNTkkbzExJGcxJHQxNzU2NTU0MzE3JGoyJGwwJGgw"
+                            alt="inspired" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORIES -->
+    <section id="stories" class="border-t border-slate-200/70 dark:border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl font-bold">✨ <span data-en="Inspiring User Stories"
+                    data-vi="User Stories Thành Công">Inspiring User Stories</span> ✨</h2>
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <!-- Maria -->
+                <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+                    <img class="w-full aspect-[16/10] object-cover"
+                        src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
+                        alt="Medical Travel" />
+                    <div class="p-5">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">Medical Travel</div>
+                        <h3 class="mt-1 font-semibold">A Life‑Changing Medical Journey</h3>
+                        <p class="mt-2 text-sm line-clamp-3"
+                            data-en="Maria, 42, Brazil → India. Through the platform, she received world‑class hip replacement at 80% less cost. &quot;I not only regained my health but also saved enough to invest in my children’s future.&quot;"
+                            data-vi="Maria, 42 tuổi, Brazil → Ấn Độ. Nhờ nền tảng, cô được thay khớp háng với chi phí thấp hơn 80% mà vẫn đảm bảo chất lượng. &quot;Tôi không chỉ hồi phục sức khỏe mà còn tiết kiệm cho tương lai của con.&quot;">
+                            Maria, 42, Brazil → India. Through the platform, she received world‑class hip replacement at
+                            80% less cost. "I not only regained my health but also saved enough to invest in my
+                            children’s future."</p>
+                    </div>
+                </article>
+                <!-- Alex spiritual -->
+                <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+                    <img class="w-full aspect-[16/10] object-cover"
+                        src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop"
+                        alt="Spiritual Companion" />
+                    <div class="p-5">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">Spiritual Companion</div>
+                        <h3 class="mt-1 font-semibold">A Spiritual Companion in a Time of Crisis</h3>
+                        <p class="mt-2 text-sm line-clamp-3"
+                            data-en="Alex, 29, Australia → Japan. A mentor helped him meditate, balance energy, and find inner peace. &quot;The sessions opened a new perspective on life.&quot;"
+                            data-vi="Alex, 29 tuổi, Úc → Nhật Bản. Một cố vấn giúp anh thiền định, cân bằng năng lượng và tìm lại bình an. &quot;Những buổi trò chuyện đã mở ra một góc nhìn mới về cuộc sống.&quot;">
+                            Alex, 29, Australia → Japan. A mentor helped him meditate, balance energy, and find inner
+                            peace. "The sessions opened a new perspective on life."</p>
+                    </div>
+                </article>
+                <!-- Sophie massage -->
+                <article class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+                    <img class="w-full aspect-[16/10] object-cover"
+                        src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1600&auto=format&fit=crop"
+                        alt="Massage" />
+                    <div class="p-5">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">Massage</div>
+                        <h3 class="mt-1 font-semibold">Instant Connection with a Massage Expert</h3>
+                        <p class="mt-2 text-sm line-clamp-3"
+                            data-en="Sophie, 35, London → Thailand. In one hour online, she learned self‑massage techniques that reduced chronic back pain. &quot;Amazing to access a Thai expert from home!&quot;"
+                            data-vi="Sophie, 35 tuổi, London → Thái Lan. Chỉ trong 1 giờ trực tuyến, cô học kỹ thuật tự massage giúp giảm đau lưng mãn tính. &quot;Thật tuyệt khi tiếp cận chuyên gia Thái ngay tại nhà!&quot;">
+                            Sophie, 35, London → Thailand. In one hour online, she learned self‑massage techniques that
+                            reduced chronic back pain. "Amazing to access a Thai expert from home!"</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Extended quotes -->
+            <div class="mt-10 grid lg:grid-cols-2 gap-6">
+                <figure
+                    class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40">
+                    <blockquote class="text-lg leading-relaxed">“As a public figure, privacy was my biggest concern.
+                        Through StrongBodyAI, I connected with a therapist from New Zealand — far enough that I felt
+                        completely comfortable sharing.”</blockquote>
+                    <figcaption class="mt-3 text-sm text-slate-500">Jennifer's Discretion Journey</figcaption>
+                </figure>
+                <figure
+                    class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40">
+                    <blockquote class="text-lg leading-relaxed">“Starting with $30/week counseling in Singapore, I
+                        discovered herbal products and meditation. Now I have a unique collection of Asian wellness
+                        practices!”</blockquote>
+                    <figcaption class="mt-3 text-sm text-slate-500">Alex's Global Care Experience</figcaption>
+                </figure>
+                <figure
+                    class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40">
+                    <blockquote class="text-lg leading-relaxed">“Through StrongBody, I found a Nigerian nurse in the UK
+                        to care for my mother. Secure payments gave me peace of mind. I now explore services from physio
+                        to nutrition.”</blockquote>
+                    <figcaption class="mt-3 text-sm text-slate-500">Maria's Cross‑Border Care Story</figcaption>
+                </figure>
+                <figure
+                    class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40">
+                    <blockquote class="text-lg leading-relaxed">“I saved 70% on dental work in Mexico, then booked a
+                        beauty package in Bangkok — spa, massage, skincare — all secured through the platform.”
+                    </blockquote>
+                    <figcaption class="mt-3 text-sm text-slate-500">Sophie's Medical Tourism Journey</figcaption>
+                </figure>
+                <figure
+                    class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40 lg:col-span-2">
+                    <blockquote class="text-lg leading-relaxed">“As a CEO, I needed discretion for stress and anxiety
+                        support. I found a Swiss expert outside my network — exactly what I needed: high expertise with
+                        absolute privacy.”</blockquote>
+                    <figcaption class="mt-3 text-sm text-slate-500">David's Confidential Wellness Path</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-12 border-t border-slate-200/70 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl font-bold" data-en="Services That Inspire" data-vi="Các Dịch Vụ Truyền Cảm Hứng">
+                Services That Inspire</h2>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">Medical Travel</h3>
+                    <p class="mt-2 text-sm"
+                        data-en="Save up to 80% on international medical services, with guaranteed quality from top professionals."
+                        data-vi="Tiết kiệm đến 80% chi phí y tế quốc tế, chất lượng đảm bảo bởi chuyên gia hàng đầu.">
+                        Save up to 80% on international medical services, with guaranteed quality from top
+                        professionals.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">Massage</h3>
+                    <p class="mt-2 text-sm" data-en="Direct guidance from renowned massage experts — recover at home."
+                        data-vi="Hướng dẫn trực tiếp từ chuyên gia massage — phục hồi ngay tại nhà.">Direct guidance
+                        from renowned massage experts — recover at home.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">P2P Connect</h3>
+                    <p class="mt-2 text-sm"
+                        data-en="Peer‑to‑peer connections with people who share your needs and interests."
+                        data-vi="Kết nối ngang hàng với những người có cùng nhu cầu và sở thích.">Peer‑to‑peer
+                        connections with people who share your needs and interests.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">Psychological Companion</h3>
+                    <p class="mt-2 text-sm"
+                        data-en="Find emotional support from empathetic professionals and experienced peers."
+                        data-vi="Nhận hỗ trợ cảm xúc từ chuyên gia thấu cảm và người có kinh nghiệm.">Find emotional
+                        support from empathetic professionals and experienced peers.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">Spiritual Companion</h3>
+                    <p class="mt-2 text-sm"
+                        data-en="Achieve inner balance through conversations with spiritual mentors."
+                        data-vi="Chạm đến cân bằng nội tâm qua các buổi trò chuyện với chuyên gia tâm linh.">Achieve
+                        inner balance through conversations with spiritual mentors.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="font-semibold">Global Chat</h3>
+                    <p class="mt-2 text-sm"
+                        data-en="Cross‑border communication with real‑time translation to connect with anyone worldwide."
+                        data-vi="Trò chuyện xuyên biên giới với dịch thuật thời gian thực, kết nối với bất kỳ ai trên thế giới.">
+                        Cross‑border communication with real‑time translation to connect with anyone worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-14 bg-slate-50 dark:bg-slate-900/30 border-y border-slate-200/70 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h3 class="text-3xl font-bold" data-en="Feel Empowered to Change Your Life"
+                data-vi="Được Trao Quyền Để Thay Đổi Cuộc Đời">Feel Empowered to Change Your Life</h3>
+            <p class="mt-4 text-slate-600 dark:text-slate-300"
+                data-en="Every story is a powerful reminder that with the right tools and access, you can transform your world."
+                data-vi="Mỗi câu chuyện nhắc nhở rằng khi có công cụ và cơ hội đúng, bạn có thể thay đổi thế giới của chính mình.">
+                Every story is a powerful reminder that with the right tools and access, you can transform your world.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="#" class="px-5 py-3 rounded-xl bg-brand-600 text-white">Post Your Request Now</a>
+                <a href="#" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700"
+                    data-en="Talk to an Expert" data-vi="Nói chuyện với chuyên gia">Talk to an Expert</a>
+            </div>
+            <p class="mt-3 text-xs text-slate-500" data-en="Let the next story on GET INSPIRED be yours."
+                data-vi="Hãy để câu chuyện tiếp theo trên GET INSPIRED là của bạn.">Let the next story on GET INSPIRED
+                be yours.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 font-semibold">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2l2.39 4.84L20 8.27l-4 3.9.94 5.48L12 15.77 7.06 17.65l.94-5.48-4-3.9 5.61-1.43L12 2z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        <span>StrongBody</span>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Real Stories. Real Connections.</p>
+                </div>
+                <div>
+                    <h5 class="text-sm font-semibold">Explore</h5>
+                    <ul class="mt-3 space-y-2 text-sm">
+                        <li><a class="link-underline" href="#stories">Stories</a></li>
+                        <li><a class="link-underline" href="#services">Services</a></li>
+                        <li><a class="link-underline" href="#cta">Get Started</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-semibold">Company</h5>
+                    <ul class="mt-3 space-y-2 text-sm">
+                        <li><a href="#" class="link-underline">About</a></li>
+                        <li><a href="#" class="link-underline">Contact</a></li>
+                        <li><a href="#" class="link-underline">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-semibold">Newsletter</h5>
+                    <form class="mt-3 flex gap-2"
+                        onsubmit="event.preventDefault(); alert('🎉 Subscribed!'); this.reset();">
+                        <input type="email" required placeholder="Email"
+                            class="flex-1 px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
+                        <button
+                            class="px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 text-xs text-slate-500">© <span id="year"></span> StrongBody. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const html = document.documentElement; const isDark = html.classList.toggle('dark'); localStorage.setItem('theme', isDark ? 'dark' : 'light'); document.getElementById('themeIcon').textContent = isDark ? '☀️' : '🌙';
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Language toggle EN/VI
+        const toggler = document.getElementById('langToggle');
+        let lang = localStorage.getItem('lang') || 'en';
+        function applyLang() {
+            document.querySelectorAll('[data-en]').forEach(el => { el.textContent = el.getAttribute(`data-${lang}`); });
+            toggler.textContent = lang.toUpperCase() === 'EN' ? 'EN / VI' : 'VI / EN';
+        }
+        toggler.addEventListener('click', () => { lang = lang === 'en' ? 'vi' : 'en'; localStorage.setItem('lang', lang); applyLang(); });
+        applyLang();
+    </script>
+</body>
+
+</html>
