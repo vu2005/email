@@ -1,170 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="./footer/footer.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate; background-color: #eeeeee;">
-  <tr>
-    <td align="center" style="padding: 20px 15px;">
-      
-      <!-- Main Content Container -->
-      <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; border-collapse: separate; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <tr>
-          <td style="padding: 0 48px;">
-            
-            <!-- Logo Section -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td align="left" style="padding: 30px 0;">
-                  <img border="0" src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png" style="vertical-align: middle; width: 100px;" alt="StrongBody Logo">
-                </td>
-              </tr>
-            </table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%"
+    style="border-collapse: separate; background-color: #eeeeee;">
+    <tr>
+      <td align="center" style="padding: 20px 15px;">
 
-            <!-- Avatar Section -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td align="center" style="padding-bottom: 12px;">
-                  <div style="display: inline-block; border: 3px solid #ff0000; border-radius: 50%; padding: 0; width: 66px; height: 66px; box-sizing: border-box; overflow: hidden; background: #fff;">
-                    <img border="0" src="{{Img_seller_avatar}}" style="vertical-align: middle; border-radius: 50%; width: 66px; height: 66px; display: block; object-fit: cover;" alt="Seller Avatar">
-                  </div>
-                </td>
-              </tr>
-            </table>
+        <!-- Main Content Container -->
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+          style="max-width: 600px; width: 100%; border-collapse: separate; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <tr>
+            <td style="padding: 0 48px;">
 
-            <!-- Title Section -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td style="font-size: 20px; line-height: 28px; color: #404145; text-align: center; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-weight: 700;">
-                  Coupon Expiry Reminder
-                </td>
-              </tr>
-            </table>
+              <!-- Logo Section -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td align="left" style="padding: 30px 0;">
+                    <img border="0" src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
+                      style="vertical-align: middle; width: 100px;" alt="StrongBody Logo">
+                  </td>
+                </tr>
+              </table>
 
-            <!-- Message Content -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td style="padding: 30px 0 0; font-size: 16px; line-height: 24px; color: #62646a; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
-                  <p style="margin: 0 0 16px;">Hi {{username}},</p>
-                  <p style="margin: 0 0 16px;">
-                    This is a friendly reminder that your coupon code
-                    <strong style="color: #404145;">{{coupon_code}}</strong> for
-                    <strong style="color: #404145;">{{discount_percentage}}% off</strong> will expire soon.
-                  </p>
-                  <p style="margin: 0 0 16px;">
-                    You can use it on any of {{seller_username}}'s Gigs until
-                    <strong style="color: #404145;">{{valid_until_date}}, {{valid_until_time}} UTC</strong>.
-                  </p>
-                </td>
-              </tr>
-            </table>
+              <!-- Avatar Section -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td align="center" style="padding-bottom: 12px;">
+                    <div
+                      style="display: inline-block; border: 3px solid #ff0000; border-radius: 50%; padding: 0; width: 66px; height: 66px; box-sizing: border-box; overflow: hidden; background: #fff;">
+                      <img border="0" src="{{Img_seller_avatar}}"
+                        style="vertical-align: middle; border-radius: 50%; width: 66px; height: 66px; display: block; object-fit: cover;"
+                        alt="Seller Avatar">
+                    </div>
+                  </td>
+                </tr>
+              </table>
 
-            <!-- Coupon Section -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate; margin: 28px 0;">
-              <tr>
-                <td>
-                  <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate; border-radius: 8px; padding: 20px; border: 1px solid #efeff0; background-color: #fafafa;">
-                    <tr>
-                      <td align="center" style="font-size: 14px; line-height: 21px; font-weight: 600; color: #000000; padding-bottom: 16px; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
-                        {{seller_username}}'s Coupon
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <table cellpadding="0" cellspacing="0" width="100%" style="border-radius: 10px; border-collapse: separate; border: 1px dashed #d4defb; background-color: #ffffff;">
-                          <tr>
-                            <td style="width: 35%; text-align: center; padding: 20px 0; border-right: 1px dashed #d4defb;">
-                              <div style="color: #ff0000;">
-                                <span style="font-size: 42px; line-height: 42px; font-weight: 700; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">{{discount_percentage}}%</span><br>
-                                <span style="font-size: 12px; line-height: 21px; font-weight: 600; letter-spacing: 1px;">OFF</span>
-                              </div>
-                            </td>
-                            <td style="padding: 20px 0 20px 24px; vertical-align: top;">
-                              <div style="font-size: 13px; line-height: 21px; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #62646a;">
-                                <div style="padding-bottom: 8px;">
-                                  <span style="color: #ff0000;">✓</span>
-                                  <strong style="color: #404145;">Minimum order amount:</strong> ${{min_order_amount}}
-                                </div>
-                                <div style="padding-bottom: 8px;">
-                                  <span style="color: #ff0000;">✓</span>
-                                  <strong style="color: #404145;">Applies to:</strong> {{applies_to}}
-                                </div>
-                                <div>
-                                  <span style="color: #ff0000;">✓</span>
-                                  <strong style="color: #404145;">Valid until:</strong> {{valid_until_date}}, {{valid_until_time}} UTC
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
+              <!-- Title Section -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td
+                    style="font-size: 20px; line-height: 28px; color: #404145; text-align: center; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-weight: 700;">
+                    Coupon Expiry Reminder
+                  </td>
+                </tr>
+              </table>
 
-            <!-- CTA Button -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td align="center" style="padding: 20px 0;">
-                  <table cellpadding="0" cellspacing="0" style="border-collapse: separate;">
-                    <tr>
-                      <td align="center" bgcolor="#ff0000" style="border-radius: 8px; padding: 0;">
-                        <a href="#" style="width: 200px; color: #ffffff; display: inline-block; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; text-align: center; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px;">
-                          Claim Your Coupon
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
+              <!-- Message Content -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td
+                    style="padding: 30px 0 0; font-size: 16px; line-height: 24px; color: #62646a; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
+                    <p style="margin: 0 0 16px;">Hi {{username}},</p>
+                    <p style="margin: 0 0 16px;">
+                      This is a friendly reminder that your coupon code
+                      <strong style="color: #404145;">{{coupon_code}}</strong> for
+                      <strong style="color: #404145;">{{discount_percentage}}% off</strong> will expire soon.
+                    </p>
+                    <p style="margin: 0 0 16px;">
+                      You can use it on any of {{seller_username}}'s Gigs until
+                      <strong style="color: #404145;">{{valid_until_date}}, {{valid_until_time}} UTC</strong>.
+                    </p>
+                  </td>
+                </tr>
+              </table>
 
-            <!-- Gigs Section Title -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
-              <tr>
-                <td align="center" style="font-size: 18px; line-height: 24px; color: #404145; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-weight: 600; padding: 32px 0 20px;">
-                  Check out {{seller_username}}'s Gigs
-                </td>
-              </tr>
-            </table>
-
-            <!-- Gigs Grid -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%; border-collapse: separate;">
-              <tr>
-                <td align="center" style="font-size: 0;">
-                  
-                  <!-- Gig 1 -->
-                  <div style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: separate;">
+              <!-- Coupon Section -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                style="border-collapse: separate; margin: 28px 0;">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0" width="100%"
+                      style="border-collapse: separate; border-radius: 8px; padding: 20px; border: 1px solid #efeff0; background-color: #fafafa;">
+                      <tr>
+                        <td align="center"
+                          style="font-size: 14px; line-height: 21px; font-weight: 600; color: #000000; padding-bottom: 16px; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
+                          {{seller_username}}'s Coupon
+                        </td>
+                      </tr>
                       <tr>
                         <td>
-                          <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
+                          <table cellpadding="0" cellspacing="0" width="100%"
+                            style="border-radius: 10px; border-collapse: separate; border: 1px dashed #d4defb; background-color: #ffffff;">
                             <tr>
-                              <td>
-                                <img alt="Gig Image" border="0" height="140" src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/414786424/original/cc5c330b036d559205ef4c277dacffafdefc3aa6/setup-and-integration-your-business.png" style="display: block; width: 100%; height: 140px; object-fit: cover;">
+                              <td
+                                style="width: 35%; text-align: center; padding: 20px 0; border-right: 1px dashed #d4defb;">
+                                <div style="color: #ff0000;">
+                                  <span
+                                    style="font-size: 42px; line-height: 42px; font-weight: 700; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">{{discount_percentage}}%</span><br>
+                                  <span
+                                    style="font-size: 12px; line-height: 21px; font-weight: 600; letter-spacing: 1px;">OFF</span>
+                                </div>
                               </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px;">
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
-                                  By {{seller_username}}
-                                </div>
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
-                                  {{gig_title_1}}
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                  <div style="display: flex; align-items: center;">
-                                    <span style="color: #ffb33e;">★</span>
-                                    <span style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_1}}</span>
+                              <td style="padding: 20px 0 20px 24px; vertical-align: top;">
+                                <div
+                                  style="font-size: 13px; line-height: 21px; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #62646a;">
+                                  <div style="padding-bottom: 8px;">
+                                    <span style="color: #ff0000;">✓</span>
+                                    <strong style="color: #404145;">Minimum order amount:</strong> ${{min_order_amount}}
                                   </div>
-                                  <div style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
-                                    Starting at <span style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_1}}</span>
+                                  <div style="padding-bottom: 8px;">
+                                    <span style="color: #ff0000;">✓</span>
+                                    <strong style="color: #404145;">Applies to:</strong> {{applies_to}}
+                                  </div>
+                                  <div>
+                                    <span style="color: #ff0000;">✓</span>
+                                    <strong style="color: #404145;">Valid until:</strong> {{valid_until_date}},
+                                    {{valid_until_time}} UTC
                                   </div>
                                 </div>
                               </td>
@@ -173,194 +125,251 @@
                         </td>
                       </tr>
                     </table>
-                  </div>
+                  </td>
+                </tr>
+              </table>
 
-                  <!-- Gig 2 -->
-                  <div style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: separate;">
+              <!-- CTA Button -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <table cellpadding="0" cellspacing="0" style="border-collapse: separate;">
                       <tr>
-                        <td>
-                          <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
-                            <tr>
-                              <td>
-                                <img alt="Gig Image" border="0" height="140" src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/427844258/original/5161e011a93443e0380ea239472dab901a66b164/professionally-create-and-optimize-your-facebook-and-instagram-business-accounts.png" style="display: block; width: 100%; height: 140px; object-fit: cover;">
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px;">
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
-                                  By {{seller_username}}
-                                </div>
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
-                                  {{gig_title_2}}
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                  <div style="display: flex; align-items: center;">
-                                    <span style="color: #ffb33e;">★</span>
-                                    <span style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_2}}</span>
-                                  </div>
-                                  <div style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
-                                    Starting at <span style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_2}}</span>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                          </table>
+                        <td align="center" bgcolor="#ff0000" style="border-radius: 8px; padding: 0;">
+                          <a href="#"
+                            style="width: 200px; color: #ffffff; display: inline-block; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; text-align: center; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px;">
+                            Claim Your Coupon
+                          </a>
                         </td>
                       </tr>
                     </table>
-                  </div>
+                  </td>
+                </tr>
+              </table>
 
-                </td>
-              </tr>
-              
-              <!-- Second Row -->
-              <tr>
-                <td align="center" style="font-size: 0;">
-                  
-                  <!-- Gig 3 -->
-                  <div style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: separate;">
-                      <tr>
-                        <td>
-                          <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
-                            <tr>
-                              <td>
-                                <img alt="Gig Image" border="0" height="140" src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/419429281/original/931695096653549c8bac1f22470f83bdef64fbce/do-instagram-hashtags-research-for-fast-organic-growth.png" style="display: block; width: 100%; height: 140px; object-fit: cover;">
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px;">
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
-                                  By {{seller_username}}
-                                </div>
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
-                                  {{gig_title_3}}
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                  <div style="display: flex; align-items: center;">
-                                    <span style="color: #ffb33e;">★</span>
-                                    <span style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_3}}</span>
+              <!-- Gigs Section Title -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: separate;">
+                <tr>
+                  <td align="center"
+                    style="font-size: 18px; line-height: 24px; color: #404145; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; font-weight: 600; padding: 32px 0 20px;">
+                    Check out {{seller_username}}'s Gigs
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Gigs Grid -->
+              <table align="center" border="0" cellpadding="0" cellspacing="0"
+                style="max-width: 100%; border-collapse: separate;">
+                <tr>
+                  <td align="center" style="font-size: 0;">
+
+                    <!-- Gig 1 -->
+                    <div
+                      style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0"
+                        style="width: 100%; border-collapse: separate;">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0"
+                              style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
+                              <tr>
+                                <td>
+                                  <img alt="Gig Image" border="0" height="140"
+                                    src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/414786424/original/cc5c330b036d559205ef4c277dacffafdefc3aa6/setup-and-integration-your-business.png"
+                                    style="display: block; width: 100%; height: 140px; object-fit: cover;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding: 12px;">
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
+                                    By {{seller_username}}
                                   </div>
-                                  <div style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
-                                    Starting at <span style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_3}}</span>
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
+                                    {{gig_title_1}}
                                   </div>
-                                </div>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-
-                  <!-- Gig 4 -->
-                  <div style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: separate;">
-                      <tr>
-                        <td>
-                          <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
-                            <tr>
-                              <td>
-                                <img alt="Gig Image" border="0" height="140" src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/424386378/original/cf267a298871a6e8c26593fbc412f8be825fbf0c/create-and-optimize-your-social-media-accounts-professionally.jpg" style="display: block; width: 100%; height: 140px; object-fit: cover;">
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px;">
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
-                                  By {{seller_username}}
-                                </div>
-                                <div style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
-                                  {{gig_title_4}}
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                  <div style="display: flex; align-items: center;">
-                                    <span style="color: #ffb33e;">★</span>
-                                    <span style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_4}}</span>
+                                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center;">
+                                      <span style="color: #ffb33e;">★</span>
+                                      <span
+                                        style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_1}}</span>
+                                    </div>
+                                    <div
+                                      style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
+                                      Starting at <span
+                                        style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_1}}</span>
+                                    </div>
                                   </div>
-                                  <div style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
-                                    Starting at <span style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_4}}</span>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <!-- Gig 2 -->
+                    <div
+                      style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0"
+                        style="width: 100%; border-collapse: separate;">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0"
+                              style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
+                              <tr>
+                                <td>
+                                  <img alt="Gig Image" border="0" height="140"
+                                    src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/427844258/original/5161e011a93443e0380ea239472dab901a66b164/professionally-create-and-optimize-your-facebook-and-instagram-business-accounts.png"
+                                    style="display: block; width: 100%; height: 140px; object-fit: cover;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding: 12px;">
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
+                                    By {{seller_username}}
                                   </div>
-                                </div>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
+                                    {{gig_title_2}}
+                                  </div>
+                                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center;">
+                                      <span style="color: #ffb33e;">★</span>
+                                      <span
+                                        style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_2}}</span>
+                                    </div>
+                                    <div
+                                      style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
+                                      Starting at <span
+                                        style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_2}}</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
 
-                </td>
-              </tr>
-            </table>
+                  </td>
+                </tr>
 
-          </td>
-        </tr>
-      </table>
+                <!-- Second Row -->
+                <tr>
+                  <td align="center" style="font-size: 0;">
 
-      <!-- Footer -->
-      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; border-collapse: separate; margin-top: 20px;">
-        <tr>
-          <td align="center" style="padding: 20px;">
-            
-            <!-- Social Media Icons -->
-            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; margin-bottom: 20px;">
-              <tr>
-                <td align="center">
-                  <a href="#" style="display: inline-block; margin: 0 8px;">
-                    <img alt="Facebook" height="32" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966" width="32" style="width: 32px; height: 32px; border-style: none;">
-                  </a>
-                  <a href="#" style="display: inline-block; margin: 0 8px;">
-                    <img alt="Pinterest" height="32" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971" width="32" style="width: 32px; height: 32px; border-style: none;">
-                  </a>
-                  <a href="#" style="display: inline-block; margin: 0 8px;">
-                    <img alt="Instagram" height="32" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937" width="32" style="width: 32px; height: 32px; border-style: none;">
-                  </a>
-                </td>
-              </tr>
-            </table>
+                    <!-- Gig 3 -->
+                    <div
+                      style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0"
+                        style="width: 100%; border-collapse: separate;">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0"
+                              style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
+                              <tr>
+                                <td>
+                                  <img alt="Gig Image" border="0" height="140"
+                                    src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/419429281/original/931695096653549c8bac1f22470f83bdef64fbce/do-instagram-hashtags-research-for-fast-organic-growth.png"
+                                    style="display: block; width: 100%; height: 140px; object-fit: cover;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding: 12px;">
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
+                                    By {{seller_username}}
+                                  </div>
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
+                                    {{gig_title_3}}
+                                  </div>
+                                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center;">
+                                      <span style="color: #ffb33e;">★</span>
+                                      <span
+                                        style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_3}}</span>
+                                    </div>
+                                    <div
+                                      style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
+                                      Starting at <span
+                                        style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_3}}</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
 
-            <!-- Footer Links -->
-            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;">
-              <tr>
-                <td align="center" style="color: #74767e; font-size: 12px; line-height: 18px; font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;">
-                  <a href="#" style="color: #404145; text-decoration: none; font-weight: 600; padding: 0 8px;">Privacy Policy</a> |
-                  <a href="#" style="color: #404145; text-decoration: none; font-weight: 600; padding: 0 8px;">Support</a> |
-                  <a href="#" style="color: #404145; text-decoration: none; font-weight: 600; padding: 0 8px;">Invite Friends</a> |
-                  <a href="#" style="color: #404145; text-decoration: none; font-weight: 600; padding: 0 8px;">Get Inspired</a>
-                  <br><br>
-                  <div style="color: #74767e; line-height: 18px;">
-                    This email was sent to you by StrongBody SG PTE, LTD.<br>
-                    You are receiving this email because you signed up for StrongBody.ai<br>
-                    If you wish to unsubscribe from all future emails, please click <a href="#" style="color: #000; text-decoration: none;">here</a>.<br><br>
-                    105 CECIL STREET #18-20 THE OCTAGON<br>
-                    Singapore, 069534 Singapore
-                  </div>
-                </td>
-              </tr>
-            </table>
+                    <!-- Gig 4 -->
+                    <div
+                      style="display: inline-block; max-width: 48%; min-width: 220px; vertical-align: top; width: 100%; margin: 0 1% 20px;">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0"
+                        style="width: 100%; border-collapse: separate;">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0"
+                              style="width: 100%; border-radius: 8px; border-collapse: separate; border: 1px solid #e4e5e7; overflow: hidden; background-color: #ffffff;">
+                              <tr>
+                                <td>
+                                  <img alt="Gig Image" border="0" height="140"
+                                    src="https://fiverr-res.cloudinary.com/images/t_medium5,q_auto,f_auto,q_auto,f_auto/gigs/424386378/original/cf267a298871a6e8c26593fbc412f8be825fbf0c/create-and-optimize-your-social-media-accounts-professionally.jpg"
+                                    style="display: block; width: 100%; height: 140px; object-fit: cover;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding: 12px;">
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #74767e; font-size: 12px; line-height: 16px; margin-bottom: 8px;">
+                                    By {{seller_username}}
+                                  </div>
+                                  <div
+                                    style="font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; color: #404145; font-size: 14px; line-height: 18px; font-weight: 500; margin-bottom: 12px; min-height: 36px;">
+                                    {{gig_title_4}}
+                                  </div>
+                                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center;">
+                                      <span style="color: #ffb33e;">★</span>
+                                      <span
+                                        style="font-size: 14px; color: #ffb33e; font-weight: 600; margin-left: 4px;">{{gig_rating_4}}</span>
+                                    </div>
+                                    <div
+                                      style="font-size: 12px; color: #74767e; text-transform: uppercase; font-weight: 500;">
+                                      Starting at <span
+                                        style="font-size: 16px; color: #404145; font-weight: 600;">${{gig_price_4}}</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
 
-            <!-- App Store Badges -->
-            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; margin-top: 20px;">
-              <tr>
-                <td align="center">
-                  <a href="#" style="display: inline-block; margin: 0 8px;">
-                    <img alt="App Store" height="36" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298" width="120" style="width: 120px; height: 36px; border-style: none;">
-                  </a>
-                  <a href="#" style="display: inline-block; margin: 0 8px;">
-                    <img alt="Google Play" height="36" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311" width="120" style="width: 120px; height: 36px; border-style: none;">
-                  </a>
-                </td>
-              </tr>
-            </table>
+                  </td>
+                </tr>
+              </table>
 
-          </td>
-        </tr>
-      </table>
+            </td>
+          </tr>
+        </table>
 
-    </td>
-  </tr>
-</table>
+        <!-- Footer -->
+        <script>document.write(emailFooter);</script>
+
+
+      </td>
+    </tr>
+  </table>
 
 </body>
+
 </html>
