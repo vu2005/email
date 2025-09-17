@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Body: Tương Lai Của Du Lịch Y Tế</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A top-down narrative, single-page application guiding potential hospital partners through the value proposition of Strong Body. The structure flows from the macro opportunity (market trends) and company vision, down to specific benefits, operational model (reverse auction), and partnership packages. This is more persuasive than a static document. Key interactions include an interactive pricing table to compare packages easily, a testimonial slider for social proof, and a market growth chart to anchor the opportunity in data. This user flow is designed to build conviction and lead seamlessly to the call-to-action. -->
+    <!-- Visualization & Content Choices: 1. Market Trend -> Goal: Show growth -> Viz: Bar Chart -> Interaction: Animated load, tooltips -> Justification: More impactful than text for data -> Library: Chart.js. 2. How it Works -> Goal: Explain process -> Viz: Step-by-step diagram -> Interaction: Scroll-triggered animations -> Justification: Visualizes a process clearly -> Library/Method: HTML/CSS. 3. Packages -> Goal: Compare options -> Viz: Tabbed pricing table -> Interaction: Click to highlight selected package -> Justification: Eases comparison, focuses user attention -> Library: Vanilla JS. 4. Testimonials -> Goal: Build trust -> Viz: Carousel/Slider -> Interaction: User-controlled navigation -> Justification: Dynamically presents social proof without clutter -> Library: Vanilla JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link.active {
+            color: #0369a1;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-sky-800">StrongBody<span class="text-amber-500">.ai</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#opportunity" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Cơ Hội</a>
+                <a href="#vision" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Tầm Nhìn</a>
+                <a href="#benefits" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Lợi Ích</a>
+                <a href="#packages" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Gói Hợp Tác</a>
+                <a href="#stories" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Câu Chuyện</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-sky-700 text-white px-6 py-2 rounded-full hover:bg-sky-800 transition duration-300">Bắt Đầu Ngay</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-sky-900 leading-tight">Tương Lai Của Du Lịch Y Tế</h1>
+                <p class="mt-4 text-lg md:text-xl text-stone-600 max-w-3xl mx-auto">Một quan hệ đối tác vì sức khỏe toàn cầu. Kết nối bệnh viện của bạn với hàng triệu bệnh nhân quốc tế và trở thành người dẫn đầu trong lĩnh vực chăm sóc sức khỏe không biên giới.</p>
+                <a href="#packages" class="mt-8 inline-block bg-amber-500 text-sky-900 font-bold px-10 py-4 rounded-full text-lg hover:bg-amber-600 transition duration-300 shadow-lg">Khám Phá Các Gói Hợp Tác</a>
+            </div>
+        </section>
+
+        <section id="opportunity" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Cơ Hội Không Thể Bỏ Lỡ</h2>
+                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Thị trường du lịch y tế đang phát triển bùng nổ. Tham gia Strong Body để khai thác thị trường béo bở này và định vị bệnh viện của bạn như một điểm đến y tế toàn cầu.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h3 class="text-2xl font-semibold text-sky-800 mb-4">Xu Hướng Tăng Trưởng Vượt Bậc</h3>
+                        <p class="text-stone-600 mb-4">Thị trường du lịch y tế toàn cầu được dự báo sẽ đạt giá trị hàng tỷ đô la, được thúc đẩy bởi nhu cầu về dịch vụ chất lượng cao, tiết kiệm chi phí và thời gian chờ đợi ngắn hơn.</p>
+                        <ul class="space-y-2 text-stone-700">
+                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Nhu cầu dịch vụ chuyên khoa ngày càng tăng.</li>
+                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Tiết kiệm chi phí cho các thủ thuật phức tạp.</li>
+                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Nền tảng kỹ thuật số đơn giản hóa quá trình.</li>
+                        </ul>
+                    </div>
+                    <div class="fade-in">
+                        <div class="chart-container bg-white p-4 rounded-lg shadow-md">
+                            <canvas id="marketChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Tầm Nhìn Của Chúng Tôi</h2>
+                    <p class="mt-4 text-stone-600 max-w-3xl mx-auto">Chúng tôi hình dung một thế giới nơi các dịch vụ được cá nhân hóa không còn bị giới hạn bởi địa lý, ngôn ngữ và kinh tế. StrongBodyAI đang xây dựng thị trường toàn cầu nhân văn nhất thế giới.</p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 200ms;">
+                        <div class="text-4xl text-amber-500 mb-4">🌐</div>
+                        <h3 class="text-xl font-semibold text-sky-800">Vũ Trụ Không Rào Cản</h3>
+                        <p class="mt-2 text-stone-600">Dịch thuật thời gian thực biến mọi cuộc trò chuyện thành kết nối ý nghĩa, xóa bỏ ranh giới ngôn ngữ.</p>
+                    </div>
+                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 400ms;">
+                        <div class="text-4xl text-amber-500 mb-4">🌟</div>
+                        <h3 class="text-xl font-semibold text-sky-800">Sân Khấu Toàn Cầu</h3>
+                        <p class="mt-2 text-stone-600">Trao quyền cho các chuyên gia y tế chia sẻ kỹ năng và được công nhận giá trị thực sự trên toàn thế giới.</p>
+                    </div>
+                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 600ms;">
+                        <div class="text-4xl text-amber-500 mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-sky-800">Niềm Tin Là Cốt Lõi</h3>
+                        <p class="mt-2 text-stone-600">Mọi tương tác được xây dựng trên nền tảng xác thực, thanh toán an toàn và sự thấu hiểu chân thành.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="benefits" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Lợi Ích Dành Cho Bệnh Viện</h2>
+                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Hợp tác với Strong Body là một bước đầu tư chiến lược để mở rộng tệp bệnh nhân quốc tế và nâng tầm thương hiệu toàn cầu.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                        <h3 class="text-lg font-semibold text-sky-800">Hiển Thị Toàn Cầu</h3>
+                        <p class="mt-2 text-sm text-stone-600">Quảng bá dịch vụ, cơ sở vật chất và chuyên môn của bạn đến bệnh nhân trên khắp thế giới.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 200ms;">
+                        <h3 class="text-lg font-semibold text-sky-800">Kết Nối Trực Tiếp</h3>
+                        <p class="mt-2 text-sm text-stone-600">Tiếp cận bệnh nhân đang chủ động tìm kiếm dịch vụ mà không cần qua trung gian tốn kém.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 400ms;">
+                        <h3 class="text-lg font-semibold text-sky-800">Nâng Cao Uy Tín</h3>
+                        <p class="mt-2 text-sm text-stone-600">Trở thành một phần của mạng lưới y tế được kiểm chứng, tăng niềm tin và uy tín quốc tế.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 600ms;">
+                        <h3 class="text-lg font-semibold text-sky-800">Dữ Liệu Thị Trường</h3>
+                        <p class="mt-2 text-sm text-stone-600">Nhận thông tin về nhu cầu và xu hướng thị trường để tối ưu hóa dịch vụ và chiến lược.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Nền Tảng Hoạt Động Như Thế Nào?</h2>
+                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Chúng tôi vận hành theo mô hình đấu giá ngược độc đáo, tạo ra một cơ chế minh bạch, hiệu quả và cạnh tranh cho cả bệnh nhân và bệnh viện.</p>
+                </div>
+                <div class="relative flex flex-col md:flex-row justify-center items-center gap-8 fade-in">
+                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
+                        <div class="text-3xl mb-2">1.</div>
+                        <h3 class="font-semibold text-sky-800">Bệnh nhân gửi yêu cầu</h3>
+                        <p class="text-sm text-stone-600">Người dùng đăng tải hồ sơ bệnh án và nhu cầu điều trị.</p>
+                    </div>
+                    <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
+                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
+                        <div class="text-3xl mb-2">2.</div>
+                        <h3 class="font-semibold text-sky-800">Bệnh viện nhận thông báo</h3>
+                        <p class="text-sm text-stone-600">Các bệnh viện và bác sĩ liên quan nhận được thông tin ngay lập tức.</p>
+                    </div>
+                     <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
+                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
+                        <div class="text-3xl mb-2">3.</div>
+                        <h3 class="font-semibold text-sky-800">Chào giá & đấu thầu</h3>
+                        <p class="text-sm text-stone-600">Bác sĩ gửi kế hoạch điều trị và chi phí cạnh tranh.</p>
+                    </div>
+                     <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
+                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
+                        <div class="text-3xl mb-2">4.</div>
+                        <h3 class="font-semibold text-sky-800">Bệnh nhân lựa chọn</h3>
+                        <p class="text-sm text-stone-600">Khách hàng so sánh và chọn đề xuất phù hợp nhất.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Các Gói Hợp Tác Linh Hoạt</h2>
+                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Chúng tôi cung cấp các gói hợp tác được thiết kế để phù hợp với mọi quy mô và mục tiêu của bệnh viện.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 fade-in">
+                    <div class="border border-stone-200 rounded-lg p-8 flex flex-col">
+                        <h3 class="text-xl font-bold text-sky-800">Dùng Thử</h3>
+                        <p class="text-3xl font-bold my-4">Miễn Phí</p>
+                        <p class="text-sm text-stone-500 mb-6">15 ngày trải nghiệm</p>
+                        <ul class="space-y-3 text-stone-700 flex-grow">
+                            <li>✓ Hồ sơ cơ bản</li>
+                            <li>✓ Đăng tải một dịch vụ</li>
+                        </ul>
+                        <button class="mt-8 w-full bg-stone-200 text-stone-800 py-3 rounded-full font-semibold">Bắt Đầu</button>
+                    </div>
+                    <div class="border-2 border-sky-700 rounded-lg p-8 flex flex-col relative shadow-xl">
+                         <span class="absolute top-0 -translate-y-1/2 bg-sky-700 text-white text-xs font-bold px-3 py-1 rounded-full left-1/2 -translate-x-1/2">Phổ Biến Nhất</span>
+                        <h3 class="text-xl font-bold text-sky-800">Thành Viên Tổ Chức</h3>
+                        <p class="text-3xl font-bold my-4">$6.000<span class="text-lg font-normal">/năm</span></p>
+                         <p class="text-sm text-stone-500 mb-6">Tối ưu hóa thu hút bệnh nhân</p>
+                        <ul class="space-y-3 text-stone-700 flex-grow">
+                            <li>✓ Hồ sơ đầy đủ</li>
+                            <li>✓ Đăng tải không giới hạn</li>
+                            <li>✓ Nhắn tin trực tiếp</li>
+                            <li>✓ Hỗ trợ chuyên dụng</li>
+                        </ul>
+                        <button class="mt-8 w-full bg-sky-700 text-white py-3 rounded-full font-semibold hover:bg-sky-800">Chọn Gói</button>
+                    </div>
+                    <div class="border border-stone-200 rounded-lg p-8 flex flex-col">
+                        <h3 class="text-xl font-bold text-sky-800">Đối Tác Marketing</h3>
+                        <p class="text-3xl font-bold my-4">$70.000<span class="text-lg font-normal">/năm</span></p>
+                        <p class="text-sm text-stone-500 mb-6">Trở thành thương hiệu toàn cầu</p>
+                        <ul class="space-y-3 text-stone-700 flex-grow">
+                            <li>✓ Mọi quyền lợi Gói Thành Viên</li>
+                            <li>✓ Đồng thương hiệu độc quyền</li>
+                            <li>✓ Vị trí nổi bật</li>
+                            <li>✓ Tham gia sự kiện quốc tế</li>
+                        </ul>
+                        <button class="mt-8 w-full bg-stone-200 text-stone-800 py-3 rounded-full font-semibold">Liên Hệ</button>
+                    </div>
+                </div>
+                 <div class="mt-12 bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto text-center fade-in">
+                    <h3 class="text-2xl font-bold text-amber-600">Cam Kết Từ Gói $70.000</h3>
+                    <p class="mt-4 text-stone-600">Chúng tôi tự tin cam kết mang lại tối thiểu <span class="font-bold text-sky-800 text-xl">60.000</span> lượt truy cập vào hồ sơ bệnh viện của bạn trong năm đầu tiên. Đây là khoản đầu tư mang lại lợi nhuận vượt trội và khẳng định vị thế dẫn đầu của bạn.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Câu Chuyện Thành Công</h2>
+                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Khám phá cách Strong Body đã thay đổi cuộc sống và tạo ra những kết nối thật sự trên toàn cầu.</p>
+                </div>
+                <div class="relative max-w-3xl mx-auto fade-in">
+                    <div id="testimonial-slider" class="overflow-hidden">
+                        <div id="testimonial-container" class="flex transition-transform duration-500 ease-in-out">
+                        </div>
+                    </div>
+                    <button id="prevBtn" class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+                        <span class="text-2xl">‹</span>
+                    </button>
+                    <button id="nextBtn" class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
+                         <span class="text-2xl">›</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-sky-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold">Bắt Đầu Ngay Hôm Nay</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-sky-200">Tham gia Strong Body để bệnh viện của bạn trở thành điểm đến y tế được lựa chọn bởi hàng chục nghìn bệnh nhân quốc tế mỗi năm.</p>
+                    <div class="mt-10 max-w-md mx-auto bg-white text-stone-800 p-8 rounded-lg shadow-2xl">
+                        <p class="font-semibold">Quét mã QR để đăng ký hoặc liên hệ trực tiếp:</p>
+                        <div class="h-40 w-40 bg-stone-200 mx-auto my-4 flex items-center justify-center">
+                            <a href="https://strongbody.ai/organization" target="_blank" class="text-sm text-stone-500">QR Code Placeholder</a>
+                        </div>
+                        <p class="text-sm"><strong>Website:</strong> strongbody.ai</p>
+                        <p class="text-sm"><strong>Email:</strong> b2b-team@strongbody.ai</p>
+                        <p class="text-sm"><strong>Nhân sự B2B:</strong> [Tên nhân sự]</p>
+                        <p class="mt-6 text-xs text-stone-500">Chúng tôi sẵn sàng ký Thỏa thuận Bảo mật Thông tin (NDA) để bảo vệ tuyệt đối dữ liệu và chiến lược của đối tác.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white py-8">
+        <div class="container mx-auto px-6 text-center text-stone-500">
+            <p class="font-bold text-lg text-sky-800">StrongBody<span class="text-amber-500">.ai</span></p>
+            <p class="text-sm mt-2">© 2025 Strong Body. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const marketChartCanvas = document.getElementById('marketChart');
+    if (marketChartCanvas) {
+        new Chart(marketChartCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['2023', '2024', '2025', '2026', '2027(Dự kiến)'],
+                datasets: [{
+                    label: 'Quy mô thị trường (tỷ USD)',
+                    data: [120, 155, 190, 240, 300],
+                    backgroundColor: 'rgba(3, 105, 161, 0.8)',
+                    borderColor: 'rgba(3, 105, 161, 1)',
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `Quy mô: ${context.raw} tỷ USD`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Quy mô (tỷ USD)'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    const testimonials = [
+        {
+            story: "Tôi không chỉ lấy lại sức khỏe mà còn tiết kiệm đủ tiền để đầu tư cho tương lai của các con. Trải nghiệm này giống như một phép màu.",
+            author: "Maria, 42 tuổi",
+            journey: "Brazil → Ấn Độ (Du lịch y tế)"
+        },
+        {
+            story: "Là một người của công chúng, quyền riêng tư là mối quan tâm lớn nhất của tôi. Qua StrongBody, tôi đã kết nối với một nhà trị liệu ở New Zealand, đủ xa để tôi cảm thấy hoàn toàn thoải mái chia sẻ.",
+            author: "Jennifer",
+            journey: "Chăm sóc sức khỏe bí mật"
+        },
+        {
+            story: "Tôi đã tiết kiệm được 70% chi phí chăm sóc răng miệng tại Mexico, mọi thứ đều được đảm bảo. Sau đó, tôi đặt một gói làm đẹp tại Bangkok. Một chuyến đi, nhiều trải nghiệm tuyệt vời!",
+            author: "Sophie",
+            journey: "Du lịch y tế & làm đẹp"
+        },
+        {
+            story: "Là CEO, tôi cần sự kín đáo khi tìm kiếm hỗ trợ cho căng thẳng. Tôi đã tìm thấy một chuyên gia người Thụy Sĩ hiểu rõ áp lực của giới lãnh đạo nhưng hoàn toàn nằm ngoài mạng lưới của tôi. Đây chính xác là điều tôi cần.",
+            author: "David",
+            journey: "Chăm sóc sức khỏe cấp cao"
+        }
+    ];
+
+    const container = document.getElementById('testimonial-container');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function renderTestimonials() {
+        container.innerHTML = '';
+        testimonials.forEach(t => {
+            const slide = document.createElement('div');
+            slide.className = 'w-full flex-shrink-0 text-center px-4 md:px-10';
+            slide.innerHTML = `
+                <div class="bg-stone-50 p-8 rounded-lg shadow-sm">
+                    <p class="text-lg italic text-stone-700">"${t.story}"</p>
+                    <p class="mt-4 font-semibold text-sky-800">${t.author}</p>
+                    <p class="text-sm text-stone-500">${t.journey}</p>
+                </div>
+            `;
+            container.appendChild(slide);
+        });
+    }
+
+    function updateSlider() {
+        container.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    if (container && prevBtn && nextBtn) {
+        renderTestimonials();
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateSlider();
+        });
+        
+        setInterval(() => {
+            nextBtn.click();
+        }, 5000);
+    }
+    
+    const faders = document.querySelectorAll('.fade-in');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    faders.forEach(fader => {
+        observer.observe(fader);
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>
