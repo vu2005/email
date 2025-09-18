@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+
+
+<head>
+
+       
+    <meta charset="UTF-8">
+
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Đề xuất Hợp tác Chiến lược: StrongBodyAI</title>
+
+       
+    <script src="https://cdn.tailwindcss.com"></script>
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+       
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+       
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+       
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"      
+          rel="stylesheet">
+
+        <style>
+        body {
+
+            font-family: 'Be Vietnam Pro', sans-serif;
+
+            -webkit-print-color-adjust: exact;
+
+            print-color-adjust: exact;
+
+        }
+
+
+
+        @media print {
+
+            body {
+
+                -webkit-print-color-adjust: exact;
+
+                print-color-adjust: exact;
+
+            }
+
+
+
+            .no-print {
+
+                display: none;
+
+            }
+
+
+
+            .page-break {
+
+                page-break-before: always;
+
+            }
+
+        }
+
+
+
+        .cover-page-container {
+
+            height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+        /* Căn lề và nội dung cho toàn bộ tài liệu */
+
+        .report-body {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        h1,
+
+        h2,
+
+        h3 {
+
+            color: #1e3a8a;
+
+            /* A professional blue color */
+
+        }
+
+
+
+        h1 {
+
+            font-size: 2.5rem;
+
+            font-weight: 800;
+
+            /* Tăng độ đậm */
+
+            margin-bottom: 1rem;
+
+            letter-spacing: -0.025em;
+
+        }
+
+
+
+        h2 {
+
+            font-size: 2rem;
+
+            /* Tăng kích thước */
+
+            font-weight: 700;
+
+            margin-top: 3rem;
+
+            margin-bottom: 1.5rem;
+
+            border-bottom: 3px solid #93c5fd;
+
+            /* Làm đường gạch chân dày hơn */
+
+            padding-bottom: 0.75rem;
+
+        }
+
+
+
+        h3 {
+
+            font-size: 1.5rem;
+
+            /* Tăng kích thước */
+
+            font-weight: 700;
+
+            margin-top: 2.5rem;
+
+            margin-bottom: 1rem;
+
+            color: #1d4ed8;
+
+        }
+
+
+
+        p {
+
+            line-height: 1.8;
+
+            margin-bottom: 1.25rem;
+
+            text-align: justify;
+
+            color: #374151;
+
+        }
+
+
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 2rem;
+
+            margin-bottom: 2rem;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+            /* Thêm bóng đổ nhẹ */
+
+            border-radius: 12px;
+
+            /* Bo góc */
+
+            overflow: hidden;
+
+            /* Ẩn phần thừa của góc bo */
+
+        }
+
+
+
+        th,
+
+        td {
+
+            border: none;
+
+            padding: 16px;
+
+            text-align: left;
+
+            border-bottom: 1px solid #e5e7eb;
+
+        }
+
+
+
+        th {
+
+            background-color: #dbeafe;
+
+            color: #1e3a8a;
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        tr:last-child td {
+
+            border-bottom: none;
+
+        }
+
+
+
+        tr:nth-child(even) {
+
+            background-color: #f9fafb;
+
+        }
+
+
+
+        caption {
+
+            caption-side: bottom;
+
+            text-align: center;
+
+            margin-top: 1rem;
+
+            font-size: 0.9rem;
+
+            color: #6b7280;
+
+        }
+
+
+
+        /* Nâng cấp giao diện Case Study */
+
+        .case-study {
+
+            border-left: 5px solid #60a5fa;
+
+            margin-top: 2rem;
+
+            margin-bottom: 2rem;
+
+            background-color: #f0f9ff;
+
+            padding: 2rem;
+
+            border-radius: 12px;
+
+            position: relative;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+        }
+
+
+
+        .case-study h3 {
+
+            margin-top: 0;
+
+            color: #1e40af;
+
+            font-size: 1.4rem;
+
+        }
+
+
+
+        /* Thêm biểu tượng trích dẫn cho Case Study */
+
+        .case-study::before {
+
+            content: '“';
+
+            position: absolute;
+
+            top: -10px;
+
+            left: 10px;
+
+            font-size: 5rem;
+
+            color: #dbeafe;
+
+            font-weight: 800;
+
+            z-index: 0;
+
+        }
+
+
+
+        .case-study p {
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+
+
+
+        .scan_me {
+
+            background-color: #ffffff;
+
+            border: 2px dashed #93c5fd;
+
+            border-radius: 12px;
+
+            padding: 2.5rem;
+
+            text-align: center;
+
+            margin-top: 2rem;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+
+        .scan_me:hover {
+
+            border-color: #3b82f6;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+
+        .scan_me p {
+
+            font-size: 1.1rem;
+
+            color: #1e3a8a;
+
+            font-weight: 600;
+
+            margin-bottom: 1rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .scan_me a {
+
+            font-family: monospace;
+
+            background-color: #eff6ff;
+
+            color: #3b82f6;
+
+            padding: 0.75rem 1.5rem;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            transition: background-color 0.3s;
+
+            font-weight: 700;
+
+        }
+
+
+
+        .scan_me a:hover {
+
+            background-color: #dbeafe;
+
+        }
+    </style>
+
+</head>
+
+
+
+<body class="bg-slate-50">
+
+
+
+        <div class="bg-white shadow-2xl rounded-lg my-8 mx-auto">
+
+                <div class="report-body px-8 md:px-12">
+
+                        <!-- Cover Page -->
+
+                        <section class="cover-page-container relative">
+
+                                <!-- Banner Section -->
+
+                                <div class="relative w-full h-[250px] bg-blue-100">
+
+                                        <img src="images/strongbody.jpg" alt="Medical Banner"
+                        class="w-full h-full object-cover border-t rounded-t-lg">
+
+
+
+                                        <!-- Logo nằm ở dưới banner -->
+
+                                        <div
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+
+                                                <div                            
+                            class="rounded-full w-40 h-40 md:w-48 md:h-48 bg-white border-8 border-white shadow-lg overflow-hidden flex items-center justify-center">
+
+                                                        <img src="images/Mascot.png" alt="StrongBodyAI Logo"            
+                                                    class="object-cover object-top w-full h-full">
+
+                                                    </div>
+
+                                            </div>
+
+
+
+
+
+                                    </div>
+
+
+
+                                <!-- Main Content Section -->
+
+                                <div class="flex-grow flex flex-col items-center text-center px-4 mt-24">
+
+                                        <div class="mt-6">
+
+                                                <h1 class="text-4xl md:text-5xl font-bold text-blue-900">Đề xuất Hợp tác
+                            Chiến lược</h1>
+
+                                                <p class="text-xl md:text-2xl text-gray-600 mt-4 max-w-2xl mx-auto">
+
+                                                        Nắm bắt Tương lai của Ngành Chăm sóc Sức khỏe Toàn cầu cùng
+                            StrongBodyAI
+
+                                                    </p>
+
+                                            </div>
+
+
+
+                                        <div class="mt-auto pb-12 text-gray-500">
+
+                                                <p>Tài liệu dành cho Ban Lãnh đạo</p>
+
+                                                <p>Ngày: 17 tháng 9 năm 2025</p>
+
+                                            </div>
+
+                                    </div>
+
+                            </section>
+
+                    </div>
+
+
+
+                <div class="page-break"></div>
+
+
+
+                <div class="report-body px-8 md:px-12">
+
+                        <!-- Section I -->
+
+                        <section id="who-we-are">
+
+                                <h2>I. Chúng Tôi Là Ai</h2>
+
+                                <p>Strong Body là nền tảng kỹ thuật số tiên phong kết nối các nhà cung cấp dịch vụ y tế
+                    hàng đầu với
+
+                                        bệnh
+
+                                        nhân quốc tế đang tìm kiếm dịch vụ chăm sóc sức khỏe chất lượng cao. Chúng tôi
+                    dẫn đầu trong lĩnh
+
+                                        vực du
+
+                                        lịch y tế, tạo ra một hệ sinh thái liền mạch, đáng tin cậy, mang lại lợi ích cho
+                    cả bệnh nhân lẫn
+
+                                        các cơ
+
+                                        sở y tế.</p>
+
+                                <p>Sứ mệnh của chúng tôi là trao quyền cho bệnh nhân có thêm lựa chọn và cung cấp cho
+                    bệnh viện một công
+
+                                        cụ
+
+                                        mạnh mẽ để mở rộng phạm vi tiếp cận toàn cầu và thu hút nhiều nhóm bệnh nhân
+                    mới. Chúng tôi tin rằng
+
+                                        việc tiếp cận y tế đẳng cấp thế giới nên không bị giới hạn bởi biên giới.</p>
+
+                                <img
+                    src="https://images.pexels.com/photos/3992933/pexels-photo-3992933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="Bác sĩ và bệnh nhân đang thảo luận"
+                    class="w-full rounded-lg shadow-md my-8">
+
+                                <p>Báo cáo này trình bày một đề xuất hợp tác chiến lược giữa cơ sở y tế của Quý vị và
+                    StrongBodyAI, một
+
+                                        nền
+
+                                        tảng công nghệ được thiết kế để định vị các đối tác của mình ở vị trí dẫn đầu
+                    trong thị trường chăm
+
+                                        sóc
+
+                                        sức khỏe toàn cầu đang phát triển mạnh mẽ. Mục tiêu của báo cáo là cung cấp một
+                    luận cứ kinh doanh
+
+                                        dựa
+
+                                        trên dữ liệu, chứng minh rằng sự hợp tác này không chỉ là một cơ hội chiến thuật
+                    mà còn là một bước
+
+                                        đi
+
+                                        chiến lược cần thiết để đảm bảo sự tăng trưởng và khả năng cạnh tranh trong thập
+                    kỷ tới.</p>
+
+                                <h3>Sự Dịch chuyển Thị trường Không thể Bỏ qua</h3>
+
+                                <p>Bối cảnh chăm sóc sức khỏe toàn cầu đang trải qua một sự thay đổi mang tính kiến tạo.
+                    Sự dịch chuyển
+
+                                        của
+
+                                        bệnh nhân xuyên biên giới không còn là một xu hướng nhỏ lẻ mà đã trở thành một
+                    ngành công nghiệp trị
+
+                                        giá
+
+                                        hàng tỷ đô la, được thúc đẩy bởi các động lực kinh tế và nhân khẩu học mạnh mẽ.
+                    Thị trường du lịch y
+
+                                        tế
+
+                                        toàn cầu được dự báo sẽ vượt mốc 252 tỷ USD vào năm 2034, với Tỷ lệ Tăng trưởng
+                    Kép Hàng năm (CAGR)
+
+                                        ấn
+
+                                        tượng là hơn 21%. Sự tăng trưởng bùng nổ này đại diện cho một nguồn doanh thu và
+                    thị phần mới quan
+
+                                        trọng
+
+                                        cho các cơ sở y tế có tầm nhìn xa.</p>
+
+                                <h3>Thách thức đối với các Nhà cung cấp Dịch vụ</h3>
+
+                                <p>Mặc dù cơ hội là rất lớn, việc nắm bắt thị trường này lại đi kèm với những thách thức
+                    đáng kể. Các
+
+                                        bệnh
+
+                                        viện thường phải đối mặt với chi phí thu hút bệnh nhân quốc tế cao ngất ngưởng,
+                    các kênh tiếp thị
+
+                                        truyền
+
+                                        thống không hiệu quả, và những khó khăn trong việc xây dựng một thương hiệu toàn
+                    cầu đáng tin cậy.
+
+                                        Việc
+
+                                        sàng lọc các yêu cầu, vượt qua rào cản ngôn ngữ và văn hóa, và quản lý hậu cần
+                    phức tạp đòi hỏi
+
+                                        nguồn
+
+                                        lực đáng kể, thường làm giảm lợi tức đầu tư.</p>
+
+                                <h3>Giải pháp StrongBodyAI</h3>
+
+                                <p>StrongBodyAI không phải là một nhà cung cấp dịch vụ thông thường, mà là một đối tác
+                    công nghệ chiến
+
+                                        lược.
+
+                                        Nền tảng của chúng tôi là cánh cổng dứt khoát dẫn đến thị trường bệnh nhân toàn
+                    cầu, tận dụng một mô
+
+                                        hình độc quyền, hiệu suất cao để kết nối các cơ sở y tế đẳng cấp thế giới với
+                    một luồng bệnh nhân
+
+                                        quốc
+
+                                        tế chất lượng, có nhu cầu thực sự. Chúng tôi biến quá trình thu hút bệnh nhân từ
+                    một hoạt động tốn
+
+                                        kém,
+
+                                        phân mảnh thành một quy trình tích hợp, hiệu quả và dựa trên dữ liệu.</p>
+
+                            </section>
+
+
+
+                        <div class="page-break"></div>
+
+
+
+                        <!-- Section II -->
+
+                        <section id="market-shift">
+
+                                <h2>II. Sự Dịch chuyển Toàn cầu</h2>
+
+                                <p>Để hiểu đầy đủ về tầm quan trọng chiến lược của việc hợp tác với StrongBodyAI, điều
+                    cần thiết là phải
+
+                                        nhận thức được quy mô và động lực của thị trường. Du lịch y tế không còn là một
+                    hiện tượng bên lề;
+
+                                        nó là một ngành kinh tế toàn cầu, phát triển nhanh chóng và được
+
+                                        củng cố bởi các xu hướng kinh tế xã hội không thể đảo ngược.</p>
+
+
+
+                                <!-- Biểu đồ -->
+
+                                <div class="bg-white p-6 rounded-xl shadow-lg my-8">
+
+                                        <h3 class="text-xl font-bold text-center text-gray-800 mb-6">Dự báo Tăng trưởng
+                        Thị trường Du lịch Y
+
+                                                tế Toàn cầu (Tỷ USD)</h3>
+
+                                        <div class="chart-container">
+
+                                                <canvas id="marketGrowthChart"></canvas>
+
+                                            </div>
+
+                                    </div>
+
+
+
+                                <h3>Định lượng Cơ hội</h3>
+
+                                <p>Các báo cáo phân tích ngành từ nhiều nguồn uy tín đều đồng thuận: thị trường du lịch
+                    y tế
+
+                                        đang trên đà tăng trưởng bùng nổ. Dữ liệu tổng hợp cho thấy thị trường toàn cầu
+                    được định giá trong
+
+                                        khoảng từ 30,5 tỷ USD đến 82,18 tỷ USD vào năm 2024. Nhìn về dài hạn, tiềm năng
+                    còn lớn hơn nhiều.
+
+                                        Các
+
+                                        dự báo cho thấy thị trường sẽ đạt quy mô từ 142 tỷ USD đến 252,94 tỷ USD vào năm
+                    2034.</p>
+
+
+
+                                <table>
+
+                                        <caption>Bảng 1: Dự báo Thị trường Du lịch Y tế Toàn cầu (2025-2034)</caption>
+
+                                        <thead>
+
+                                                <tr>
+
+                                                        <th>Nguồn Phân tích</th>
+
+                                                        <th>Quy mô 2025 (Tỷ USD)</th>
+
+                                                        <th>Dự báo (Tỷ USD)</th>
+
+                                                        <th>Giai đoạn</th>
+
+                                                        <th>CAGR (%)</th>
+
+                                                    </tr>
+
+                                            </thead>
+
+                                        <tbody>
+
+                                                <tr>
+
+                                                        <td>Precedence Research</td>
+
+                                                        <td>$43.51</td>
+
+                                                        <td>$252.94</td>
+
+                                                        <td>2025-2034</td>
+
+                                                        <td>21.60%</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Fortune Business Insights</td>
+
+                                                        <td>$38.20</td>
+
+                                                        <td>$162.80</td>
+
+                                                        <td>2025-2032</td>
+
+                                                        <td>23.0%</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Global Market Insights</td>
+
+                                                        <td>$35.00</td>
+
+                                                        <td>$142.00</td>
+
+                                                        <td>2025-2034</td>
+
+                                                        <td>16.8%</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Mordor Intelligence</td>
+
+                                                        <td>$93.72</td>
+
+                                                        <td>$218.16</td>
+
+                                                        <td>2025-2030</td>
+
+                                                        <td>18.41%</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>The Business Research Company</td>
+
+                                                        <td>$91.98</td>
+
+                                                        <td>$182.35</td>
+
+                                                        <td>2025-2029</td>
+
+                                                        <td>18.7%</td>
+
+                                                    </tr>
+
+                                            </tbody>
+
+                                    </table>
+
+
+
+                                <h3>Các Động lực Tăng trưởng</h3>
+
+                                <p>Sự tăng trưởng của du lịch y tế được thúc đẩy bởi các yếu tố cơ bản như Chênh lệch
+                    Chi phí (Cost
+
+                                        Arbitrage), Chất lượng và Khả năng Tiếp cận, Giảm Thời gian Chờ đợi, Dân số Toàn
+                    cầu đang Già hóa,
+
+                                        và Sự
+
+                                        Hỗ trợ của Công nghệ.</p>
+
+                            </section>
+
+
+
+                        <!-- Section III -->
+
+                        <section id="solution">
+
+                                <h2>III. Giải pháp StrongBodyAI</h2>
+
+                                <p>StrongBodyAI được thiết kế để giải quyết những thách thức cốt lõi mà các Chương trình
+                    Bệnh nhân Quốc
+
+                                        tế
+
+                                        (IPP) phải đối mặt, từ chi phí hành chính và tiếp thị cao đến rào cản giao tiếp
+                    và xây dựng lòng
+
+                                        tin.
+
+                                    </p>
+
+                                <img src="images/profile.webp"                    
+                    alt="Giao diện nền tảng công nghệ y tế" class="w-full rounded-lg shadow-md my-8">
+
+                                <h3>Hệ sinh thái Tích hợp</h3>
+
+                                <p>Nền tảng của chúng tôi được xây dựng dựa trên các trụ cột chính: Phạm vi Tiếp cận
+                    Toàn cầu (185 quốc
+
+                                        gia), Luồng Bệnh nhân Chất lượng (sàng lọc kỹ lưỡng), Lòng tin và Minh bạch (quy
+                    trình xác minh và
+
+                                        giao
+
+                                        tiếp trực tiếp), và Cá nhân hóa dựa trên AI (phá vỡ rào cản ngôn ngữ).</p>
+
+                            </section>
+
+
+
+                        <div class="page-break"></div>
+
+
+
+                        <!-- Section IV -->
+
+                        <section id="advantage">
+
+                                <h2>IV. Lợi thế Hợp tác</h2>
+
+                                <h3>Mô hình Đấu giá Ngược</h3>
+
+                                <p>Trọng tâm của chúng tôi là mô hình Đấu giá Ngược: một bệnh nhân đăng nhu cầu, và
+                    nhiều bệnh viện cạnh
+
+                                        tranh để đưa ra đề xuất giá trị tốt nhất. Mô hình này đảo ngược động lực truyền
+                    thống, tạo ra một
+
+                                        thị
+
+                                        trường hiệu quả, minh bạch, nơi chất lượng và giá trị được đặt lên hàng đầu.</p>
+
+                                <h3>Lợi ích Định lượng được</h3>
+
+                                <p>Mô hình này mang lại lợi ích rõ ràng: Tăng tốc Chu kỳ Thu hút Bệnh nhân, Nâng cao
+                    Thông tin Thị
+
+                                        trường,
+
+                                        Hiệu quả Hoạt động và Tăng cường Minh bạch và Công bằng. Nó không chỉ là một cơ
+                    chế giảm giá mà là
+
+                                        một
+
+                                        hệ thống tinh vi để tối ưu hóa toàn bộ quá trình, giảm thiểu rủi ro cho cả hai
+                    bên và cung cấp dữ
+
+                                        liệu
+
+                                        chiến lược quý giá.</p>
+
+                            </section>
+
+
+
+                        <!-- Section V -->
+
+                        <section id="case-studies">
+
+                                <h2>V. Kết quả Hữu hình</h2>
+
+                                <div class="case-study">
+
+                                        <h3>Ca 1: Can thiệp Y tế Phức tạp</h3>
+
+                                        <p><strong>Bệnh nhân:</strong> Maria, 42 tuổi, Brazil.</p>
+
+                                        <p><strong>Thách thức:</strong> Chi phí phẫu thuật thay khớp háng tại quê nhà
+                        quá cao.</p>
+
+                                        <p><strong>Giải pháp StrongBodyAI:</strong> Kết nối với bệnh viện chuẩn JCI tại
+                        Ấn Độ qua nền tảng,
+
+                                                tiết
+
+                                                kiệm hơn 80% chi phí so với giá tại Hoa Kỳ (khoảng 5.000 - 7.000 USD so
+                        với 40.000 - 75.000
+
+                                                USD).
+
+                                            </p>
+
+                                    </div>
+
+                                <div class="case-study">
+
+                                        <h3>Ca 2: Sức khỏe Tinh thần</h3>
+
+                                        <p><strong>Bệnh nhân:</strong> Alex, 29 tuổi, Úc.</p>
+
+                                        <p><strong>Thách thức:</strong> Tìm kiếm sự hỗ trợ về tinh thần sau biến cố lớn.
+                    </p>
+
+                                        <p><strong>Giải pháp StrongBodyAI:</strong> Kết nối với một người bạn đồng hành
+                        tâm linh tại Nhật
+
+                                                Bản,
+
+                                                minh họa cho sự hội tụ giữa y tế và chăm sóc sức khỏe chủ động.</p>
+
+                                    </div>
+
+
+
+                                <table>
+
+                                        <caption>Bảng 2: So sánh Chi phí Ước tính cho các Thủ thuật Y tế Chính</caption>
+
+                                        <thead>
+
+                                                <tr>
+
+                                                        <th>Thủ thuật Y tế</th>
+
+                                                        <th>Chi phí tại Hoa Kỳ (USD)</th>
+
+                                                        <th>Chi phí tại Ấn Độ (USD)</th>
+
+                                                        <th>Chi phí tại Mexico/Thổ Nhĩ Kỳ (USD)</th>
+
+                                                    </tr>
+
+                                            </thead>
+
+                                        <tbody>
+
+                                                <tr>
+
+                                                        <td>Thay khớp háng toàn phần</td>
+
+                                                        <td>$40,000 - $75,000</td>
+
+                                                        <td>$5,000 - $9,000</td>
+
+                                                        <td>$9,000 - $13,200</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Phẫu thuật bắc cầu động mạch vành</td>
+
+                                                        <td>$70,000 - $133,000</td>
+
+                                                        <td>$6,000 - $15,000</td>
+
+                                                        <td>-</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Cấy ghép Nha khoa (mỗi răng)</td>
+
+                                                        <td>$3,000 - $5,000</td>
+
+                                                        <td>$500 - $1,200</td>
+
+                                                        <td>$800 - $1,500</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Phẫu thuật Giảm béo</td>
+
+                                                        <td>$15,000 - $25,000</td>
+
+                                                        <td>$4,000 - $7,000</td>
+
+                                                        <td>$3,500 - $6,000</td>
+
+                                                    </tr>
+
+                                            </tbody>
+
+                                    </table>
+
+                            </section>
+
+
+
+                        <div class="page-break"></div>
+
+
+
+                        <!-- Section VI -->
+
+                        <section id="partnership">
+
+                                <h2>VI. Khuôn khổ Hợp tác</h2>
+
+                                <p>Chúng tôi cung cấp các gói hợp tác linh hoạt được thiết kế để phù hợp với các mục
+                    tiêu chiến lược
+
+                                        khác
+
+                                        nhau, từ thăm dò thị trường đến theo đuổi vị trí dẫn đầu toàn cầu.</p>
+
+                                <table>
+
+                                        <caption>Bảng 3: Các Gói Hợp tác StrongBodyAI</caption>
+
+                                        <thead>
+
+                                                <tr>
+
+                                                        <th>Tính năng / Giá trị</th>
+
+                                                        <th>Gói Thăm dò (Miễn phí)</th>
+
+                                                        <th>Gói Tham gia ($6.000/năm)</th>
+
+                                                        <th>Gói Dẫn đầu ($70.000/năm)</th>
+
+                                                    </tr>
+
+                                            </thead>
+
+                                        <tbody>
+
+                                                <tr>
+
+                                                        <td>Hồ sơ Tổ chức</td>
+
+                                                        <td>Cơ bản</td>
+
+                                                        <td>Đầy đủ & Chi tiết</td>
+
+                                                        <td class="font-bold bg-blue-50">Đầy đủ & Nổi bật</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Số lượng Dịch vụ</td>
+
+                                                        <td>Một dịch vụ</td>
+
+                                                        <td>Không giới hạn</td>
+
+                                                        <td class="font-bold bg-blue-50">Không giới hạn</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Tương tác Trực tiếp</td>
+
+                                                        <td>Không</td>
+
+                                                        <td>Có (Nhắn tin)</td>
+
+                                                        <td class="font-bold bg-blue-50">Có (Nhắn tin & Gọi thoại)</td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Hỗ trợ Chuyên dụng</td>
+
+                                                        <td>Cơ bản</td>
+
+                                                        <td>Ưu tiên</td>
+
+                                                        <td class="font-bold bg-blue-50">Chiến lược & Quản lý tài khoản
+                            </td>
+
+                                                    </tr>
+
+                                                <tr>
+
+                                                        <td>Vị trí Nổi bật</td>
+
+                                                        <td>Không</td>
+
+                                                        <td>Không</td>
+
+                                                        <td class="font-bold bg-blue-50">Có</td>
+
+                                                    </tr>
+
+                                                <tr class="font-bold text-blue-800">
+
+                                                        <td>Giá trị Chiến lược</td>
+
+                                                        <td>Xác thực thị trường</td>
+
+                                                        <td>Xây dựng sự hiện diện</td>
+
+                                                        <td class="bg-blue-50">Thống lĩnh & Xây dựng thương hiệu</td>
+
+                                                    </tr>
+
+                                            </tbody>
+
+                                    </table>
+
+                            </section>
+
+
+
+                        <!-- Section VII -->
+
+                        <section id="vision">
+
+                                <h2>VII. Tầm nhìn Tương lai</h2>
+
+                                <p>Chúng tôi không chỉ xây dựng một nền tảng cho hôm nay; chúng tôi đang kiến tạo một hệ
+                    sinh thái cho
+
+                                        tương
+
+                                        lai của tất cả các dịch vụ được cá nhân hóa, không biên giới. Tầm nhìn của chúng
+                    tôi là tạo ra một
+
+                                        thị
+
+                                        trường toàn cầu nơi sự hội tụ của y tế, chăm sóc sức khỏe và các dịch vụ cá nhân
+                    hóa trở thành hiện
+
+                                        thực, đảm bảo một luồng bệnh nhân bền vững cho các đối tác.</p>
+
+                                <img
+                    src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="Hình ảnh tượng trưng cho kết nối toàn cầu và tương lai"                    
+                    class="w-full rounded-lg shadow-md my-8">
+
+                            </section>
+
+
+
+                        <!-- Section VIII -->
+
+                        <section id="next-steps">
+
+                                <h2>VIII. Các Bước Tiếp theo</h2>
+
+                                <p>Đây là thời điểm quyết định để hành động và định vị cơ sở y tế của Quý vị như một
+                    điểm đến được lựa
+
+                                        chọn
+
+                                        cho bệnh nhân quốc tế. Quy trình đăng ký rất đơn giản.</p>
+
+
+
+                                <div class="scan_me">
+
+                                        <p>Quét mã QR hoặc truy cập trang web để bắt đầu:</p>
+
+                                        <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://strongbody.ai/organization"
+                                                alt="QR Code to registration page" class="my-4">
+
+                                        <a href="https://strongbody.ai/organization"
+                        target="_blank">https://strongbody.ai/organization</a>
+
+                                    </div>
+
+
+
+                                <h3 class="mt-12">Liên hệ Trực tiếp:</h3>
+
+                                <p class="text-left">Chúng tôi khuyến khích một cuộc thảo luận trực tiếp để tìm hiểu sâu
+                    hơn về các mục
+
+                                        tiêu
+
+                                        cụ thể của Quý vị. Vui lòng liên hệ với đội ngũ chuyên trách của chúng tôi:</p>
+
+                                <ul class="list-none space-y-2 text-gray-700 bg-slate-50 p-6 rounded-lg">
+
+                                        <li><strong>Email:</strong> partnership@strongbody.ai</li>
+
+                                        <li><strong>Điện thoại:</strong> (+84) 123 456 789</li>
+
+                                        <li><strong>Phụ trách B2B:</strong> Nguyễn Văn A</li>
+
+                                        <li><strong>Chức danh:</strong> Giám đốc Phát triển Đối tác</li>
+
+                                    </ul>
+
+                            </section>
+
+                    </div>
+
+
+
+                <footer class="text-center mt-12 py-8 border-t border-gray-200">
+
+                        <p class="text-sm text-gray-500">&copy; 2025 StrongBodyAI. All rights reserved.</p>
+
+                    </footer>
+
+            </div>
+
+
+
+       
+    <script>
+
+        // Dữ liệu cho biểu đồ
+
+        const years = ['2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'];
+
+        const marketSize = [43.51, 52.91, 64.34, 78.24, 95.14, 115.69, 140.68, 171.07, 208.02, 252.95]; // Dữ liệu tính toán dựa trên CAGR 21.60%
+
+
+
+        // Lấy context của canvas
+
+        const ctx = document.getElementById('marketGrowthChart').getContext('2d');
+
+
+
+        // Tạo gradient cho background của biểu đồ
+
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+
+        gradient.addColorStop(0, 'rgba(59, 130, 246, 0.4)');
+
+        gradient.addColorStop(1, 'rgba(219, 234, 254, 0.1)');
+
+
+
+
+
+        // Cấu hình biểu đồ
+
+        const marketGrowthChart = new Chart(ctx, {
+
+            type: 'line',
+
+            data: {
+
+                labels: years,
+
+                datasets: [{
+
+                    label: 'Quy mô thị trường (Tỷ USD)',
+
+                    data: marketSize,
+
+                    backgroundColor: gradient, // Gradient background
+
+                    borderColor: '#2563eb', // Màu xanh đậm cho đường line
+
+                    borderWidth: 3,
+
+                    pointBackgroundColor: '#2563eb',
+
+                    pointBorderColor: '#ffffff',
+
+                    pointHoverBackgroundColor: '#ffffff',
+
+                    pointHoverBorderColor: '#2563eb',
+
+                    pointRadius: 5,
+
+                    pointHoverRadius: 8,
+
+                    pointBorderWidth: 2,
+
+                    tension: 0.4, // Làm cho đường cong mượt hơn
+
+                    fill: true // Tô màu khu vực dưới đường line
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: true,
+
+                plugins: {
+
+                    legend: {
+
+                        display: false // Ẩn chú thích vì chỉ có 1 dataset
+
+                    },
+
+                    tooltip: {
+
+                        backgroundColor: '#1e3a8a',
+
+                        titleColor: '#ffffff',
+
+                        bodyColor: '#ffffff',
+
+                        padding: 12,
+
+                        cornerRadius: 8,
+
+                        displayColors: false,
+
+                        callbacks: {
+
+                            label: function (context) {
+
+                                return `Doanh thu: $${context.parsed.y.toFixed(2)}B`;
+
+                            }
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        grid: {
+
+                            color: '#e5e7eb', // Màu đường lưới mờ
+
+                            drawBorder: false
+
+                        },
+
+                        ticks: {
+
+                            color: '#6b7280',
+
+                            padding: 10,
+
+                            callback: function (value, index, values) {
+
+                                return '$' + value + 'B'; // Thêm đơn vị Tỷ USD
+
+                            }
+
+                        }
+
+                    },
+
+                    x: {
+
+                        grid: {
+
+                            display: false // Ẩn đường lưới trục X
+
+                        },
+
+                        ticks: {
+
+                            color: '#6b7280',
+
+                            padding: 10
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+</html>

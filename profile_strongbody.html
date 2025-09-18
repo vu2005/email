@@ -1,314 +1,617 @@
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strong Body: Tương Lai Của Du Lịch Y Tế</title>
+    <title>Strategic Partnership Proposal: StrongBodyAI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutrals -->
-    <!-- Application Structure Plan: A top-down narrative, single-page application guiding potential hospital partners through the value proposition of Strong Body. The structure flows from the macro opportunity (market trends) and company vision, down to specific benefits, operational model (reverse auction), and partnership packages. This is more persuasive than a static document. Key interactions include an interactive pricing table to compare packages easily, a testimonial slider for social proof, and a market growth chart to anchor the opportunity in data. This user flow is designed to build conviction and lead seamlessly to the call-to-action. -->
-    <!-- Visualization & Content Choices: 1. Market Trend -> Goal: Show growth -> Viz: Bar Chart -> Interaction: Animated load, tooltips -> Justification: More impactful than text for data -> Library: Chart.js. 2. How it Works -> Goal: Explain process -> Viz: Step-by-step diagram -> Interaction: Scroll-triggered animations -> Justification: Visualizes a process clearly -> Library/Method: HTML/CSS. 3. Packages -> Goal: Compare options -> Viz: Tabbed pricing table -> Interaction: Click to highlight selected package -> Justification: Eases comparison, focuses user attention -> Library: Vanilla JS. 4. Testimonials -> Goal: Build trust -> Viz: Carousel/Slider -> Interaction: User-controlled navigation -> Justification: Dynamically presents social proof without clutter -> Library: Vanilla JS. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: 'Be Vietnam Pro', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                page-break-before: always;
             }
         }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+        .cover-page-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+
+        /* General Document Styling */
+        .report-body {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .nav-link.active {
-            color: #0369a1;
+
+        h1,
+        h2,
+        h3 {
+            color: #1e3a8a;
+            /* A professional blue color */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #93c5fd;
+            padding-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1d4ed8;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            text-align: justify;
+            color: #374151;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: none;
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #dbeafe;
+            color: #1e3a8a;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        caption {
+            caption-side: bottom;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Case Study Styling */
+        .case-study {
+            border-left: 5px solid #60a5fa;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: #f0f9ff;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .case-study h3 {
+            margin-top: 0;
+            color: #1e40af;
+            font-size: 1.4rem;
+        }
+
+        .case-study::before {
+            content: '“';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 5rem;
+            color: #dbeafe;
+            font-weight: 800;
+            z-index: 0;
+        }
+
+        .case-study p {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .scan_me {
+            background-color: #ffffff;
+            border: 2px dashed #93c5fd;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .scan_me:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .scan_me p {
+            font-size: 1.1rem;
+            color: #1e3a8a;
             font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .scan_me a {
+            font-family: monospace;
+            background-color: #eff6ff;
+            color: #3b82f6;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-weight: 700;
+        }
+
+        .scan_me a:hover {
+            background-color: #dbeafe;
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800">
 
-    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-sky-800">StrongBody<span class="text-amber-500">.ai</span></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#opportunity" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Cơ Hội</a>
-                <a href="#vision" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Tầm Nhìn</a>
-                <a href="#benefits" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Lợi Ích</a>
-                <a href="#packages" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Gói Hợp Tác</a>
-                <a href="#stories" class="nav-link text-stone-600 hover:text-sky-700 transition duration-300">Câu Chuyện</a>
-            </div>
-            <a href="#contact" class="hidden md:block bg-sky-700 text-white px-6 py-2 rounded-full hover:bg-sky-800 transition duration-300">Bắt Đầu Ngay</a>
-        </nav>
-    </header>
+<body class="bg-slate-50">
 
-    <main>
-        <section id="hero" class="bg-white">
-            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-sky-900 leading-tight">Tương Lai Của Du Lịch Y Tế</h1>
-                <p class="mt-4 text-lg md:text-xl text-stone-600 max-w-3xl mx-auto">Một quan hệ đối tác vì sức khỏe toàn cầu. Kết nối bệnh viện của bạn với hàng triệu bệnh nhân quốc tế và trở thành người dẫn đầu trong lĩnh vực chăm sóc sức khỏe không biên giới.</p>
-                <a href="#packages" class="mt-8 inline-block bg-amber-500 text-sky-900 font-bold px-10 py-4 rounded-full text-lg hover:bg-amber-600 transition duration-300 shadow-lg">Khám Phá Các Gói Hợp Tác</a>
-            </div>
-        </section>
+    <div class="bg-white shadow-2xl rounded-lg my-8 mx-auto">
+        <div class="report-body px-8 md:px-12">
+            <!-- Cover Page -->
+            <section class="cover-page-container relative">
+                <!-- Banner Section -->
+                <div class="relative w-full h-[250px] bg-blue-100">
+                    <img src="images/strongbody.jpg" alt="Medical Banner"
+                        class="w-full h-full object-cover border-t rounded-t-lg">
 
-        <section id="opportunity" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Cơ Hội Không Thể Bỏ Lỡ</h2>
-                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Thị trường du lịch y tế đang phát triển bùng nổ. Tham gia Strong Body để khai thác thị trường béo bở này và định vị bệnh viện của bạn như một điểm đến y tế toàn cầu.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="fade-in">
-                        <h3 class="text-2xl font-semibold text-sky-800 mb-4">Xu Hướng Tăng Trưởng Vượt Bậc</h3>
-                        <p class="text-stone-600 mb-4">Thị trường du lịch y tế toàn cầu được dự báo sẽ đạt giá trị hàng tỷ đô la, được thúc đẩy bởi nhu cầu về dịch vụ chất lượng cao, tiết kiệm chi phí và thời gian chờ đợi ngắn hơn.</p>
-                        <ul class="space-y-2 text-stone-700">
-                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Nhu cầu dịch vụ chuyên khoa ngày càng tăng.</li>
-                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Tiết kiệm chi phí cho các thủ thuật phức tạp.</li>
-                            <li class="flex items-start"><span class="text-amber-500 font-bold mr-2">✓</span> Nền tảng kỹ thuật số đơn giản hóa quá trình.</li>
-                        </ul>
-                    </div>
-                    <div class="fade-in">
-                        <div class="chart-container bg-white p-4 rounded-lg shadow-md">
-                            <canvas id="marketChart"></canvas>
+                    <!-- Logo -->
+                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                        <div
+                            class="rounded-full w-40 h-40 md:w-48 md:h-48 bg-white border-8 border-white shadow-lg overflow-hidden flex items-center justify-center">
+                            <img src="images/Mascot.png" alt="StrongBodyAI Logo"
+                                class="object-cover object-top w-full h-full">
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="vision" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <div class="fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Tầm Nhìn Của Chúng Tôi</h2>
-                    <p class="mt-4 text-stone-600 max-w-3xl mx-auto">Chúng tôi hình dung một thế giới nơi các dịch vụ được cá nhân hóa không còn bị giới hạn bởi địa lý, ngôn ngữ và kinh tế. StrongBodyAI đang xây dựng thị trường toàn cầu nhân văn nhất thế giới.</p>
-                </div>
-                <div class="mt-12 grid md:grid-cols-3 gap-8">
-                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 200ms;">
-                        <div class="text-4xl text-amber-500 mb-4">🌐</div>
-                        <h3 class="text-xl font-semibold text-sky-800">Vũ Trụ Không Rào Cản</h3>
-                        <p class="mt-2 text-stone-600">Dịch thuật thời gian thực biến mọi cuộc trò chuyện thành kết nối ý nghĩa, xóa bỏ ranh giới ngôn ngữ.</p>
+                <!-- Main Content Section -->
+                <div class="flex-grow flex flex-col items-center text-center px-4 mt-24">
+                    <div class="mt-6">
+                        <h1 class="text-4xl md:text-5xl font-bold text-blue-900">Strategic Partnership Proposal</h1>
+                        <p class="text-xl md:text-2xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                            Seizing the Future of Global Healthcare with StrongBodyAI
+                        </p>
                     </div>
-                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 400ms;">
-                        <div class="text-4xl text-amber-500 mb-4">🌟</div>
-                        <h3 class="text-xl font-semibold text-sky-800">Sân Khấu Toàn Cầu</h3>
-                        <p class="mt-2 text-stone-600">Trao quyền cho các chuyên gia y tế chia sẻ kỹ năng và được công nhận giá trị thực sự trên toàn thế giới.</p>
-                    </div>
-                    <div class="p-8 bg-stone-50 rounded-lg shadow-sm fade-in" style="transition-delay: 600ms;">
-                        <div class="text-4xl text-amber-500 mb-4">🤝</div>
-                        <h3 class="text-xl font-semibold text-sky-800">Niềm Tin Là Cốt Lõi</h3>
-                        <p class="mt-2 text-stone-600">Mọi tương tác được xây dựng trên nền tảng xác thực, thanh toán an toàn và sự thấu hiểu chân thành.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="benefits" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Lợi Ích Dành Cho Bệnh Viện</h2>
-                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Hợp tác với Strong Body là một bước đầu tư chiến lược để mở rộng tệp bệnh nhân quốc tế và nâng tầm thương hiệu toàn cầu.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
-                        <h3 class="text-lg font-semibold text-sky-800">Hiển Thị Toàn Cầu</h3>
-                        <p class="mt-2 text-sm text-stone-600">Quảng bá dịch vụ, cơ sở vật chất và chuyên môn của bạn đến bệnh nhân trên khắp thế giới.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 200ms;">
-                        <h3 class="text-lg font-semibold text-sky-800">Kết Nối Trực Tiếp</h3>
-                        <p class="mt-2 text-sm text-stone-600">Tiếp cận bệnh nhân đang chủ động tìm kiếm dịch vụ mà không cần qua trung gian tốn kém.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 400ms;">
-                        <h3 class="text-lg font-semibold text-sky-800">Nâng Cao Uy Tín</h3>
-                        <p class="mt-2 text-sm text-stone-600">Trở thành một phần của mạng lưới y tế được kiểm chứng, tăng niềm tin và uy tín quốc tế.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="transition-delay: 600ms;">
-                        <h3 class="text-lg font-semibold text-sky-800">Dữ Liệu Thị Trường</h3>
-                        <p class="mt-2 text-sm text-stone-600">Nhận thông tin về nhu cầu và xu hướng thị trường để tối ưu hóa dịch vụ và chiến lược.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="how-it-works" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Nền Tảng Hoạt Động Như Thế Nào?</h2>
-                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Chúng tôi vận hành theo mô hình đấu giá ngược độc đáo, tạo ra một cơ chế minh bạch, hiệu quả và cạnh tranh cho cả bệnh nhân và bệnh viện.</p>
-                </div>
-                <div class="relative flex flex-col md:flex-row justify-center items-center gap-8 fade-in">
-                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
-                        <div class="text-3xl mb-2">1.</div>
-                        <h3 class="font-semibold text-sky-800">Bệnh nhân gửi yêu cầu</h3>
-                        <p class="text-sm text-stone-600">Người dùng đăng tải hồ sơ bệnh án và nhu cầu điều trị.</p>
-                    </div>
-                    <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
-                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
-                        <div class="text-3xl mb-2">2.</div>
-                        <h3 class="font-semibold text-sky-800">Bệnh viện nhận thông báo</h3>
-                        <p class="text-sm text-stone-600">Các bệnh viện và bác sĩ liên quan nhận được thông tin ngay lập tức.</p>
-                    </div>
-                     <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
-                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
-                        <div class="text-3xl mb-2">3.</div>
-                        <h3 class="font-semibold text-sky-800">Chào giá & đấu thầu</h3>
-                        <p class="text-sm text-stone-600">Bác sĩ gửi kế hoạch điều trị và chi phí cạnh tranh.</p>
-                    </div>
-                     <div class="hidden md:block text-2xl text-amber-500 font-bold">→</div>
-                    <div class="flex-1 text-center p-6 bg-stone-50 rounded-lg">
-                        <div class="text-3xl mb-2">4.</div>
-                        <h3 class="font-semibold text-sky-800">Bệnh nhân lựa chọn</h3>
-                        <p class="text-sm text-stone-600">Khách hàng so sánh và chọn đề xuất phù hợp nhất.</p>
+                    <div class="mt-auto pb-12 text-gray-500">
+                        <p>Executive Leadership Brief</p>
+                        <p>Date: September 17, 2025</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="packages" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Các Gói Hợp Tác Linh Hoạt</h2>
-                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Chúng tôi cung cấp các gói hợp tác được thiết kế để phù hợp với mọi quy mô và mục tiêu của bệnh viện.</p>
-                </div>
-                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 fade-in">
-                    <div class="border border-stone-200 rounded-lg p-8 flex flex-col">
-                        <h3 class="text-xl font-bold text-sky-800">Dùng Thử</h3>
-                        <p class="text-3xl font-bold my-4">Miễn Phí</p>
-                        <p class="text-sm text-stone-500 mb-6">15 ngày trải nghiệm</p>
-                        <ul class="space-y-3 text-stone-700 flex-grow">
-                            <li>✓ Hồ sơ cơ bản</li>
-                            <li>✓ Đăng tải một dịch vụ</li>
-                        </ul>
-                        <button class="mt-8 w-full bg-stone-200 text-stone-800 py-3 rounded-full font-semibold">Bắt Đầu</button>
-                    </div>
-                    <div class="border-2 border-sky-700 rounded-lg p-8 flex flex-col relative shadow-xl">
-                         <span class="absolute top-0 -translate-y-1/2 bg-sky-700 text-white text-xs font-bold px-3 py-1 rounded-full left-1/2 -translate-x-1/2">Phổ Biến Nhất</span>
-                        <h3 class="text-xl font-bold text-sky-800">Thành Viên Tổ Chức</h3>
-                        <p class="text-3xl font-bold my-4">$6.000<span class="text-lg font-normal">/năm</span></p>
-                         <p class="text-sm text-stone-500 mb-6">Tối ưu hóa thu hút bệnh nhân</p>
-                        <ul class="space-y-3 text-stone-700 flex-grow">
-                            <li>✓ Hồ sơ đầy đủ</li>
-                            <li>✓ Đăng tải không giới hạn</li>
-                            <li>✓ Nhắn tin trực tiếp</li>
-                            <li>✓ Hỗ trợ chuyên dụng</li>
-                        </ul>
-                        <button class="mt-8 w-full bg-sky-700 text-white py-3 rounded-full font-semibold hover:bg-sky-800">Chọn Gói</button>
-                    </div>
-                    <div class="border border-stone-200 rounded-lg p-8 flex flex-col">
-                        <h3 class="text-xl font-bold text-sky-800">Đối Tác Marketing</h3>
-                        <p class="text-3xl font-bold my-4">$70.000<span class="text-lg font-normal">/năm</span></p>
-                        <p class="text-sm text-stone-500 mb-6">Trở thành thương hiệu toàn cầu</p>
-                        <ul class="space-y-3 text-stone-700 flex-grow">
-                            <li>✓ Mọi quyền lợi Gói Thành Viên</li>
-                            <li>✓ Đồng thương hiệu độc quyền</li>
-                            <li>✓ Vị trí nổi bật</li>
-                            <li>✓ Tham gia sự kiện quốc tế</li>
-                        </ul>
-                        <button class="mt-8 w-full bg-stone-200 text-stone-800 py-3 rounded-full font-semibold">Liên Hệ</button>
-                    </div>
-                </div>
-                 <div class="mt-12 bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto text-center fade-in">
-                    <h3 class="text-2xl font-bold text-amber-600">Cam Kết Từ Gói $70.000</h3>
-                    <p class="mt-4 text-stone-600">Chúng tôi tự tin cam kết mang lại tối thiểu <span class="font-bold text-sky-800 text-xl">60.000</span> lượt truy cập vào hồ sơ bệnh viện của bạn trong năm đầu tiên. Đây là khoản đầu tư mang lại lợi nhuận vượt trội và khẳng định vị thế dẫn đầu của bạn.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="stories" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-sky-800">Câu Chuyện Thành Công</h2>
-                    <p class="mt-4 text-stone-600 max-w-2xl mx-auto">Khám phá cách Strong Body đã thay đổi cuộc sống và tạo ra những kết nối thật sự trên toàn cầu.</p>
-                </div>
-                <div class="relative max-w-3xl mx-auto fade-in">
-                    <div id="testimonial-slider" class="overflow-hidden">
-                        <div id="testimonial-container" class="flex transition-transform duration-500 ease-in-out">
-                        </div>
-                    </div>
-                    <button id="prevBtn" class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
-                        <span class="text-2xl">‹</span>
-                    </button>
-                    <button id="nextBtn" class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition">
-                         <span class="text-2xl">›</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 bg-sky-800 text-white">
-            <div class="container mx-auto px-6 text-center">
-                <div class="fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold">Bắt Đầu Ngay Hôm Nay</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-sky-200">Tham gia Strong Body để bệnh viện của bạn trở thành điểm đến y tế được lựa chọn bởi hàng chục nghìn bệnh nhân quốc tế mỗi năm.</p>
-                    <div class="mt-10 max-w-md mx-auto bg-white text-stone-800 p-8 rounded-lg shadow-2xl">
-                        <p class="font-semibold">Quét mã QR để đăng ký hoặc liên hệ trực tiếp:</p>
-                        <div class="h-40 w-40 bg-stone-200 mx-auto my-4 flex items-center justify-center">
-                            <a href="https://strongbody.ai/organization" target="_blank" class="text-sm text-stone-500">QR Code Placeholder</a>
-                        </div>
-                        <p class="text-sm"><strong>Website:</strong> strongbody.ai</p>
-                        <p class="text-sm"><strong>Email:</strong> b2b-team@strongbody.ai</p>
-                        <p class="text-sm"><strong>Nhân sự B2B:</strong> [Tên nhân sự]</p>
-                        <p class="mt-6 text-xs text-stone-500">Chúng tôi sẵn sàng ký Thỏa thuận Bảo mật Thông tin (NDA) để bảo vệ tuyệt đối dữ liệu và chiến lược của đối tác.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-white py-8">
-        <div class="container mx-auto px-6 text-center text-stone-500">
-            <p class="font-bold text-lg text-sky-800">StrongBody<span class="text-amber-500">.ai</span></p>
-            <p class="text-sm mt-2">© 2025 Strong Body. All Rights Reserved.</p>
+            </section>
         </div>
-    </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const marketChartCanvas = document.getElementById('marketChart');
-    if (marketChartCanvas) {
-        new Chart(marketChartCanvas, {
-            type: 'bar',
+        <div class="page-break"></div>
+
+        <div class="report-body px-8 md:px-12">
+            <!-- Section I -->
+            <section id="who-we-are">
+                <h2>I. Who We Are</h2>
+                <p>StrongBodyAI is a pioneering digital platform connecting leading medical providers with international
+                    patients seeking high-quality healthcare. We are at the forefront of the medical tourism sector,
+                    creating a seamless, trusted ecosystem that benefits both patients and healthcare facilities.</p>
+                <p>Our mission is to empower patients with choices and provide hospitals with a powerful tool to expand
+                    their global reach and attract new patient demographics. We believe that access to world-class
+                    medical care should not be limited by borders.</p>
+                <img src="images/img_request.jpg"
+                    alt="Doctor and patient in discussion" class="w-full rounded-lg shadow-md my-8">
+                <p>This report presents a strategic partnership proposal between your institution and StrongBodyAI, a
+                    technology platform designed to position its partners at the forefront of the burgeoning global
+                    healthcare market. The goal is to provide a data-driven business case demonstrating that this
+                    collaboration is not just a tactical opportunity, but a necessary strategic move to ensure growth
+                    and
+                    competitiveness in the coming decade.</p>
+                <h3>An Unignorable Market Shift</h3>
+                <p>The global healthcare landscape is undergoing a tectonic shift. The movement of patients across
+                    borders is no longer a niche trend but a multi-billion dollar industry driven by powerful economic
+                    and
+                    demographic forces. The global medical tourism market is projected to exceed $252 billion by 2034,
+                    with an impressive Compound Annual Growth Rate (CAGR) of over 21%. This explosive growth represents
+                    a significant new source of revenue and market share for forward-thinking healthcare institutions.
+                </p>
+                <h3>The Provider's Challenge</h3>
+                <p>While the opportunity is immense, capturing this market comes with significant challenges. Hospitals
+                    often face staggering international patient acquisition costs, inefficient traditional marketing
+                    channels, and difficulties in building a trusted global brand. The process of screening inquiries,
+                    navigating language and cultural barriers, and managing complex logistics requires considerable
+                    resources, often diminishing the return on investment.</p>
+                <h3>The StrongBodyAI Solution</h3>
+                <p>StrongBodyAI is not a conventional service provider but a strategic technology partner. Our platform
+                    serves as a definitive gateway to the global patient market, leveraging a proprietary,
+                    high-performance
+                    model to connect world-class medical facilities with a stream of high-quality, high-intent
+                    international
+                    patients. We transform patient acquisition from a costly, fragmented activity into an integrated,
+                    efficient, and data-driven process.</p>
+            </section>
+
+            <div class="page-break"></div>
+
+            <!-- Section II -->
+            <section id="market-shift">
+                <h2>II. The Global Shift</h2>
+                <p>To fully grasp the strategic importance of a partnership with StrongBodyAI, it is essential to
+                    recognize the scale and momentum of the market. Medical tourism is no longer a peripheral
+                    phenomenon; it is a rapidly growing global economic sector, underpinned by irreversible
+                    socioeconomic
+                    trends.</p>
+
+                <!-- Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg my-8">
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-6">Global Medical Tourism Market Growth
+                        Forecast (USD Billions)</h3>
+                    <div class="chart-container">
+                        <canvas id="marketGrowthChart"></canvas>
+                    </div>
+                </div>
+
+                <h3>Quantifying the Opportunity</h3>
+                <p>Industry analysis reports from multiple reputable sources concur: the medical tourism market is on a
+                    trajectory of explosive growth. Consolidated data indicates the global market was valued between
+                    $30.5 billion and $82.18 billion in 2024. Looking ahead, the potential is even greater. Forecasts
+                    project the market to reach a size between $142 billion and $252.94 billion by 2034.</p>
+
+                <table>
+                    <caption>Table 1: Global Medical Tourism Market Forecast (2025-2034)</caption>
+                    <thead>
+                        <tr>
+                            <th>Analysis Source</th>
+                            <th>2025 Size (USD Billions)</th>
+                            <th>Forecast (USD Billions)</th>
+                            <th>Period</th>
+                            <th>CAGR (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Precedence Research</td>
+                            <td>$43.51</td>
+                            <td>$252.94</td>
+                            <td>2025-2034</td>
+                            <td>21.60%</td>
+                        </tr>
+                        <tr>
+                            <td>Fortune Business Insights</td>
+                            <td>$38.20</td>
+                            <td>$162.80</td>
+                            <td>2025-2032</td>
+                            <td>23.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Global Market Insights</td>
+                            <td>$35.00</td>
+                            <td>$142.00</td>
+                            <td>2025-2034</td>
+                            <td>16.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Mordor Intelligence</td>
+                            <td>$93.72</td>
+                            <td>$218.16</td>
+                            <td>2025-2030</td>
+                            <td>18.41%</td>
+                        </tr>
+                        <tr>
+                            <td>The Business Research Company</td>
+                            <td>$91.98</td>
+                            <td>$182.35</td>
+                            <td>2025-2029</td>
+                            <td>18.7%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>The Growth Drivers</h3>
+                <p>The growth of medical tourism is fueled by fundamental factors such as Cost Arbitrage, Quality and
+                    Accessibility, Reduced Wait Times, an Aging Global Population, and the Enablement of Technology.</p>
+            </section>
+
+            <!-- Section III -->
+            <section id="solution">
+                <h2>III. The StrongBodyAI Solution</h2>
+                <p>StrongBodyAI is engineered to solve the core challenges faced by International Patient Programs
+                    (IPPs), from high administrative and marketing costs to communication barriers and trust-building.
+                </p>
+                <img src="images/profile.webp" alt="Healthcare technology platform interface"
+                    class="w-full rounded-lg shadow-md my-8">
+                <h3>An Integrated Ecosystem</h3>
+                <p>Our platform is built on key pillars: Global Reach (185 countries), Quality Patient Flow (thorough
+                    screening), Trust and Transparency (verification processes and direct communication), and AI-Powered
+                    Personalization (breaking down language barriers).</p>
+            </section>
+
+            <div class="page-break"></div>
+
+            <!-- Section IV -->
+            <section id="advantage">
+                <h2>IV. The Partnership Advantage</h2>
+                <h3>The Reverse Auction Model</h3>
+                <p>At our core is the Reverse Auction model: a patient posts a need, and multiple hospitals compete to
+                    offer the best value proposition. This model inverts traditional dynamics, creating an efficient,
+                    transparent marketplace where quality and value are paramount.</p>
+                <h3>Quantifiable Benefits</h3>
+                <p>This model yields clear benefits: Accelerated Patient Acquisition Cycles, Enhanced Market
+                    Intelligence, Operational Efficiency, and Increased Transparency and Fairness. It is not merely a
+                    price-reduction mechanism but a sophisticated system to optimize the entire process, minimizing risk
+                    for
+                    both parties and providing valuable strategic data.</p>
+            </section>
+
+            <!-- Section V -->
+            <section id="case-studies">
+                <h2>V. Tangible Results</h2>
+                <div class="case-study">
+                    <h3>Case 1: Complex Medical Intervention</h3>
+                    <p><strong>Patient:</strong> Maria, 42, Brazil.</p>
+                    <p><strong>Challenge:</strong> The cost of hip replacement surgery was prohibitive in her home
+                        country.</p>
+                    <p><strong>StrongBodyAI Solution:</strong> Connected with a JCI-accredited hospital in India via the
+                        platform, saving over 80% on costs compared to US prices (approx. $5,000 - $7,000 vs. $40,000 -
+                        $75,000).
+                    </p>
+                </div>
+                <div class="case-study">
+                    <h3>Case 2: Mental Wellness</h3>
+                    <p><strong>Patient:</strong> Alex, 29, Australia.</p>
+                    <p><strong>Challenge:</strong> Seeking mental support after a major life event.</p>
+                    <p><strong>StrongBodyAI Solution:</strong> Connected with a spiritual companion in Japan,
+                        illustrating
+                        the convergence of medical and proactive wellness care.</p>
+                </div>
+
+                <table>
+                    <caption>Table 2: Estimated Cost Comparison for Major Medical Procedures</caption>
+                    <thead>
+                        <tr>
+                            <th>Medical Procedure</th>
+                            <th>Cost in USA (USD)</th>
+                            <th>Cost in India (USD)</th>
+                            <th>Cost in Mexico/Turkey (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Hip Replacement</td>
+                            <td>$40,000 - $75,000</td>
+                            <td>$5,000 - $9,000</td>
+                            <td>$9,000 - $13,200</td>
+                        </tr>
+                        <tr>
+                            <td>Coronary Artery Bypass Graft</td>
+                            <td>$70,000 - $133,000</td>
+                            <td>$6,000 - $15,000</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Dental Implant (per tooth)</td>
+                            <td>$3,000 - $5,000</td>
+                            <td>$500 - $1,200</td>
+                            <td>$800 - $1,500</td>
+                        </tr>
+                        <tr>
+                            <td>Bariatric Surgery</td>
+                            <td>$15,000 - $25,000</td>
+                            <td>$4,000 - $7,000</td>
+                            <td>$3,500 - $6,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="page-break"></div>
+
+            <!-- Section VI -->
+            <section id="partnership">
+                <h2>VI. Partnership Framework</h2>
+                <p>We offer flexible partnership tiers designed to align with varying strategic objectives, from market
+                    exploration to the pursuit of global leadership.</p>
+                <table>
+                    <caption>Table 3: StrongBodyAI Partnership Tiers</caption>
+                    <thead>
+                        <tr>
+                            <th>Feature / Value</th>
+                            <th>Explorer Tier (Free)</th>
+                            <th>Engage Tier ($6,000/year)</th>
+                            <th>Leader Tier ($70,000/year)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organization Profile</td>
+                            <td>Basic</td>
+                            <td>Full & Detailed</td>
+                            <td class="font-bold bg-blue-50">Full & Featured</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Services</td>
+                            <td>One Service</td>
+                            <td>Unlimited</td>
+                            <td class="font-bold bg-blue-50">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Direct Interaction</td>
+                            <td>No</td>
+                            <td>Yes (Messaging)</td>
+                            <td class="font-bold bg-blue-50">Yes (Messaging & Voice Call)</td>
+                        </tr>
+                        <tr>
+                            <td>Dedicated Support</td>
+                            <td>Basic</td>
+                            <td>Priority</td>
+                            <td class="font-bold bg-blue-50">Strategic & Account Managed</td>
+                        </tr>
+                        <tr>
+                            <td>Featured Placement</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td class="font-bold bg-blue-50">Yes</td>
+                        </tr>
+                        <tr class="font-bold text-blue-800">
+                            <td>Strategic Value</td>
+                            <td>Market Validation</td>
+                            <td>Presence Building</td>
+                            <td class="bg-blue-50">Dominance & Brand Building</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section VII -->
+            <section id="vision">
+                <h2>VII. Future Vision</h2>
+                <p>We are not just building a platform for today; we are architecting an ecosystem for the future of all
+                    borderless, personalized services. Our vision is to create a global marketplace where the
+                    convergence of medical, wellness, and personalized services becomes a reality, ensuring a
+                    sustainable
+                    flow of patients for our partners.</p>
+                <img src="images/img_footer.jpeg"
+                    alt="Image symbolizing global connection and the future" class="w-full rounded-lg shadow-md my-8">
+            </section>
+
+            <!-- Section VIII -->
+            <section id="next-steps">
+                <h2>VIII. Next Steps</h2>
+                <p>This is the decisive moment to act and position your institution as a destination of choice for
+                    international patients. The registration process is straightforward.</p>
+
+                <div class="scan_me">
+                    <p>Scan the QR code or visit the website to begin:</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://strongbody.ai/organization"
+                        alt="QR Code to registration page" class="my-4">
+                    <a href="https://strongbody.ai/organization" target="_blank">https://strongbody.ai/organization</a>
+                </div>
+
+                <h3 class="mt-12">Direct Contact:</h3>
+                <p class="text-left">We encourage a direct discussion to delve deeper into your specific objectives.
+                    Please contact our dedicated team:</p>
+                <ul class="list-none space-y-2 text-gray-700 bg-slate-50 p-6 rounded-lg">
+                    <li><strong>Email:</strong> Work@strongbody.ai</li>
+                    <li><strong>Phone:</strong> (+84) 918 596 988</li>
+                    <li><strong>B2B Lead:</strong> Wind StrongBody</li>
+                    <li><strong>Title:</strong> Director of Partner Development</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer class="text-center mt-12 py-8 border-t border-gray-200">
+            <p class="text-sm text-gray-500">&copy; 2025 StrongBodyAI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Chart Data
+        const years = ['2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'];
+        const marketSize = [43.51, 52.91, 64.34, 78.24, 95.14, 115.69, 140.68, 171.07, 208.02, 252.95]; // Data calculated based on 21.60% CAGR
+
+        // Get canvas context
+        const ctx = document.getElementById('marketGrowthChart').getContext('2d');
+
+        // Create gradient for chart background
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(59, 130, 246, 0.4)');
+        gradient.addColorStop(1, 'rgba(219, 234, 254, 0.1)');
+
+
+        // Chart Configuration
+        const marketGrowthChart = new Chart(ctx, {
+            type: 'line',
             data: {
-                labels: ['2023', '2024', '2025', '2026', '2027(Dự kiến)'],
+                labels: years,
                 datasets: [{
-                    label: 'Quy mô thị trường (tỷ USD)',
-                    data: [120, 155, 190, 240, 300],
-                    backgroundColor: 'rgba(3, 105, 161, 0.8)',
-                    borderColor: 'rgba(3, 105, 161, 1)',
-                    borderWidth: 1,
-                    borderRadius: 5
+                    label: 'Market Size (USD Billions)',
+                    data: marketSize,
+                    backgroundColor: gradient, // Gradient background
+                    borderColor: '#2563eb', // Dark blue for the line
+                    borderWidth: 3,
+                    pointBackgroundColor: '#2563eb',
+                    pointBorderColor: '#ffffff',
+                    pointHoverBackgroundColor: '#ffffff',
+                    pointHoverBorderColor: '#2563eb',
+                    pointRadius: 5,
+                    pointHoverRadius: 8,
+                    pointBorderWidth: 2,
+                    tension: 0.4, // Makes the line curve smoothly
+                    fill: true // Fill the area under the line
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 plugins: {
                     legend: {
-                        display: false
+                        display: false // Hide legend since there's only one dataset
                     },
                     tooltip: {
+                        backgroundColor: '#1e3a8a',
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        padding: 12,
+                        cornerRadius: 8,
+                        displayColors: false,
                         callbacks: {
-                            label: function(context) {
-                                return `Quy mô: ${context.raw} tỷ USD`;
+                            label: function (context) {
+                                return `Revenue: $${context.parsed.y.toFixed(2)}B`;
                             }
                         }
                     }
@@ -316,124 +619,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Quy mô (tỷ USD)'
+                        grid: {
+                            color: '#e5e7eb', // Light gray grid lines
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#6b7280',
+                            padding: 10,
+                            callback: function (value, index, values) {
+                                return '$' + value + 'B'; // Add Billion unit
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false // Hide X-axis grid lines
+                        },
+                        ticks: {
+                            color: '#6b7280',
+                            padding: 10
                         }
                     }
                 }
             }
         });
-    }
-
-    const testimonials = [
-        {
-            story: "Tôi không chỉ lấy lại sức khỏe mà còn tiết kiệm đủ tiền để đầu tư cho tương lai của các con. Trải nghiệm này giống như một phép màu.",
-            author: "Maria, 42 tuổi",
-            journey: "Brazil → Ấn Độ (Du lịch y tế)"
-        },
-        {
-            story: "Là một người của công chúng, quyền riêng tư là mối quan tâm lớn nhất của tôi. Qua StrongBody, tôi đã kết nối với một nhà trị liệu ở New Zealand, đủ xa để tôi cảm thấy hoàn toàn thoải mái chia sẻ.",
-            author: "Jennifer",
-            journey: "Chăm sóc sức khỏe bí mật"
-        },
-        {
-            story: "Tôi đã tiết kiệm được 70% chi phí chăm sóc răng miệng tại Mexico, mọi thứ đều được đảm bảo. Sau đó, tôi đặt một gói làm đẹp tại Bangkok. Một chuyến đi, nhiều trải nghiệm tuyệt vời!",
-            author: "Sophie",
-            journey: "Du lịch y tế & làm đẹp"
-        },
-        {
-            story: "Là CEO, tôi cần sự kín đáo khi tìm kiếm hỗ trợ cho căng thẳng. Tôi đã tìm thấy một chuyên gia người Thụy Sĩ hiểu rõ áp lực của giới lãnh đạo nhưng hoàn toàn nằm ngoài mạng lưới của tôi. Đây chính xác là điều tôi cần.",
-            author: "David",
-            journey: "Chăm sóc sức khỏe cấp cao"
-        }
-    ];
-
-    const container = document.getElementById('testimonial-container');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
-
-    function renderTestimonials() {
-        container.innerHTML = '';
-        testimonials.forEach(t => {
-            const slide = document.createElement('div');
-            slide.className = 'w-full flex-shrink-0 text-center px-4 md:px-10';
-            slide.innerHTML = `
-                <div class="bg-stone-50 p-8 rounded-lg shadow-sm">
-                    <p class="text-lg italic text-stone-700">"${t.story}"</p>
-                    <p class="mt-4 font-semibold text-sky-800">${t.author}</p>
-                    <p class="text-sm text-stone-500">${t.journey}</p>
-                </div>
-            `;
-            container.appendChild(slide);
-        });
-    }
-
-    function updateSlider() {
-        container.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    if (container && prevBtn && nextBtn) {
-        renderTestimonials();
-        
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            updateSlider();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-            updateSlider();
-        });
-        
-        setInterval(() => {
-            nextBtn.click();
-        }, 5000);
-    }
-    
-    const faders = document.querySelectorAll('.fade-in');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    faders.forEach(fader => {
-        observer.observe(fader);
-    });
-
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-});
-</script>
+    </script>
 
 </body>
+
 </html>
