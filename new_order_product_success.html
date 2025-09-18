@@ -5,186 +5,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StrongBody - New Product Order</title>
-    <!-- Google Font Library -->
-  <script src="./footer/footer.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body
-    style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+    style="margin:0; padding:0; font-family:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif; background-color:#f5f5f5;">
 
-    <!-- Main email container -->
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-        style="background-color: #f5f5f5;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f5f5f5;">
         <tr>
-            <td align="center" style="padding: 20px 15px;">
+            <td align="center" style="padding:32px 15px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                    style="max-width:600px; background-color:#ffffff; border-radius:12px; overflow:hidden;">
 
-                <!-- Email content frame -->
-                <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-                    style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-
-                    <!-- Header & Logo -->
+                    <!-- Logo -->
                     <tr>
-                        <td align="left" style="padding: 30px 40px 0;">
-                            <a href="#" target="_blank" style="text-decoration: none;">
+                        <td align="left" style="padding:40px 40px 0;">
+                            <a href="https://strongbody.ai/" target="_blank">
                                 <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
-                                    alt="StrongBody" width="80" style="max-width: 80px; border: 0;">
+                                    alt="StrongBody" width="90" style="max-width:90px; border:0; display:block;">
                             </a>
                         </td>
                     </tr>
 
-                    <!-- Main title and greeting -->
+                    <!-- Title -->
                     <tr>
-                        <td
-                            style="text-align: center; padding: 35px 40px 0; font-size: 26px; color: #0e0e0f; font-weight: 700; line-height: 32px;">
-                            <strong style="color: #2c3e50;">You have a new product order!</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td
-                            style="text-align: center; padding: 15px 40px 20px; font-size: 16px; color: #555555; line-height: 24px;">
-                            Congratulations! A customer has just placed a product order on StrongBody.
-                            Please check the order details below and prepare the items for shipping.
+                        <td align="center"
+                            style="padding:32px 40px 0; font-size:24px; font-weight:600; color:#111827; line-height:32px;">
+                            You Have A New Product Order!
                         </td>
                     </tr>
 
-                    <!-- Order details section -->
+                    <!-- Subtitle -->
                     <tr>
-                        <td style="padding: 20px 40px;">
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-                                style="border-radius: 8px; background-color: #f9f9f9; padding: 25px; border: 1px solid #e0e0e0;">
-
-                                <!-- Order header info -->
-                                <tr>
-                                    <td colspan="2" style="padding-bottom: 20px; border-bottom: 2px solid #e0e0e0;">
-                                        <div
-                                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                            <div style="font-size: 18px; color: #0e0e0f; font-weight: 600;">
-                                                Order ID: <span style="color: #2c3e50;">{{.order_id}}</span>
-                                            </div>
-                                            <div style="font-size: 14px; color: #999; font-weight: 500;">
-                                                {{.order_date}}
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="font-size: 14px; color: #28a745; font-weight: 600; background-color: #d4edda; padding: 5px 10px; border-radius: 15px; display: inline-block;">
-                                            {{.order_status}}
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <!-- Product and image section -->
-                                <tr>
-                                    <td width="150" style="vertical-align: top; padding: 20px 20px 0 0;">
-                                        <img src="{{.product_image}}" alt="Product Image" width="120"
-                                            style="width: 100%; max-width: 120px; border-radius: 8px; display: block; border: 2px solid #e0e0e0;">
-                                    </td>
-
-                                    <td style="vertical-align: top; padding-top: 20px;">
-                                        <div
-                                            style="font-size: 18px; color: #0e0e0f; font-weight: 600; line-height: 24px; margin-bottom: 8px;">
-                                            {{.product_name}}
-                                        </div>
-                                        <div style="font-size: 14px; color: #666; margin-bottom: 8px;">
-                                            SKU: {{.product_sku}}
-                                        </div>
-                                        <div style="font-size: 14px; color: #666; margin-bottom: 10px;">
-                                            Quantity: <span style="font-weight: 600;">{{.quantity}}</span>
-                                        </div>
-                                        <div
-                                            style="font-size: 24px; color: #dc3545; font-weight: bold; margin-bottom: 15px;">
-                                            {{.total_amount}}
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <!-- Customer info section -->
-                                <tr>
-                                    <td colspan="2" style="padding-top: 20px; border-top: 2px solid #e0e0e0;">
-                                        <div
-                                            style="font-size: 16px; color: #0e0e0f; font-weight: 600; margin-bottom: 8px;">
-                                            Customer Information:
-                                        </div>
-                                        <div style="font-size: 15px; color: #555555; margin-bottom: 5px;">
-                                            <strong>Name:</strong> {{.customer_name}}
-                                        </div>
-                                        <div style="font-size: 14px; color: #555555; margin-top: 10px;">
-                                            <strong>Customer Note:</strong>
-                                            <div
-                                                style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin-top: 5px; font-style: italic; color: #856404;">
-                                                "{{.customer_note}}"
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td align="left"
+                            style="padding:26px 40px 0; font-size:15px; color:#555555; line-height:24px;">
+                            Congratulations! A customer has just placed a product order on StrongBody. Please check the
+                            order details
+                            below and prepare the items for shipping.
                         </td>
                     </tr>
 
-                    <!-- Next Steps Section -->
+                    <!-- GAP 32 -->
                     <tr>
-                        <td style="padding: 20px 40px;">
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-                                style="border-radius: 8px; background-color: #e8f5e8; padding: 20px; border: 1px solid #c3e6c3;">
+                        <td style="height:32px;"></td>
+                    </tr>
+
+                    <!-- Order Box -->
+                    <!-- Order Box -->
+                    <tr>
+                        <td style="padding:0 40px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background-color:#f9f9f9; border:1px solid #e0e0e0; border-radius:8px;">
+
+                                <!-- Header -->
                                 <tr>
-                                    <td>
-                                        <div
-                                            style="font-size: 16px; color: #0e0e0f; font-weight: 600; margin-bottom: 12px; text-align: center;">
-                                            Please follow these steps:
-                                        </div>
-                                        <div style="font-size: 14px; color: #555555; line-height: 22px;">
-                                            <div style="margin-bottom: 10px; padding: 8px 0;">
-                                                <strong style="color: #2c3e50;">1. Prepare Order:</strong> Package your items securely and prepare shipping labels
-                                            </div>
-                                            <div style="padding: 8px 0;">
-                                                <strong style="color: #2c3e50;">2. Confirm Shipping:</strong> Update tracking information when the shipper arrives to collect the package
-                                            </div>
-                                        </div>
+                                    <td colspan="4"
+                                        style="padding:16px; font-size:15px; font-weight:600; color:#111827;">
+                                        Order ID: {{.orderID}} <br>
+                                        <span style="font-size:13px; font-weight:500; color:#888;">Order date:
+                                            {{.orderDate}}</span>
+                                    </td>
+                                    <td align="right" style="padding:16px;">
+                                        <span
+                                            style="font-size:14px; font-weight:600; color:#155724; background:#d4edda; padding:6px 12px; border-radius:12px;">
+                                           {{.orderStatus}}
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- Divider -->
+                                <tr>
+                                    <td colspan="5" style="border-top:1px solid #e0e0e0; height:1px;"></td>
+                                </tr>
+
+                                <!-- Table Header -->
+                                <tr style="background:#f3f3f3; font-size:13px; font-weight:600; color:#555;">
+                                    <td align="left" style="padding:12px;">Product Name</td>
+                                    <td align="center" style="padding:12px;">Quantity</td>
+                                    <td align="center" style="padding:12px;">SKU</td>
+                                    <td align="right" style="padding:12px;">Total</td>
+                                </tr>
+
+                                <!-- Product Row -->
+                                <tr style="font-size:14px; color:#111827;">
+                                    <td align="left" style="padding:12px; display:flex; align-items:center;">
+                                        <img src="{{.productImage}}" alt="Product"
+                                            style="width:50px; height:50px; border:1px solid #e0e0e0; border-radius:6px; margin-right:8px;">
+                                        {{.ProductName}}
+                                    </td>
+                                    <td align="center" style="padding:12px;">{{.quantity}}</td>
+                                    <td align="center" style="padding:12px;">{{.productSKU}}</td>
+                                    <td align="right" style="padding:12px; font-weight:700; color:#dc3545;">
+                                        {{.total}}
+                                    </td>
+                                </tr>
+
+                                <!-- Divider -->
+                                <tr>
+                                    <td colspan="5" style="border-top:1px solid #e0e0e0; height:1px;"></td>
+                                </tr>
+
+                                <!-- Customer Info -->
+                                <tr>
+                                    <td colspan="5"
+                                        style="padding:16px; font-size:14px; color:#111827; font-weight:600;">
+                                        Customer Information:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" style="padding:0 16px 16px; font-size:14px; color:#555;">
+                                        <div style="margin-bottom:6px;"><strong>Name:</strong> {{.CustomerName}}</div>
+                                        <div><strong>Customer Note:</strong> {{.customer_note}}</div>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
 
-                    <!-- Call to Action (CTA) Button -->
+
+                    <!-- GAP 32 -->
                     <tr>
-                        <td align="center" style="padding: 0 40px 30px;">
+                        <td style="height:32px;"></td>
+                    </tr>
+
+                    <!-- Next Steps -->
+                    <tr>
+                        <td style="padding:0 40px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background:#f3f8ff; border:1px solid #d0e2ff; border-radius:8px; padding:20px;">
+                                <tr>
+                                    <td
+                                        style="font-size:15px; font-weight:600; color:#111827; padding-bottom:12px; text-align:center;">
+                                        Please follow these steps:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:14px; color:#555; line-height:22px;">
+                                        <div style="margin-bottom:8px;"><strong>1. Prepare Order:</strong> Package items
+                                            securely and prepare
+                                            shipping labels.</div>
+                                        <div><strong>2. Confirm Shipping:</strong> Update tracking when shipper collects
+                                            package.</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- GAP 32 -->
+                    <tr>
+                        <td style="height:32px;"></td>
+                    </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                        <td align="center" style="padding:0 40px;">
                             <a href="[Link to Order Management]" target="_blank"
-                                style="display: inline-block; padding: 15px 30px; font-size: 16px; color: #ffffff; background-color: #2d2d2d; border-radius: 5px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-right: 10px;">
+                                style="display:inline-block; background:#111827; color:#fff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; font-size:14px; margin-right:10px;">
                                 View Order Details
                             </a>
                             <a href="[Link to Contact Customer]" target="_blank"
-                                style="display: inline-block; padding: 15px 30px; font-size: 16px; color: #ffffff; background-color: #2d2d2d; border-radius: 5px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                style="display:inline-block; background:#111827; color:#fff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; font-size:14px;">
                                 Contact Customer
                             </a>
                         </td>
                     </tr>
 
-                    <!-- Email closing -->
+                    <!-- GAP 60 -->
                     <tr>
-                        <td class="body-text" align="left" style="padding: 0 40px 40px;">
-                            <div align="left" style="font-size: 14px; color: #555555; line-height: 22px;">
-                                Please package the items carefully and ensure secure shipping to provide the best experience for your customer.
-                                If you have any questions, don't hesitate to contact us.
-                                <br><br>
-                                Best of luck!
-                                <br>
-                                The StrongBody.ai Team
-                            </div>
+                        <td style="height:60px;"></td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding:0 40px 40px; font-size:13px; color:#555; line-height:22px; text-align:left;">
+                            Please package the items carefully and ensure secure shipping to provide the best experience
+                            for your
+                            customer.
+                            If you have any questions, don’t hesitate to contact us.
+                            <br><br>
+                            Regards,<br>
+                            The StrongBody.ai Team
                         </td>
                     </tr>
 
                 </table>
-
             </td>
         </tr>
-
-        <!-- Footer section -->
-          <script>document.write(emailFooter);</script>
-
     </table>
 
 </body>

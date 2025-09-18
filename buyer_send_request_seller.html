@@ -6,85 +6,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StrongBody - New Service Request</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-
-  <script src="./footer/footer.js"></script>
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
     rel="stylesheet" />
 </head>
 
 <body
-  style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+  style="margin:0; padding:0; font-family:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif; background:#ffffff;">
 
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background-color: #f5f5f5;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background:#ffffff;">
     <tr>
-      <td align="center" style="padding: 20px 15px;">
+      <td align="center" style="padding:40px 20px;">
 
+        <!-- Container -->
         <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-          style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          style="max-width:600px; background:#ffffff;">
 
-          <!-- Header -->
+          <!-- Logo -->
           <tr>
-            <td align="left" style="padding: 30px 40px 0;">
-              <a href="#" target="_blank" style="text-decoration: none;">
-                <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
-                  alt="StrongBody" width="80" style="max-width: 80px; border: 0;">
-              </a>
+            <td align="left" style="padding:0 40px 40px;">
+              <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
+                alt="StrongBody Logo" width="120" style="display:block; max-width:120px; border:0;">
             </td>
           </tr>
 
           <!-- Title -->
           <tr>
             <td
-              style="text-align: center; padding: 35px 40px 0; font-size: 26px; color: #0e0e0f; font-weight: 700; line-height: 32px;">
-              <strong style="color: #2c3e50;">New Opportunity Waiting for You on StrongBody AI!</strong>
+              style="text-align:center; padding:0 40px 32px; font-size:24px; color:#111827; font-weight:700; line-height:32px;">
+              New Opportunity Waiting for <br> You on StrongBody AI!
             </td>
           </tr>
 
-          <!-- Intro message -->
+          <!-- Greeting -->
           <tr>
-            <td
-              style="text-align: center; padding: 15px 40px 20px; font-size: 16px; color: #555555; line-height: 24px;">
-              Hello <strong>{{.SellerName}}</strong>,<br>
-              You have a new service request waiting on StrongBody AI<br>
-              – and it’s a perfect match for your expertise in <strong>{{.CategoryName}}</strong>.
+            <td style="padding:0 40px 16px; font-size:14px; color:#374151; line-height:22px; text-align:left;">
+              Hello {{.SellerName}},
             </td>
           </tr>
 
-          <!-- Request Details in table -->
+          <!-- Intro -->
           <tr>
-            <td style="padding: 20px 40px;">
+            <td style="padding:0 40px 40px; font-size:14px; color:#374151; line-height:22px; text-align:left;">
+              You have a new service request waiting on StrongBody AI – and it’s a perfect match for your expertise in
+              <b>{{.CategoryName}}</b>.
+            </td>
+          </tr>
+
+          <!-- Request Info -->
+          <tr>
+            <td style="padding:0 40px 40px;">
               <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"
-                style="border-radius: 8px; background-color: #f9f9f9; padding: 25px; border: 1px solid #e0e0e0;">
+                style="border-radius:8px; background:#f9fafb; padding:24px;">
                 <tr>
-                  <td style="font-size: 20px; color: #2c3e50; font-weight: 700; padding-bottom: 15px;">
+                  <td style="font-size:14px; color:#111827; font-weight:700; padding-bottom:20px; text-align:center;">
                     Here're Request Info:
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <table width="100%" cellpadding="6" cellspacing="0" border="0"
-                      style="font-size: 14px; color: #333333;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                      style="font-size:14px; color:#111827;">
                       <tr>
-                        <td style="font-weight: 600; width: 150px;">Request ID:</td>
-                        <td>#{{.RequestID}}</td>
+                        <td style="color:#374151; border-bottom:1px solid #e5e7eb; padding:12px 0;">Request ID</td>
+                        <td style="font-weight:500; text-align:right; border-bottom:1px solid #e5e7eb; padding:12px 0;">
+                          #{{.RequestID}}</td>
                       </tr>
                       <tr>
-                        <td style="font-weight: 600;">Category:</td>
-                        <td>{{.CategoryName}}</td>
+                        <td style="color:#374151; border-bottom:1px solid #e5e7eb; padding:12px 0;">Category</td>
+                        <td style="font-weight:500; text-align:right; border-bottom:1px solid #e5e7eb; padding:12px 0;">
+                          {{.CategoryName}}</td>
                       </tr>
                       <tr>
-                        <td style="font-weight: 600;">Customer:</td>
-                        <td>{{.CustomerName}}</td>
+                        <td style="color:#374151; border-bottom:1px solid #e5e7eb; padding:12px 0;">Customer</td>
+                        <td style="font-weight:500; text-align:right; border-bottom:1px solid #e5e7eb; padding:12px 0;">
+                          {{.CustomerName}}</td>
                       </tr>
                       <tr>
-                        <td style="font-weight: 600; vertical-align: top;">Case details:</td>
-                        <td
-                          style="background-color: #ffffff; padding: 12px; border-left: 4px solid #ff0000; border-radius: 4px;">
-                          {{.RequestDescription}}
-                        </td>
+                        <td style="color:#374151; padding:12px 0;">Case details</td>
+                        <td style="font-weight:500; text-align:right; padding:12px 0;">
+                          {{.RequestDescription}}</td>
                       </tr>
                     </table>
                   </td>
@@ -93,51 +94,128 @@
             </td>
           </tr>
 
-          <!-- Encouragement -->
+          <!-- Message -->
           <tr>
-            <td
-              style="text-align: center; padding: 0 40px 20px; font-size: 16px; color: #2c3e50; line-height: 24px; font-weight: 600;">
-              💡 This is your chance to connect directly with a potential client who is actively looking for your help.
-              Don’t let this opportunity slip away — the sooner you respond, the higher your chance of winning this
+            <td style="text-align:center; padding:0 40px 24px; font-size:14px; color:#374151; line-height:22px;">
+              This is your chance to connect directly with a potential client who is actively looking for your help.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="text-align:center; padding:0 40px 32px; font-size:14px; color:#374151; line-height:22px;">
+              Don’t let this opportunity slip away – the sooner you respond, the higher your chance of winning this
               client’s trust.
             </td>
           </tr>
 
-          <!-- CTA Button -->
+          <!-- Button -->
           <tr>
-            <td align="center" style="padding: 0 40px 30px;">
-              <a href="https://strongbody.ai/seller/request/management" target="_blank"
-                style="display: inline-block; padding: 15px 30px; font-size: 16px; color: #ffffff; background-color: #ff0000; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <td align="center" style="padding:0 40px 40px;">
+              <a href="https://strongbody.ai/seller/request/management/{{.RequestID}}?type=request&ref={{.BuyerID}}"
+                target="_blank"
+                style="display:inline-block; padding:14px 28px; font-size:14px; color:#ffffff; background:#111827; border-radius:6px; text-decoration:none; font-weight:600;">
                 View Request & Submit Offer Now
               </a>
             </td>
           </tr>
- <tr>
-            <td
-              style="text-align: center; padding: 0 40px 20px; font-size: 16px; color: #2c3e50; line-height: 24px; font-weight: 600;">
+
+          <!-- Footer Note -->
+          <tr>
+            <td style="text-align:left; padding:0 40px 24px; font-size:14px; color:#374151; line-height:22px;">
               Make your expertise count. Turn this request into your next success story today!
             </td>
           </tr>
-          <!-- Closing -->
+
+          <!-- Signature -->
           <tr>
-            <td align="left" style="padding: 0 40px 40px;">
-              <div style="font-size: 14px; color: #555555; line-height: 22px;">
-
+            <td align="left" style="padding:0 40px 40px;">
+              <div style="font-size:14px; color:#374151; line-height:22px;">
                 Regards,<br>
-                <strong>The StrongBody AI Team</strong>
-
+                <b>The StrongBody AI Team</b>
               </div>
             </td>
           </tr>
-
         </table>
 
-        <script>document.write(emailFooter);</script>
+        <table style="width:100%;text-align:center;border-collapse:separate">
+          <tbody>
+            <!-- Social Icons -->
+            <tr>
+              <td align="center" style="padding:10px 10px 20px">
+                <a href="" style="display:inline-block;margin:2px" target="_blank">
+                  <img alt="Facebook" height="40" width="40"
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NZkfMVt-Hiz_LdWR6TufEnm9TsBCwNKpvI52dDI6aBTzHVFspd5R4VCFdW1q0yV9xYk7s2lKwCCABQ8kCb_1f2m8eTRbKf73Ha4WEPnHUs5qQ_NNVOMHlH8np32dbBirfBfo69r52GIeNOREL5rcurJ3JW2NnCi35hb5SxImiApbb_ReSs4pIgkEKAnZKJ6Lg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033596e141af42e11eb9011/original.png?1613977966"
+                    style="width:40px;height:40px">
+                </a>
+                <a href="" style="display:inline-block;margin:2px" target="_blank">
+                  <img alt="Pinterest" height="40" width="40"
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NY40Jk9Q9r8EYNjNSqhxdyuHfYDoAUyypZ0ZQrrpvog4WHJCG1dnI7fqfm5GyCk3gKlCfPUIiIs6NwsN8unN1yNbEzBlP8SdHB5FelnTkPZ0JBAEwFtxsMYXefqzobP9tDwsIaTuE2vMXX4rxzb6l2OBewnQK4SH9WdKDkIW4vVQXIUyp1cKDUmQpMwfI4JIg=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033597389461f339542c0be/original.png?1613977971"
+                    style="width:40px;height:40px">
+                </a>
+                <a href="" style="display:inline-block;margin:2px" target="_blank">
+                  <img alt="Instagram" height="40" width="40"
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NYma5Mt_uO53kSV2TjrVGoU3s3Hj8ntUqCxzABv1hd9kqyiTV4KAd2ngNnsBmWsPGc8jjOKFBM_wguwT7Z_MFyy76dzJz9m8nsPYAjlZC70UkdKEXVoQszhC84e0e7Y7ZzADsO1bMusM658fHOMnpX9_hWgqwNR_7k7PAfdZ7JCpxr2YBQ1F_ZjqnnwEmhSvA=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/6033595124413112353135b6/original.png?1613977937"
+                    style="width:40px;height:40px">
+                </a>
+              </td>
+            </tr>
+
+            <!-- Info + Links -->
+            <tr>
+              <td align="center" style="color:#c5c6c9;font-size:12px;line-height:18px;
+                   font-family:'Plus Jakarta Sans',sans-serif;
+                   padding:0px 5px">
+                <span style="font-size:12px">
+                  <span style="font-family:'Plus Jakarta Sans',sans-serif">
+                    <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Privacy
+                      Policy</a> |
+                    <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Support</a> |
+                    <a href="https://strongbody.ai/affiliate/overview"
+                      style="color:black;text-decoration:none;font-weight:bold" target="_blank">Refer & Earn</a> |
+                    <a href="" style="color:black;text-decoration:none;font-weight:bold" target="_blank">Get
+                      Inspired</a>
+                    <br><br>
+                    <span style="color:#7a7d85">
+                      This email was sent to you by StrongBody SG PTE, LTD.<br>
+                      You are receiving this email because you signed up for StrongBody.ai<br>
+                      If you wish to unsubscribe from all future emails, please click
+                      <a href="https://strongbody.ai/?ref=stronghealth" style="color:black;text-decoration:none"
+                        target="_blank">here</a>.
+                      <br><br>
+                      105 CECIL STREET #18-20 THE OCTAGON Singapore, 069534 Singapore <br>
+                      StrongBody wellness marketplace, now in Multime, your trusted voice social app for connections
+                    </span>
+                  </span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- App Badges -->
+            <tr>
+              <td align="center" style="padding:20px 10px">
+                <a href="" style="display:inline-block;width:120px;height:36px;margin:4px;padding-right:15px;"
+                  target="_blank">
+                  <img alt="Multime" height="36"
+                    src="https://storage.googleapis.com/strongbody/upload-manually/multime.jpg" width="120">
+                </a>
+                <a href="" style="display:inline-block;margin:5px" target="_blank">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_NZWl7EIjscaUbeUcbgKpvPwgEjIuXlLnwgesEPmEl6Xdag5F98eCpacO6Xzwvc_LYpd3tk19eCItP3K1aJl6UUY7cVoLdIconuyThElGiyHj0Njj21gqEundUrsbbSQLYwOkWj-NnXXqZEd12h_okqN2k_VTNrDzkm4driCkBshS_-YVCuEoNzwYdVIPenEWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335ea2798dc82632426968/original.png?1613979298"
+                    width="120">
+                </a>
+                <a href="" style="display:inline-block;margin:5px" target="_blank">
+                  <img
+                    src="https://ci3.googleusercontent.com/meips/ADKq_Na5AnnJzd14X47VOF7R-WTkbmEgzKJOxuh42XqiISpm6ndZ5tT_JGonezLr7mppPJ6siM9Cd_pXLjcQhRQp3T6maALt-hOipMyy5HMakhWT5Xh97hpWmn2UkvrY0gb5cJzywPz8Fa0dTe0vyQ50XqcaAcGopTgS4h9fqiJAFSayGmAyKPc_gtMv0uDc2awoWQ=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/60335eaf83566879cab564c3/original.png?1613979311"
+                    width="120">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
       </td>
     </tr>
   </table>
-
 </body>
 
 </html>

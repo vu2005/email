@@ -2,101 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StrongBody - Your Request Has Been Received</title>
-  <script src="./footer/footer.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 </head>
 
-<body style="margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;">
+<body
+    style="margin:0; padding:0; font-family:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif; background-color:#F3F4F6;">
 
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #eeeeee;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F3F4F6;">
         <tr>
-            <td height="20"></td>
-        </tr>
-        <tr>
-            <td align="center" style="padding: 0 15px;">
+            <td align="center" style="padding:40px 20px;">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0"
-                    style="max-width: 600px; background-color: #ffffff;">
+                    style="max-width:600px; background-color:#ffffff; border-radius:8px;">
+
+                    <!-- Logo -->
                     <tr>
-                        <td style="padding: 30px 55px 0;">
+                        <td style="padding:40px 40px 0;">
                             <a href="https://strongbody.ai/" target="_blank">
                                 <img src="https://storage.googleapis.com/strongbody/upload-manually/logo-strongbody.png"
-                                    alt="StrongBody" width="80" style="max-width: 80px; border: 0;">
+                                    alt="StrongBody" width="100" style="border:0; display:block;">
                             </a>
                         </td>
                     </tr>
 
+                    <!-- Title -->
                     <tr>
-                        <td
-                            style="text-align: left; padding: 35px 40px 20px; font-size: 16px; color: #0e0e0f; line-height: 24px;">
-                            <div style="margin-bottom: 20px;">
-                                Hello <strong>{{.firstName}} {{.lastName}}</strong>,
-                            </div>
-
-                            <div style="margin-bottom: 20px;">
-                                We've received your request and will soon match you with the most suitable expert to
-                                assist you.
-                            </div>
-
-                            <div
-                                style="background-color: #f0f8ff; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 4px solid #ff0000;">
-                                <div style="font-size: 16px; color: #0e0e0f; line-height: 24px; margin-bottom: 15px;">
-                                    <strong>An account has been automatically created for you</strong> with the email:
-                                    <strong>{{.email}}</strong>
-                                </div>
-                                <div style="font-size: 14px; color: #666; line-height: 22px;">
-                                    To get started, please set your account password by clicking the button below.
-                                </div>
-                            </div>
+                        <td align="center" style="padding:40px 40px 0;">
+                            <h1 style="font-size:22px; font-weight:600; color:#111827; margin:0;">
+                                Your Profile Needs Attention
+                            </h1>
                         </td>
                     </tr>
 
+                    <!-- Content -->
                     <tr>
-                        <td style="padding: 0 40px 40px;">
-                            <div style="text-align: center; margin-bottom: 30px;">
-                                <a href="{{.ResetLink}}" target="_blank"
-                                    style="display: inline-block; background-color: #ff0000; color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 25px; font-size: 16px; font-weight: 600;">
-                                    Set Your Password
-                                </a>
-                            </div>
-
-                            <div
-                                style="background-color: #fff3f3; border-radius: 8px; padding: 20px; font-size: 14px; color: #666; line-height: 22px;">
-                                <div style="margin-bottom: 15px;">
-                                    <strong style="color: #ff0000;">Next steps:</strong>
-                                </div>
-                                <div style="margin-bottom: 8px;">1. Set your password to complete the account creation.
-                                </div>
-                                <div style="margin-bottom: 8px;">2. We will analyze your request and find the most
-                                    suitable expert.</div>
-                                <div style="margin-bottom: 8px;">3. You will receive an email notification once an
-                                    expert is recommended.</div>
-                                <div>4. Log in to your account to track your request's progress.</div>
-                            </div>
+                        <td style="padding:40px 40px 0; font-size:14px; line-height:22px; color:#374151;">
+                            <p style="margin:0 0 20px;">Hello <strong>{{.firstName}} {{.lastName}}</strong>,</p>
+                            <p style="margin:0;">
+                                Thank you for trusting and submitting your request to StrongBody – A platform connecting
+                                you with global experts. We have received your request and will soon find the most
+                                suitable expert to assist you.
+                            </p>
                         </td>
                     </tr>
 
+                    <!-- Info Box -->
                     <tr>
-                        <td class="body-text" align="left" style="padding: 0 40px 40px;">
-                            <div align="left" style="font-size: 14px; color: #555555; line-height: 22px;">
-                                Best regards,
-                                <br>
-                                The StrongBody.ai Team
-                            </div>
+                        <td style="padding:40px 40px 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background-color:#F9FAFB; border-radius:6px;">
+                                <tr>
+                                    <td style="padding:20px;">
+                                        <p style="font-size:14px; font-weight:600; color:#111827; margin:0 0 12px;">
+                                            An account has been automatically created for you with the email:
+                                            <strong>{{.email}}</strong>
+                                        </p>
+                                        <p style="font-size:14px; color:#374151; margin:0;">
+                                            To get started, please set your account password by clicking the button
+                                            below.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                        <td align="center" style="padding:40px 40px 0;">
+                            <a href="{{.ResetLink}}" target="_blank"
+                                style="display:inline-block; padding:14px 28px; background-color:#111827; color:#ffffff; text-decoration:none; border-radius:6px; font-weight:600; font-size:14px;">
+                                Set Your Password
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Next Steps -->
+                    <tr>
+                        <td style="padding:40px 40px 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background-color:#FFF7F7; border-radius:6px;">
+                                <tr>
+                                    <td style="padding:20px; font-size:14px; line-height:22px; color:#374151;">
+                                        <p style="margin:0 0 12px; font-weight:600; color:#B91C1C;">Next steps:</p>
+                                        <p style="margin:0 0 8px;">1. Set your password to complete the account
+                                            creation.</p>
+                                        <p style="margin:0 0 8px;">2. We will analyze your request and find the most
+                                            suitable expert.</p>
+                                        <p style="margin:0 0 8px;">3. You will receive an email notification once an
+                                            expert is recommended.</p>
+                                        <p style="margin:0;">4. Log in to your account to track your request's progress.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding:40px; font-size:12px; line-height:20px; color:#6B7280; text-align:left;">
+                            <p style="margin:0 0 6px;">Thank you for being part of StrongBody.ai. We’re here to help you
+                                succeed.</p>
+                            <p style="margin:0;">Regards,<br>The StrongBody AI Team</p>
+                        </td>
+                    </tr>
+
                 </table>
             </td>
-            
         </tr>
-
     </table>
-    
+
 </body>
 
 </html>
